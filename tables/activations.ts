@@ -1,4 +1,4 @@
-import { type Row, t, table, type TableDatabase } from "@the8020/db";
+import { type Row, t, table, type TableDatabase } from "/p/the8020/db/mod.ts";
 
 const Activations = table("the8020__packages__activations", {
   activationId: t.text().primaryKey(),
@@ -23,7 +23,7 @@ const Activations = table("the8020__packages__activations", {
   indexes: [{ columns: ["stage"] }],
 });
 
-declare module "@the8020/db/types" {
+declare module "/p/the8020/db/types.ts" {
   interface Database extends TableDatabase<typeof Activations> {}
 }
 
