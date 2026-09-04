@@ -1,0 +1,8 @@
+version = 1
+program = "repository-pull"
+summary = "Pull a package repository"
+usage = "<package-id>"
+mutates_state = true
+restart_behavior = "none"
+[[examples]]
+command = "packages.repository.pull the8020/uui"

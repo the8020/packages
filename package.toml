@@ -1,0 +1,4 @@
+schema = 1
+description = "80|20 desired packages and activation history"
+documentation_url = "https://github.com/the8020/packages"
+license = "Apache-2.0"

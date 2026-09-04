@@ -1,0 +1,8 @@
+version = 1
+program = "inspect"
+summary = "Inspect an installed package"
+usage = "<package-id>"
+mutates_state = false
+restart_behavior = "none"
+[[examples]]
+command = "packages.inspect the8020/uui"

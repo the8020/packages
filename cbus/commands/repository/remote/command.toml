@@ -1,0 +1,8 @@
+version = 1
+program = "repository-remote"
+summary = "Inspect or configure a package remote"
+usage = "<package-id> [--name <name>] [--url <url>]"
+mutates_state = true
+restart_behavior = "none"
+[[examples]]
+command = "packages.repository.remote the8020/uui"

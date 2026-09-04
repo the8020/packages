@@ -1,0 +1,15 @@
+version = 1
+program = "synchronize"
+summary = "Synchronize desired packages"
+usage = "[--packages <id,id,...>] [--git-token-stdin]"
+mutates_state = true
+restart_behavior = "none"
+[[secrets]]
+name = "git-token"
+required = false
+prompt = "Git token: "
+stdin_option = "git-token-stdin"
+[[examples]]
+command = "packages.synchronize"
+[[examples]]
+command = "packages.synchronize --packages acme/private --git-token-stdin"

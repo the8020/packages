@@ -1,0 +1,8 @@
+version = 1
+program = "repository-checkout"
+summary = "Check out a package branch or commit"
+usage = "<package-id> [--branch <name> | --commit <commit>]"
+mutates_state = true
+restart_behavior = "none"
+[[examples]]
+command = "packages.repository.checkout the8020/uui --branch main"

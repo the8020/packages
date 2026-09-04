@@ -1,0 +1,8 @@
+version = 1
+program = "versions-list"
+summary = "List package commits"
+usage = "<package-id> [--limit <count>]"
+mutates_state = false
+restart_behavior = "none"
+[[examples]]
+command = "packages.versions.list the8020/uui"

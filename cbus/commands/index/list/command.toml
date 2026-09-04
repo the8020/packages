@@ -1,0 +1,7 @@
+version = 1
+program = "index-list"
+summary = "List desired packages"
+mutates_state = false
+restart_behavior = "none"
+[[examples]]
+command = "packages.index.list"
