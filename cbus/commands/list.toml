@@ -1,4 +1,5 @@
 version = 1
+command = "packages.list"
 program = "list"
 summary = "List installed packages"
 mutates_state = false

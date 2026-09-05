@@ -1,4 +1,5 @@
 version = 1
+command = "packages.repository.status"
 program = "repository-status"
 summary = "Report package repository status"
 usage = "<package-id>"

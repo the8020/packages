@@ -1,4 +1,5 @@
 version = 1
+command = "packages.repository.pull"
 program = "repository-pull"
 summary = "Pull a package repository"
 usage = "<package-id>"

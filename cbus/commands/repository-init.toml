@@ -1,4 +1,5 @@
 version = 1
+command = "packages.repository.init"
 program = "repository-init"
 summary = "Initialize a package repository"
 usage = "<package-id> [--author-name <name>] [--author-email <email>] [--message <message>]"

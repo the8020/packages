@@ -1,4 +1,5 @@
 version = 1
+command = "packages.repository.list"
 program = "repository-list"
 summary = "List package repositories"
 mutates_state = false

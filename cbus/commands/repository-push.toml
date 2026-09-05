@@ -1,4 +1,5 @@
 version = 1
+command = "packages.repository.push"
 program = "repository-push"
 summary = "Push a package repository"
 usage = "<package-id>"

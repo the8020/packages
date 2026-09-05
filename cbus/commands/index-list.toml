@@ -1,4 +1,5 @@
 version = 1
+command = "packages.index.list"
 program = "index-list"
 summary = "List desired packages"
 mutates_state = false

@@ -1,4 +1,5 @@
 version = 1
+command = "packages.index.inspect"
 program = "index-inspect"
 summary = "Inspect a desired package"
 usage = "<package-id>"

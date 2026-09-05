@@ -1,4 +1,5 @@
 version = 1
+command = "packages.index.set"
 program = "index-set"
 summary = "Set desired package source and version"
 usage = "<package-id> [--source <url>] [--commit <commit> | --tag <tag>] [--local] [--secret <name>]"
