@@ -1,13 +1,15 @@
 import { type Row, t, table, type TableDatabase } from "/p/the8020/db/mod.ts";
+import { packageId } from "../types/package.ts";
+import { secretName } from "/p/the8020/secrets/types/secret.ts";
 
 const Packages = table("the8020__packages__packages", {
-  packageId: t.text().primaryKey(),
+  packageId: t.from(packageId).primaryKey(),
   author: t.text(),
   repository: t.text(),
   source: t.text().nullable(),
   requestedCommit: t.text().nullable(),
   requestedTag: t.text().nullable(),
-  secretName: t.text().nullable(),
+  secretName: t.from(secretName).nullable(),
   local: t.boolean().default(false),
   activeCommit: t.text().nullable(),
   state: t.enum(

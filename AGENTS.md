@@ -115,6 +115,9 @@ below.
   desired-version, repository, and synchronization commands.
 - [tables/AGENTS.md](tables/AGENTS.md): Describe desired and active packages
   plus durable activation and hook history.
+- [types/AGENTS.md](types/AGENTS.md): Define shared package and program
+  reference fields, searchable value help, and links to their administration
+  programs.
 
 # Purpose
 
@@ -126,7 +129,8 @@ below.
 # Ownership
 
 - Own authored schemas and administrative command programs for packages,
-  activation batches, activation members, and hook runs.
+  activation batches, activation members, and hook runs, plus reusable package
+  and package-program reference fields.
 - Do not own Git worktrees, schema DDL, application tables, services, or the
   kernel's built-in `_8020_*` catalog.
 
@@ -137,12 +141,28 @@ below.
   independently for each package and hook.
 - Package source paths remain derived node-local state and are never stored as
   authoritative shared paths.
+- Semantic package/program fields carry ordinary Zod string schemas and server
+  callbacks. Package value help searches the catalog table in bounded pages;
+  program value help searches the kernel's ready-program catalog and returns
+  only the requested page. Lazy open callbacks call the owning admin-core UUI
+  entrypoints. Field imports perform no runtime work.
 - Flat `cbus/commands/*.toml` declarations use a required `command` field for
   the complete public name; filenames are arbitrary. They map visible
   `packages.*` commands to non-discoverable ordinary programs. Programs parse
   raw string arguments and report intentional input errors structurally before
   calling typed kernel package operations; synchronization may consume only its
   execution-scoped optional Git token.
+
+# Work Guidance
+
+- Keep package catalog and activation-history responsibilities separate from
+  application features. Reuse ordinary programs, hooks, and typed kernel
+  operations; native Git and source publication remain kernel foundations, not
+  a second application workflow.
+- Keep desired versions, active commits, and hook attempts authoritative in
+  their database owners. Local paths and discovery indexes are derived; bound
+  inspection and verify publication failures across the package/kernel
+  boundary.
 
 # Verification
 

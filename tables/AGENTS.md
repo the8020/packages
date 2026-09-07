@@ -18,6 +18,9 @@ Parent DOX: [packages DOX](../AGENTS.md).
   success are recorded independently.
 - Package source paths remain derived node-local state rather than authoritative
   shared paths.
+- The package primary key reuses `types/package.ts` through `t.from`; physical
+  keys and defaults remain owned here.
+- The nullable credential reference reuses `the8020/secrets/types/secret.ts`.
 
 # Work Guidance
 
