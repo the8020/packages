@@ -157,12 +157,11 @@ below.
 
 - Keep package catalog and activation-history responsibilities separate from
   application features. Reuse ordinary programs, hooks, and typed kernel
-  operations; native Git and source publication remain kernel foundations, not
-  a second application workflow.
+  operations; native Git and source publication remain kernel foundations, not a
+  second application workflow.
 - Keep desired versions, active commits, and hook attempts authoritative in
   their database owners. Local paths and discovery indexes are derived; bound
-  inspection and verify publication failures across the package/kernel
-  boundary.
+  inspection and verify publication failures across the package/kernel boundary.
 
 # Verification
 
