@@ -116,8 +116,8 @@ below.
 - [tables/AGENTS.md](tables/AGENTS.md): Describe desired and active packages
   plus durable activation and hook history.
 - [types/AGENTS.md](types/AGENTS.md): Define shared package and program
-  reference fields, searchable value help, and links to their administration
-  programs.
+  metadata, source/version fields, searchable value help, and administration
+  links.
 
 # Purpose
 
@@ -165,5 +165,7 @@ below.
 
 # Verification
 
-- `deno task check` formats, lints, and type-checks all table modules.
-- `deno task test` verifies stable table descriptors and composite identities.
+- `deno task check` formats, lints, and type-checks fields, tables, and
+  programs.
+- `deno task test` verifies table descriptors, composite identities, and bounded
+  Git field lookup and customization.

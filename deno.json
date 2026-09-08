@@ -17,7 +17,7 @@
     "kysely": "npm:kysely@0.29.4"
   },
   "tasks": {
-    "check": "deno fmt --check . && deno lint . && deno check --import-map=deno.local.json tables/*.ts src/*.ts programs/*/*.ts",
-    "test": "deno test --import-map=deno.local.json tables src programs"
+    "check": "deno fmt --check . && deno lint . && deno check --import-map=deno.local.json types/*.ts tables/*.ts src/*.ts programs/*/*.ts",
+    "test": "deno test --import-map=deno.local.json types tables src programs"
   }
 }

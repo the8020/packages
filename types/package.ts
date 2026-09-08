@@ -30,3 +30,64 @@ export const packageId: z.ZodString = field(z.string(), {
     await packages(value);
   },
 });
+
+export const packageInfo = z.object({
+  author: field(z.string(), {
+    label: "Author",
+    description: "The namespace that owns the package, such as `the8020`.",
+  }),
+  repository: field(z.string(), {
+    label: "Repository",
+    description: "The package name within its author namespace.",
+  }),
+  description: field(z.string(), {
+    label: "Description",
+    description: "What this package provides and when to use it.",
+  }),
+  documentationUrl: field(z.string(), {
+    label: "Documentation",
+    description: "Where to find instructions for using this package.",
+  }),
+  license: field(z.string(), {
+    label: "License",
+    description:
+      "The terms under which this package may be used and distributed.",
+  }),
+  valid: field(z.boolean(), {
+    label: "Valid",
+    description:
+      "Whether the package passed inspection and its declared content can be used.",
+  }),
+  status: field(z.string(), {
+    label: "Status",
+    description: "Whether the package is ready to use or needs attention.",
+  }),
+  serviceCount: field(z.number().int(), {
+    label: "Services",
+    description: "Number of services provided by this package.",
+  }),
+  programCount: field(z.number().int(), {
+    label: "Programs",
+    description:
+      "Number of programs provided by this package, including hidden programs.",
+  }),
+  fileCount: field(z.number().int(), {
+    label: "Visible files",
+    description: "Number of files included in this package inspection.",
+  }),
+  validation: field(z.string(), {
+    label: "Validation",
+    description:
+      "Problems in the package declarations that must be corrected before use.",
+  }),
+  inspection: field(z.string(), {
+    label: "Inspection",
+    description:
+      "Problems encountered while reading or inspecting this package.",
+  }),
+  issue: field(z.string(), {
+    label: "Needs attention",
+    description:
+      "Package validation or inspection problems to resolve before using its content.",
+  }),
+});
