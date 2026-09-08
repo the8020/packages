@@ -124,33 +124,39 @@ export const versionSelection = field(z.string().min(1), {
 export function repositoryFields(repository: PackageRepository) {
   return z.object({
     branch: field(sourceInfo.shape.branch, {
-      valueHelp: choiceHelp(repository.branches.map((branch) => ({
-        value: branch.name,
-        label: branch.remote
-          ? `${branch.name} (remote)`
-          : branch.current
-          ? `${branch.name} (current)`
-          : branch.name,
-      }))),
+      valueHelp: choiceHelp(
+        sourceInfo.shape.branch,
+        repository.branches.map((branch) => ({
+          value: branch.name,
+          label: branch.remote
+            ? `${branch.name} (remote)`
+            : branch.current
+            ? `${branch.name} (current)`
+            : branch.name,
+        })),
+      ),
     }),
     commit: field(sourceInfo.shape.commit, {
-      valueHelp: choiceHelp(repository.commits.map((commit) => ({
-        value: commit.commit,
-        label: `${commit.short_commit} — ${commit.subject}`,
-      }))),
+      valueHelp: choiceHelp(
+        sourceInfo.shape.commit,
+        repository.commits.map((commit) => ({
+          value: commit.commit,
+          label: `${commit.short_commit} — ${commit.subject}`,
+        })),
+      ),
     }),
   });
 }
 
 export function sourceVersion(inspection?: PackageSourceInspection) {
   return field(versionSelection, {
-    valueHelp: choiceHelp(sourceVersionOptions(inspection)),
+    valueHelp: choiceHelp(versionSelection, sourceVersionOptions(inspection)),
   });
 }
 
 export function installedVersion(versions: PackageVersions) {
   return field(versionSelection, {
-    valueHelp: choiceHelp(installedVersionOptions(versions)),
+    valueHelp: choiceHelp(versionSelection, installedVersionOptions(versions)),
   });
 }
 
@@ -189,16 +195,22 @@ function installedVersionOptions(versions: PackageVersions) {
 }
 
 /** Page an already bounded reference snapshot through ordinary field help. */
-function choiceHelp<Value>(items: readonly ValueHelpItem<Value>[]) {
-  return ({ query, offset, limit }: ValueHelpRequest) => {
-    const search = query.trim().toLowerCase();
-    const matches = items.filter((item) =>
-      `${item.value} ${item.label} ${item.description ?? ""}`.toLowerCase()
-        .includes(search)
+function choiceHelp<Value>(
+  schema: z.ZodType,
+  items: readonly ValueHelpItem<Value>[],
+) {
+  return async (request: ValueHelpRequest) => {
+    const { queryValueHelp } = await import("/p/the8020/uui/lists.ts");
+    return queryValueHelp(
+      z.object({
+        value: schema,
+        label: field(z.string(), {
+          label: "Name",
+          description: "The readable name of this Git reference or version.",
+        }),
+      }),
+      items.map((item) => ({ value: item.value, label: item.label })),
+      request,
     );
-    return {
-      items: matches.slice(offset, offset + limit),
-      more: matches.length > offset + limit,
-    };
   };
 }

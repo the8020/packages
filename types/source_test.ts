@@ -1,6 +1,13 @@
 import { assert, assertEquals } from "@std/assert";
-import { field, fieldMetadata } from "/p/the8020/db/fields.ts";
+import {
+  field,
+  fieldMetadata,
+  type ValueHelpPage,
+} from "/p/the8020/db/fields.ts";
 import { installedVersion, repositoryFields, sourceVersion } from "./source.ts";
+
+const values = (page: ValueHelpPage | undefined) =>
+  page && ({ rows: page.rows, more: page.more });
 
 Deno.test("Git fields retain meaning and independent paged choices across screens", async () => {
   const first = sourceVersion({
@@ -25,19 +32,37 @@ Deno.test("Git fields retain meaning and independent paged choices across screen
   );
   const help = fieldMetadata(customized)?.valueHelp;
   assert(help);
-  assertEquals(await help({ query: " TAG ", offset: 1, limit: 1 }), {
-    items: [{ value: "tag:v2", label: "Tag v2" }],
-    more: false,
-  });
-  assertEquals((await help({ query: "", offset: 0, limit: 2 })).more, true);
   assertEquals(
-    await fieldMetadata(second)?.valueHelp?.({
-      query: "",
-      offset: 0,
-      limit: 1,
-    }),
+    values(
+      await help({
+        query: { search: " TAG ", filters: {}, sort: null },
+        offset: 1,
+        limit: 1,
+      }),
+    ),
     {
-      items: [{ value: "latest", label: "Latest default branch" }],
+      rows: [{ value: "tag:v2", label: "Tag v2" }],
+      more: false,
+    },
+  );
+  assertEquals(
+    (await help({
+      query: { search: "", filters: {}, sort: null },
+      offset: 0,
+      limit: 2,
+    })).more,
+    true,
+  );
+  assertEquals(
+    values(
+      await fieldMetadata(second)?.valueHelp?.({
+        query: { search: "", filters: {}, sort: null },
+        offset: 0,
+        limit: 1,
+      }),
+    ),
+    {
+      rows: [{ value: "latest", label: "Latest default branch" }],
       more: false,
     },
   );
@@ -56,13 +81,15 @@ Deno.test("Git fields retain meaning and independent paged choices across screen
     }],
   });
   assertEquals(
-    await fieldMetadata(versions)?.valueHelp?.({
-      query: "connection",
-      offset: 0,
-      limit: 1,
-    }),
+    values(
+      await fieldMetadata(versions)?.valueHelp?.({
+        query: { search: "connection", filters: {}, sort: null },
+        offset: 0,
+        limit: 1,
+      }),
+    ),
     {
-      items: [{ value: "commit:abc", label: "abc — Fix connection" }],
+      rows: [{ value: "commit:abc", label: "abc — Fix connection" }],
       more: false,
     },
   );
@@ -76,13 +103,15 @@ Deno.test("Git fields retain meaning and independent paged choices across screen
     commits: [],
   });
   assertEquals(
-    await fieldMetadata(repository.shape.branch)?.valueHelp?.({
-      query: "REMOTE",
-      offset: 0,
-      limit: 1,
-    }),
+    values(
+      await fieldMetadata(repository.shape.branch)?.valueHelp?.({
+        query: { search: "REMOTE", filters: {}, sort: null },
+        offset: 0,
+        limit: 1,
+      }),
+    ),
     {
-      items: [{ value: "stable", label: "stable (remote)" }],
+      rows: [{ value: "stable", label: "stable (remote)" }],
       more: false,
     },
   );

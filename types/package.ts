@@ -4,24 +4,14 @@ export const packageId: z.ZodString = field(z.string(), {
   label: "Package",
   description:
     "Open a package to see its programs, services, and installed version.",
-  valueHelp: async ({ query, offset, limit }) => {
+  valueHelp: async (request) => {
     const { default: Packages } = await import("../tables/packages.ts");
-    const { sql } = await import("/p/the8020/db/mod.ts");
-    const rows = await Packages.select([Packages.packageId, Packages.state])
-      .where(
-        sql<string>`lower(${sql.ref(Packages.packageId)})`,
-        "like",
-        `%${query.trim().toLowerCase()}%`,
-      )
-      .orderBy(Packages.packageId).offset(offset).limit(limit + 1).execute();
-    return {
-      items: rows.slice(0, limit).map((row) => ({
-        value: row.packageId,
-        label: row.packageId,
-        description: row.state.charAt(0).toUpperCase() + row.state.slice(1),
-      })),
-      more: rows.length > limit,
-    };
+    const { lookupPage } = await import("/p/the8020/db/lookup.ts");
+    return lookupPage(
+      z.object({ packageId, state: packageInfo.shape.status }),
+      Packages.select([Packages.packageId, Packages.state]),
+      request,
+    );
   },
   open: async (value) => {
     const { default: packages } = await import(

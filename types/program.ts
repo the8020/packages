@@ -4,23 +4,25 @@ export const programId: z.ZodString = field(z.string(), {
   label: "Program",
   description:
     "Choose a program to run. **Interactive** programs open a screen; **background** programs run as jobs.",
-  valueHelp: async ({ query, offset, limit }) => {
+  valueHelp: async (request) => {
     const { kernel } = await import("@the8020/kernel");
-    const search = query.trim().toLowerCase();
-    const programs = (await kernel.programs.list()).filter((program) =>
-      `${program.program_id} ${program.description ?? ""}`.toLowerCase()
-        .includes(search)
-    ).sort((left, right) => left.program_id.localeCompare(right.program_id));
-    return {
-      items: programs.slice(offset, offset + limit).map((program) => ({
-        value: program.program_id,
-        label: program.description || program.name,
-        description: `${program.program_id} · ${
-          program.uui ? "Interactive" : "Background"
-        }`,
-      })),
-      more: programs.length > offset + limit,
-    };
+    const { queryValueHelp } = await import("/p/the8020/uui/lists.ts");
+    const rows = (await kernel.programs.list()).sort((a, b) =>
+      a.program_id.localeCompare(b.program_id)
+    ).map((program) => ({
+      programId: program.program_id,
+      description: program.description || program.name,
+      uui: program.uui,
+    }));
+    return queryValueHelp(
+      z.object({
+        programId,
+        description: programInfo.shape.description,
+        uui: programInfo.shape.uui,
+      }),
+      rows,
+      request,
+    );
   },
   open: async (value) => {
     const { default: programs } = await import(
