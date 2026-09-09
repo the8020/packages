@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.init"
-program = "repository-init"
+program = "the8020/packages/repository-init"
 summary = "Initialize a package repository"
 usage = "<package-id> [--author-name <name>] [--author-email <email>] [--message <message>]"
 mutates_state = true

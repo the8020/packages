@@ -1,6 +1,6 @@
 version = 1
 command = "packages.inspect"
-program = "inspect"
+program = "the8020/packages/inspect"
 summary = "Inspect an installed package"
 usage = "<package-id>"
 mutates_state = false

@@ -1,6 +1,6 @@
 version = 1
 command = "packages.synchronize"
-program = "synchronize"
+program = "the8020/packages/synchronize"
 summary = "Synchronize desired packages"
 usage = "[--packages <id,id,...>] [--git-token-stdin]"
 mutates_state = true

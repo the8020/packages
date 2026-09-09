@@ -1,6 +1,6 @@
 version = 1
 command = "packages.versions.list"
-program = "versions-list"
+program = "the8020/packages/versions-list"
 summary = "List package commits"
 usage = "<package-id> [--limit <count>]"
 mutates_state = false

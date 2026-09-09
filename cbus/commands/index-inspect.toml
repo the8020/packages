@@ -1,6 +1,6 @@
 version = 1
 command = "packages.index.inspect"
-program = "index-inspect"
+program = "the8020/packages/index-inspect"
 summary = "Inspect a desired package"
 usage = "<package-id>"
 mutates_state = false

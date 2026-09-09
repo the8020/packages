@@ -1,6 +1,6 @@
 version = 1
 command = "packages.source.inspect"
-program = "source-inspect"
+program = "the8020/packages/source-inspect"
 summary = "Inspect public package source"
 usage = "<source-url>"
 mutates_state = false

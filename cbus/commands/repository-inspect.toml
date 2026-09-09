@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.inspect"
-program = "repository-inspect"
+program = "the8020/packages/repository-inspect"
 summary = "Inspect a package repository"
 usage = "<package-id>"
 mutates_state = false

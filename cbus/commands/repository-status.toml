@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.status"
-program = "repository-status"
+program = "the8020/packages/repository-status"
 summary = "Report package repository status"
 usage = "<package-id>"
 mutates_state = false

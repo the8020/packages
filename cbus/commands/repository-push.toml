@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.push"
-program = "repository-push"
+program = "the8020/packages/repository-push"
 summary = "Push a package repository"
 usage = "<package-id>"
 mutates_state = true

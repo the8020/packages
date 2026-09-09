@@ -1,6 +1,6 @@
 version = 1
 command = "packages.list"
-program = "list"
+program = "the8020/packages/list"
 summary = "List installed packages"
 mutates_state = false
 restart_behavior = "none"

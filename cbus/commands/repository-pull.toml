@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.pull"
-program = "repository-pull"
+program = "the8020/packages/repository-pull"
 summary = "Pull a package repository"
 usage = "<package-id>"
 mutates_state = true

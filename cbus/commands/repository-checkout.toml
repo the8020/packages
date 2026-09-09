@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.checkout"
-program = "repository-checkout"
+program = "the8020/packages/repository-checkout"
 summary = "Check out a package branch or commit"
 usage = "<package-id> [--branch <name> | --commit <commit>]"
 mutates_state = true

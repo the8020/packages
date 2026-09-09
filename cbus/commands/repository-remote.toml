@@ -1,6 +1,6 @@
 version = 1
 command = "packages.repository.remote"
-program = "repository-remote"
+program = "the8020/packages/repository-remote"
 summary = "Inspect or configure a package remote"
 usage = "<package-id> [--name <name>] [--url <url>]"
 mutates_state = true

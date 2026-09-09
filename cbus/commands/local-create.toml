@@ -1,6 +1,6 @@
 version = 1
 command = "packages.local.create"
-program = "local-create"
+program = "the8020/packages/local-create"
 summary = "Create a local package"
 usage = "<package-id> [--description <text>]"
 mutates_state = true

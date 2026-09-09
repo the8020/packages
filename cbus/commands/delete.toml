@@ -1,6 +1,6 @@
 version = 1
 command = "packages.delete"
-program = "delete"
+program = "the8020/packages/delete"
 summary = "Delete a package and its installed source; retain database data"
 usage = "<package-id> --confirm"
 mutates_state = true

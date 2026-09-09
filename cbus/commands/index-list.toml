@@ -1,6 +1,6 @@
 version = 1
 command = "packages.index.list"
-program = "index-list"
+program = "the8020/packages/index-list"
 summary = "List desired packages"
 mutates_state = false
 restart_behavior = "none"
