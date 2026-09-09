@@ -15,6 +15,7 @@ Parent DOX: [packages DOX](../AGENTS.md).
   an ordinary same-package program in `program`.
 - Keep declarations flat. Filenames do not define command identity, and
   duplicate public names are invalid.
+- `packages.delete <package-id> --confirm` exposes confirmed package deletion.
 
 # Work Guidance
 

@@ -16,6 +16,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
   failures.
 - Repository mutation and authentication remain kernel-owned; synchronization
   may consume only its execution-scoped optional Git token.
+- The hidden `delete` program requires a package ID and `--confirm` before
+  calling `kernel.packages.delete`.
 
 # Work Guidance
 

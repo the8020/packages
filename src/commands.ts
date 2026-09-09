@@ -33,6 +33,23 @@ export function inspect(...args: string[]) {
   return kernel.packages.inspect(requiredCommandArgument(args, 0, "package ID"))
     .then((value) => ({ package: value }));
 }
+export function remove(...args: string[]) {
+  const parsed = parseCommandArguments(args, { booleans: ["confirm"] });
+  const packageId = requiredCommandArgument(
+    parsed.positionals,
+    0,
+    "package ID",
+  );
+  if (parsed.options.confirm !== true) {
+    throw new AdminCommandError({
+      code: "invalid_arguments",
+      message: "package deletion requires --confirm",
+    });
+  }
+  return kernel.packages.delete(packageId, true).then(() => ({
+    deleted: true,
+  }));
+}
 export function indexList() {
   return kernel.packages.index.list().then((packages) => ({ packages }));
 }

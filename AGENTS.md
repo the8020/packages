@@ -152,6 +152,9 @@ below.
   raw string arguments and report intentional input errors structurally before
   calling typed kernel package operations; synchronization may consume only its
   execution-scoped optional Git token.
+- `packages.delete <package-id> --confirm` delegates to the shared kernel
+  deletion API. It removes installed source and retires the live package/table
+  catalog while retaining table data and activation history.
 
 # Work Guidance
 

@@ -1,0 +1,9 @@
+version = 1
+command = "packages.delete"
+program = "delete"
+summary = "Delete a package and its installed source; retain database data"
+usage = "<package-id> --confirm"
+mutates_state = true
+restart_behavior = "none"
+[[examples]]
+command = "packages.delete acme/example --confirm"

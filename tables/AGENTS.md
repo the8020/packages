@@ -16,6 +16,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
   table identity follows the package and file path.
 - Exact active commits and activation phases are durable; hook attempts and
   success are recorded independently.
+- An empty activation-member `candidateCommit` records package removal. Removed
+  package rows are retired with no active commit; history is retained.
 - Package source paths remain derived node-local state rather than authoritative
   shared paths.
 - Package identity, author/repository, source URL, and Git commit/tag columns
