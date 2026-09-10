@@ -16,6 +16,9 @@ Parent DOX: [packages DOX](../AGENTS.md).
   table identity follows the package and file path.
 - Exact active commits and activation phases are durable; hook attempts and
   success are recorded independently.
+- `published` means source/schema and package records are published, while
+  runtime indexing or backup cleanup may still need retry. Only completion of
+  that work moves the activation to `complete`.
 - An empty activation-member `candidateCommit` records package removal. Removed
   package rows are retired with no active commit; history is retained.
 - Package source paths remain derived node-local state rather than authoritative

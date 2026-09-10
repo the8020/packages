@@ -9,6 +9,7 @@ const Activations = table("the8020__packages__activations", {
       "pre_activated",
       "code_switched",
       "post_activated",
+      "published",
       "complete",
       "failed",
     ] as const,
