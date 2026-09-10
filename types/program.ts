@@ -1,4 +1,4 @@
-import { field, z } from "/p/the8020/db/fields.ts";
+import { choiceHelp, field, z } from "/p/the8020/db/fields.ts";
 
 export const programId: z.ZodString = field(z.string(), {
   label: "Program",
@@ -41,6 +41,11 @@ export const programInfo = z.object({
     label: "Runs as",
     description:
       "Interactive programs open a screen; background jobs run without an interactive screen. Unavailable programs cannot run.",
+    valueHelp: choiceHelp(z.string(), [
+      "Interactive",
+      "Background job",
+      "Unavailable",
+    ]),
   }),
   description: field(z.string(), {
     label: "Description",

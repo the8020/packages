@@ -26,6 +26,10 @@ Parent DOX: [packages DOX](../AGENTS.md).
   remain `latest`, `tag:<name>`, or `commit:<hash>` for version selection. They
   query no external data.
 - Keep package namespaces distinct from commit author names.
+- Known inspection/catalog statuses, program kinds, repository states, file
+  types, and Git reference kinds use shared `choiceHelp`. Catalog package state
+  stays distinct from the Ready/Needs attention inspection summary. Git
+  selectors reuse that same helper with their inspected value/name pairs.
 
 # Work Guidance
 

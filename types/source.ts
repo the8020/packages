@@ -1,10 +1,5 @@
 import { secretName } from "/p/the8020/secrets/types/secret.ts";
-import {
-  field,
-  type ValueHelpItem,
-  type ValueHelpRequest,
-  z,
-} from "/p/the8020/db/fields.ts";
+import { choiceHelp, field, z } from "/p/the8020/db/fields.ts";
 import type {
   PackageRepository,
   PackageSourceInspection,
@@ -63,15 +58,24 @@ export const sourceInfo = z.object({
   repositoryStatus: field(z.string(), {
     label: "Status",
     description: "The repository state reported by Git inspection.",
+    valueHelp: choiceHelp(z.string(), [
+      "ready",
+      "not-initialized",
+      "invalid-git-metadata",
+      "missing-initial-commit",
+      "shared-worktree-modified",
+    ]),
   }),
   type: field(z.string(), {
     label: "Type",
     description:
-      "Whether this package entry is a file, directory, or symbolic link.",
+      "Whether this package entry is a regular file, symbolic link, or another file type.",
+    valueHelp: choiceHelp(z.string(), ["file", "symlink", "other"]),
   }),
   kind: field(z.string(), {
     label: "Reference type",
     description: "Whether this Git reference is a branch or tag.",
+    valueHelp: choiceHelp(z.string(), ["branch", "tag"]),
   }),
   name: field(z.string(), {
     label: "Reference",
@@ -192,25 +196,4 @@ function installedVersionOptions(versions: PackageVersions) {
     });
   }
   return options;
-}
-
-/** Page an already bounded reference snapshot through ordinary field help. */
-function choiceHelp<Value>(
-  schema: z.ZodType,
-  items: readonly ValueHelpItem<Value>[],
-) {
-  return async (request: ValueHelpRequest) => {
-    const { queryValueHelp } = await import("/p/the8020/uui/lists.ts");
-    return queryValueHelp(
-      z.object({
-        value: schema,
-        label: field(z.string(), {
-          label: "Name",
-          description: "The readable name of this Git reference or version.",
-        }),
-      }),
-      items.map((item) => ({ value: item.value, label: item.label })),
-      request,
-    );
-  };
 }

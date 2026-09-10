@@ -1,4 +1,4 @@
-import { field, z } from "/p/the8020/db/fields.ts";
+import { choiceHelp, field, z } from "/p/the8020/db/fields.ts";
 
 export const packageId: z.ZodString = field(z.string(), {
   label: "Package",
@@ -8,7 +8,7 @@ export const packageId: z.ZodString = field(z.string(), {
     const { default: Packages } = await import("../tables/packages.ts");
     const { lookupPage } = await import("/p/the8020/db/lookup.ts");
     return lookupPage(
-      z.object({ packageId, state: packageInfo.shape.status }),
+      z.object({ packageId, state: packageInfo.shape.catalogState }),
       Packages.select([Packages.packageId, Packages.state]),
       request,
     );
@@ -51,6 +51,18 @@ export const packageInfo = z.object({
   status: field(z.string(), {
     label: "Status",
     description: "Whether the package is ready to use or needs attention.",
+    valueHelp: choiceHelp(z.string(), ["Ready", "Needs attention"]),
+  }),
+  catalogState: field(z.string(), {
+    label: "Status",
+    description: "The package's activation state in the catalog.",
+    valueHelp: choiceHelp(z.string(), [
+      "desired",
+      "activating",
+      "ready",
+      "failed",
+      "retired",
+    ]),
   }),
   serviceCount: field(z.number().int(), {
     label: "Services",
