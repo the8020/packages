@@ -1,0 +1,5 @@
+"packages.package.create" = "Create a local package; value is namespace/package."
+"packages.package.delete" = "Delete a package; value is namespace/package."
+"packages.package.edit" = "Edit desired package source or version; value is namespace/package."
+"packages.package.synchronize" = "Apply desired packages; value is namespace/package, or * for the complete index."
+"packages.repository.edit" = "Change, pull or push a package repository; value is namespace/package."

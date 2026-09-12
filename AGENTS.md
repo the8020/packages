@@ -136,6 +136,20 @@ below.
 
 # Local Contracts
 
+- Package `declarations/` files describe shared capabilities for developers and
+  discovery tools. `auth.toml` maps authorization keys to descriptions;
+  `events.toml` maps published event names to descriptions including payload and
+  timing. Both use quoted TOML keys. They are advisory, separate from executable
+  `events/*.toml` subscriptions, and add no kernel validation or discovery
+  rules.
+
+- `src/admin.ts` is the application-facing package API shared by command
+  programs and UUI. It checks the declared `packages.package.*` and
+  `packages.repository.edit` permissions before native mutations. Values are
+  canonical package IDs; synchronizing the entire index checks value `*`. Reads
+  retain the typed kernel API. Native command recovery remains independent and
+  package commands run as system. `declarations/auth.toml` documents keys.
+
 - Exact active commits and activation phases are durable database state.
 - Hook completion is at-least-once and therefore records attempts and success
   independently for each package and hook.

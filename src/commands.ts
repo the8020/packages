@@ -1,3 +1,4 @@
+import { packages } from "/p/the8020/packages/src/admin.ts";
 import {
   AdminCommandError,
   kernel,
@@ -27,10 +28,10 @@ function integer(value: string | boolean | undefined, name: string): number {
 }
 
 export function list() {
-  return kernel.packages.list().then((packages) => ({ packages }));
+  return packages.list().then((packages) => ({ packages }));
 }
 export function inspect(...args: string[]) {
-  return kernel.packages.inspect(requiredCommandArgument(args, 0, "package ID"))
+  return packages.inspect(requiredCommandArgument(args, 0, "package ID"))
     .then((value) => ({ package: value }));
 }
 export function remove(...args: string[]) {
@@ -46,15 +47,15 @@ export function remove(...args: string[]) {
       message: "package deletion requires --confirm",
     });
   }
-  return kernel.packages.delete(packageId, true).then(() => ({
+  return packages.delete(packageId, true).then(() => ({
     deleted: true,
   }));
 }
 export function indexList() {
-  return kernel.packages.index.list().then((packages) => ({ packages }));
+  return packages.index.list().then((packages) => ({ packages }));
 }
 export function indexInspect(...args: string[]) {
-  return kernel.packages.index.inspect(
+  return packages.index.inspect(
     requiredCommandArgument(args, 0, "package ID"),
   )
     .then((value) => ({ package: value }));
@@ -67,7 +68,7 @@ export function indexSet(...args: string[]) {
   const identity = packageIdentity(
     requiredCommandArgument(parsed.positionals, 0, "package ID"),
   );
-  return kernel.packages.index.set({
+  return packages.index.set({
     ...identity,
     source: parsed.options.source as string | undefined,
     commit: parsed.options.commit as string | undefined,
@@ -77,14 +78,14 @@ export function indexSet(...args: string[]) {
   }).then((value) => ({ package: value }));
 }
 export function sourceInspect(...args: string[]) {
-  return kernel.packages.source.inspect(
+  return packages.source.inspect(
     requiredCommandArgument(args, 0, "source URL"),
   )
     .then((source) => ({ source }));
 }
 export function versions(...args: string[]) {
   const parsed = parseCommandArguments(args, { values: ["limit"] });
-  return kernel.packages.versions.list(
+  return packages.versions.list(
     requiredCommandArgument(parsed.positionals, 0, "package ID"),
     parsed.options.limit === undefined
       ? undefined
@@ -96,7 +97,7 @@ export function synchronize(...args: string[]) {
   const selected = typeof parsed.options.packages === "string"
     ? parsed.options.packages.split(",").filter(Boolean)
     : [];
-  return kernel.packages.synchronize(
+  return packages.synchronize(
     selected,
     kernel.execution.optionalSecret("git-token"),
   ).then((packages) => ({
@@ -108,13 +109,13 @@ export function localCreate(...args: string[]) {
   const identity = packageIdentity(
     requiredCommandArgument(parsed.positionals, 0, "package ID"),
   );
-  return kernel.packages.local.create({
+  return packages.local.create({
     ...identity,
     description: parsed.options.description as string | undefined,
   }).then((value) => ({ package: value }));
 }
 export function repositoryList() {
-  return kernel.packages.repository.list().then((repositories) => ({
+  return packages.repository.list().then((repositories) => ({
     repositories,
   }));
 }
@@ -123,13 +124,13 @@ export function repositoryOne(
   args: string[],
 ) {
   const packageId = requiredCommandArgument(args, 0, "package ID");
-  return kernel.packages.repository[action](packageId).then((repository) => ({
+  return packages.repository[action](packageId).then((repository) => ({
     repository,
   }));
 }
 export function repositoryCheckout(...args: string[]) {
   const parsed = parseCommandArguments(args, { values: ["branch", "commit"] });
-  return kernel.packages.repository.checkout({
+  return packages.repository.checkout({
     packageId: requiredCommandArgument(parsed.positionals, 0, "package ID"),
     branch: parsed.options.branch as string | undefined,
     commit: parsed.options.commit as string | undefined,
@@ -139,7 +140,7 @@ export function repositoryInitialize(...args: string[]) {
   const parsed = parseCommandArguments(args, {
     values: ["author-name", "author-email", "message"],
   });
-  return kernel.packages.repository.initialize({
+  return packages.repository.initialize({
     package_id: requiredCommandArgument(parsed.positionals, 0, "package ID"),
     author_name: parsed.options["author-name"],
     author_email: parsed.options["author-email"],
@@ -148,7 +149,7 @@ export function repositoryInitialize(...args: string[]) {
 }
 export function repositoryRemote(...args: string[]) {
   const parsed = parseCommandArguments(args, { values: ["name", "url"] });
-  return kernel.packages.repository.remote({
+  return packages.repository.remote({
     package_id: requiredCommandArgument(parsed.positionals, 0, "package ID"),
     name: parsed.options.name,
     url: parsed.options.url,
