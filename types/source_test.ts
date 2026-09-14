@@ -71,6 +71,7 @@ Deno.test("Git fields retain meaning and independent paged choices across screen
     current_commit: "abc",
     versions: [{
       commit: "abc",
+      parents: [],
       short_commit: "abc",
       authored_at: "2026-09-07T00:00:00Z",
       author: "Example",

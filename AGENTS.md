@@ -130,7 +130,8 @@ below.
 
 - Own authored schemas and administrative command programs for packages,
   activation batches, activation members, and hook runs, plus reusable package
-  and package-program reference fields.
+  and package-program reference fields, program metadata, and shared command
+  argument helpers.
 - Do not own Git worktrees, schema DDL, application tables, services, or the
   kernel's built-in `_8020_*` catalog.
 
@@ -147,9 +148,27 @@ below.
   programs and UUI. It checks the declared `packages.package.*` and
   `packages.repository.edit` permissions before native mutations. Values are
   canonical package IDs; synchronizing the entire index checks value `*`. Reads
-  retain the typed kernel API. Native command recovery remains independent and
-  package commands run as system. `declarations/auth.toml` documents keys.
+  use typed kernel APIs; selected inspection adds package-owned program
+  metadata. Native command recovery remains independent and package commands run
+  as system. `declarations/auth.toml` documents keys.
 
+- Direct application package mutations additionally require the shared system
+  role `development`, including when invoked as `system`. Test and production
+  use the deployment package's reviewed import/run owner. Native recovery stays
+  independent of this application policy.
+
+- `commands.ts` provides `parseCommandArguments` and `requiredCommandArgument`
+  for package command programs. It preserves raw positional text and raises the
+  SDK's structured `invalid_arguments` errors.
+- `programs.ts` owns program manifest schema, descriptions, discovery/UI flags,
+  and default layout metadata. It reads bounded real TOML without importing
+  program code. `listPrograms()` enriches native ready executable records; UUI
+  discovery and loading share `readProgramManifest`.
+- Native program records contain no application metadata. Metadata errors are
+  reported separately as `metadata_error`, retaining native identity/validity
+  and healthy catalog entries. Invalid metadata offers no interactive launch;
+  native program execution remains independent. `src/admin.ts` enriches selected
+  package inspection through this same reader.
 - Exact active commits and activation phases are durable database state.
 - Hook completion is at-least-once and therefore records attempts and success
   independently for each package and hook.
@@ -157,7 +176,7 @@ below.
   authoritative shared paths.
 - Semantic package/program fields carry ordinary Zod string schemas and server
   callbacks. Package value help searches the catalog table in bounded pages;
-  program value help searches the kernel's ready-program catalog and returns
+  program value help searches the enriched ready-program catalog and returns
   only the requested page. Lazy open callbacks call the owning admin-core UUI
   entrypoints. Field imports perform no runtime work.
 - Flat `cbus/commands/*.toml` declarations use a required `command` field for
@@ -172,6 +191,12 @@ below.
 
 # Work Guidance
 
+- Build only what the request and established contracts require. Before adding a
+  mechanism, identify that need and why existing owners or standard tools cannot
+  meet it. Do not invent stronger guarantees for hypothetical cases. Remove
+  unsupported additions at closeout; agent-written tests and DOX do not
+  authorize them. Preserve required correctness, security, and data integrity.
+
 - Keep package catalog and activation-history responsibilities separate from
   application features. Reuse ordinary programs, hooks, and typed kernel
   operations; native Git and source publication remain kernel foundations, not a
@@ -184,5 +209,7 @@ below.
 
 - `deno task check` formats, lints, and type-checks fields, tables, and
   programs.
-- `deno task test` verifies table descriptors, composite identities, and bounded
-  Git field lookup and customization.
+- `deno task test` verifies command parsing/errors, bounded program metadata
+  reads, catalog/inspection composition without importing programs, table
+  descriptors, identities, and bounded Git field lookup/customization. Tests use
+  temporary files with read/write permission.

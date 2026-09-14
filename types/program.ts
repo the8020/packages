@@ -5,9 +5,9 @@ export const programId: z.ZodString = field(z.string(), {
   description:
     "Choose a program to run. **Interactive** programs open a screen; **background** programs run as jobs.",
   valueHelp: async (request) => {
-    const { kernel } = await import("@the8020/kernel");
+    const { listPrograms } = await import("../programs.ts");
     const { queryValueHelp } = await import("/p/the8020/uui/lists.ts");
-    const rows = (await kernel.programs.list()).sort((a, b) =>
+    const rows = (await listPrograms()).sort((a, b) =>
       a.program_id.localeCompare(b.program_id)
     ).map((program) => ({
       programId: program.program_id,
@@ -59,6 +59,11 @@ export const programInfo = z.object({
   discoverable: field(z.boolean(), {
     label: "Listed on Home",
     description: "Whether an interactive program appears in the Home catalog.",
+  }),
+  metadataError: field(z.string(), {
+    label: "Metadata error",
+    description:
+      "Why the program description or presentation metadata could not be read.",
   }),
   defaultLayout: field(z.string(), {
     label: "Default layout",

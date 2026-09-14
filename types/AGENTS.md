@@ -10,7 +10,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
 - `package.ts` and `program.ts` own references and descriptive metadata.
 - `source.ts` owns file/Git metadata and branch, commit, install-version, and
   installed-version field builders using the supplied bounded inspection.
-- The catalog and kernel own discovery; admin-core owns linked screens.
+- `../programs.ts` enriches native executable discovery with application
+  metadata; admin-core owns linked screens.
 
 # Local Contracts
 
