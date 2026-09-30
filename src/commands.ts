@@ -77,8 +77,10 @@ export function indexSet(...args: string[]) {
   }).then((value) => ({ package: value }));
 }
 export function sourceInspect(...args: string[]) {
+  const parsed = parseCommandArguments(args, { values: ["secret"] });
   return packages.source.inspect(
-    requiredCommandArgument(args, 0, "source URL"),
+    requiredCommandArgument(parsed.positionals, 0, "source URL"),
+    { secret: parsed.options.secret as string | undefined },
   )
     .then((source) => ({ source }));
 }

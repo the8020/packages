@@ -9,6 +9,7 @@ import {
   kernelInvokeSymbol,
 } from "@the8020/kernel";
 import remove from "../programs/delete/program.ts";
+import { sourceInspect } from "./commands.ts";
 
 (globalThis as unknown as Record<symbol, unknown>)[
   kernelDatabaseBackendSymbol
@@ -58,6 +59,50 @@ Deno.test("package delete requires an ID and explicit confirmation", async () =>
       "development system",
     );
     assertEquals(calls.length, 1);
+  } finally {
+    delete (globalThis as unknown as Record<symbol, unknown>)[
+      kernelInvokeSymbol
+    ];
+  }
+});
+
+Deno.test("source inspection forwards an optional secret name", async () => {
+  const calls: unknown[] = [];
+  (globalThis as unknown as Record<symbol, unknown>)[kernelInvokeSymbol] =
+    ((operation, input) => {
+      if (operation === "database.execute") {
+        return Promise.resolve({
+          columns: ["value"],
+          rows: [[{
+            type: "json",
+            value: {
+              id: "a07a0d1f-a160-48cf-8b50-b3770129a232",
+              name: "Test",
+              role: "development",
+            },
+          }]],
+        });
+      }
+      calls.push(input);
+      return Promise.resolve({
+        success: true,
+        result: { source: { package_id: "team/private" } },
+      });
+    }) satisfies KernelInvoke;
+  try {
+    const source = "https://gitlab.example.com/group/team/private.git";
+    assertThrows(() => sourceInspect(), AdminCommandError);
+    await sourceInspect(source, "--secret", "gitlab");
+    await sourceInspect(source);
+    await sourceInspect(source, "--secret", " ");
+    assertEquals(calls, [
+      {
+        operation: "package.source.inspect",
+        input: { source, secret: "gitlab" },
+      },
+      { operation: "package.source.inspect", input: { source } },
+      { operation: "package.source.inspect", input: { source } },
+    ]);
   } finally {
     delete (globalThis as unknown as Record<symbol, unknown>)[
       kernelInvokeSymbol

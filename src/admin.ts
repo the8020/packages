@@ -35,6 +35,19 @@ export interface PackageInspection {
   inspection_errors?: string[] | null;
 }
 
+/** The package ID the kernel derives from a source URL's final two segments. */
+function sourcePackageId(source: string): string {
+  try {
+    const parts = new URL(source.trim()).pathname.split("/").filter(Boolean);
+    const repository = parts.at(-1)?.replace(/\.git$/, "");
+    const author = parts.at(-2);
+    if (author && repository) return `${author}/${repository}`;
+  } catch {
+    // The kernel rejects the invalid source with its own message.
+  }
+  return source;
+}
+
 async function requireMutation(action: string, value: string) {
   await requirePermission(action, value);
   await requireDevelopment();
@@ -44,9 +57,22 @@ async function requireMutation(action: string, value: string) {
 export const packages = {
   ...kernel.packages,
   source: {
-    async inspect(source: string) {
+    /** Inspect a source; a secret name authenticates a private repository. */
+    async inspect(source: string, options: { secret?: string } = {}) {
+      const secret = options.secret?.trim();
+      if (secret) {
+        // Using a credential against an arbitrary URL needs the same authority
+        // as recording that credential on the package.
+        await requirePermission(
+          "packages.package.edit",
+          sourcePackageId(source),
+        );
+      }
       await requireDevelopment();
-      return await kernel.packages.source.inspect(source);
+      return await kernel.packages.source.inspect(
+        source,
+        secret ? { secret } : {},
+      );
     },
   },
   versions: {

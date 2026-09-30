@@ -1,9 +1,11 @@
 version = 1
 command = "packages.source.inspect"
 program = "the8020/packages/source-inspect"
-summary = "Inspect public package source"
-usage = "<source-url>"
+summary = "Inspect package source"
+usage = "<source-url> [--secret <name>]"
 mutates_state = false
 restart_behavior = "none"
 [[examples]]
 command = "packages.source.inspect https://github.com/the8020/uui.git"
+[[examples]]
+command = "packages.source.inspect https://gitlab.example.com/group/team/private.git --secret gitlab"
