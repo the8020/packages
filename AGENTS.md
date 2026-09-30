@@ -151,6 +151,11 @@ below.
   use typed kernel APIs; selected inspection adds package-owned program
   metadata. Native command recovery remains independent and package commands run
   as system. `declarations/auth.toml` documents keys.
+- Source inspection accepts an optional global secret name for private
+  repositories. Naming one requires `packages.package.edit` on the package ID
+  derived from the URL's final two path segments, the same authority as storing
+  that secret on the package; public inspection keeps only the development
+  system check. The value is resolved only by the kernel and never returned.
 
 - Direct application package mutations additionally require the shared system
   role `development`, including when invoked as `system`. Test and production
