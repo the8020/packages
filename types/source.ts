@@ -24,7 +24,8 @@ export const sourceInfo = z.object({
   }),
   source: field(z.string(), {
     label: "Git URL",
-    description: "The HTTPS Git repository URL to install or update from.",
+    description:
+      "The HTTP or HTTPS Git repository URL to install or update from.",
   }),
   path: field(z.string(), {
     label: "Path",

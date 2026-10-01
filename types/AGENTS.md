@@ -26,6 +26,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
   fields through ordinary list filtering, sorting, and paging. The choice values
   remain `latest`, `tag:<name>`, or `commit:<hash>` for version selection. They
   query no external data.
+- Git source help accepts HTTP and HTTPS; the system owner chooses transport
+  security. Native package operations own source validation.
 - Keep package namespaces distinct from commit author names.
 - Known inspection/catalog statuses, program kinds, repository states, file
   types, and Git reference kinds use shared `choiceHelp`. Catalog package state

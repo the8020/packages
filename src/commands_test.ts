@@ -26,7 +26,7 @@ Deno.test("package delete requires an ID and explicit confirmation", async () =>
           rows: [[{
             type: "json",
             value: {
-              id: "a07a0d1f-a160-48cf-8b50-b3770129a232",
+              id: "sys-a07a0d1fa1",
               name: "Test",
               role,
             },
@@ -76,7 +76,7 @@ Deno.test("source inspection forwards an optional secret name", async () => {
           rows: [[{
             type: "json",
             value: {
-              id: "a07a0d1f-a160-48cf-8b50-b3770129a232",
+              id: "sys-a07a0d1fa1",
               name: "Test",
               role: "development",
             },
