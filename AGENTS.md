@@ -161,6 +161,11 @@ below.
   role `development`, including when invoked as `system`. Test and production
   use the deployment package's reviewed import/run owner. Native recovery stays
   independent of this application policy.
+- Repository fetch uses the same authorized API and refreshes available
+  refs/tags without changing desired or active versions. Installation and
+  explicit version application retain an attached Git branch; branch state
+  remains native Git metadata, and the catalog continues to record exact
+  commits.
 
 - `commands.ts` provides `parseCommandArguments` and `requiredCommandArgument`
   for package command programs. It preserves raw positional text and raises the

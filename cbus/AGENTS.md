@@ -17,6 +17,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
 - Keep declarations flat. Filenames do not define command identity, and
   duplicate public names are invalid.
 - `packages.delete <package-id> --confirm` exposes confirmed package deletion.
+- `packages.repository.fetch <package-id>` downloads refs/tags without moving
+  the installed checkout or activating a version.
 
 # Work Guidance
 

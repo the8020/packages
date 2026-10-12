@@ -155,6 +155,10 @@ export const packages = {
       await requireMutation("packages.repository.edit", input.packageId);
       return kernel.packages.repository.checkout(input);
     },
+    async fetch(packageId: string) {
+      await requireMutation("packages.repository.edit", packageId);
+      return kernel.packages.repository.fetch(packageId);
+    },
     async pull(packageId: string) {
       await requireMutation("packages.repository.edit", packageId);
       return kernel.packages.repository.pull(packageId);

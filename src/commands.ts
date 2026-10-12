@@ -121,7 +121,7 @@ export function repositoryList() {
   }));
 }
 export function repositoryOne(
-  action: "inspect" | "status" | "pull" | "push",
+  action: "inspect" | "status" | "fetch" | "pull" | "push",
   args: string[],
 ) {
   const packageId = requiredCommandArgument(args, 0, "package ID");

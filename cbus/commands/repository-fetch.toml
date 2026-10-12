@@ -1,0 +1,9 @@
+version = 1
+command = "packages.repository.fetch"
+program = "the8020/packages/repository-fetch"
+summary = "Fetch available package versions without activating them"
+usage = "<package-id>"
+mutates_state = true
+restart_behavior = "none"
+[[examples]]
+command = "packages.repository.fetch the8020/uui"

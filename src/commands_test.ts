@@ -9,6 +9,7 @@ import {
   kernelInvokeSymbol,
 } from "@the8020/kernel";
 import remove from "../programs/delete/program.ts";
+import fetchRepository from "../programs/repository-fetch/program.ts";
 import { sourceInspect } from "./commands.ts";
 
 (globalThis as unknown as Record<symbol, unknown>)[
@@ -103,6 +104,47 @@ Deno.test("source inspection forwards an optional secret name", async () => {
       { operation: "package.source.inspect", input: { source } },
       { operation: "package.source.inspect", input: { source } },
     ]);
+  } finally {
+    delete (globalThis as unknown as Record<symbol, unknown>)[
+      kernelInvokeSymbol
+    ];
+  }
+});
+
+Deno.test("repository fetch uses the authorized package API without applying a version", async () => {
+  const calls: unknown[] = [];
+  let role = "development";
+  (globalThis as unknown as Record<symbol, unknown>)[kernelInvokeSymbol] =
+    ((operation, input) => {
+      if (operation === "database.execute") {
+        return Promise.resolve({
+          columns: ["value"],
+          rows: [[{
+            type: "json",
+            value: { id: "sys-a07a0d1fa1", name: "Test", role },
+          }]],
+        });
+      }
+      calls.push(input);
+      return Promise.resolve({
+        success: true,
+        result: { repository: { package_id: "the8020/example" } },
+      });
+    }) satisfies KernelInvoke;
+  try {
+    assertThrows(() => fetchRepository(), AdminCommandError);
+    await fetchRepository("the8020/example");
+    assertEquals(calls, [{
+      operation: "package.repository.fetch",
+      input: { package_id: "the8020/example" },
+    }]);
+    role = "production";
+    await assertRejects(
+      () => fetchRepository("the8020/example"),
+      Error,
+      "development system",
+    );
+    assertEquals(calls.length, 1);
   } finally {
     delete (globalThis as unknown as Record<symbol, unknown>)[
       kernelInvokeSymbol
