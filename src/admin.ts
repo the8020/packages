@@ -104,11 +104,15 @@ export const packages = {
     await requireMutation("packages.package.delete", packageId);
     return kernel.packages.delete(packageId, confirm);
   },
-  async synchronize(packageIds: string[] = [], gitToken?: string) {
+  async synchronize(
+    packageIds: string[] = [],
+    gitToken?: string,
+    schema: Parameters<typeof kernel.packages.synchronize>[3] = {},
+  ) {
     for (const id of packageIds.length ? packageIds : ["*"]) {
       await requireMutation("packages.package.synchronize", id);
     }
-    return kernel.packages.synchronize(packageIds, gitToken);
+    return kernel.packages.synchronize(packageIds, gitToken, undefined, schema);
   },
   index: {
     ...kernel.packages.index,
