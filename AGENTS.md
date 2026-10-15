@@ -118,6 +118,8 @@ below.
 - [types/AGENTS.md](types/AGENTS.md): Define shared package and program
   metadata, source/version fields, searchable value help, and administration
   links.
+- [vendor/AGENTS.md](vendor/AGENTS.md): Pin and bundle both existing TOML
+  parsers with original types and licenses.
 
 # Purpose
 
@@ -136,6 +138,12 @@ below.
   kernel's built-in `_8020_*` catalog.
 
 # Local Contracts
+
+- `vendor/` owns the committed external TOML bundles and original type
+  entrypoints; `deno task bundle` regenerates them before publication. Program
+  manifests keep smol-toml; `toml.ts` exposes the unchanged standard TOML parser
+  for service and authorization declarations. Application modules remain
+  ordinary imports.
 
 - Package `declarations/` files describe shared capabilities for developers and
   discovery tools. `auth.toml` maps authorization keys to descriptions;
