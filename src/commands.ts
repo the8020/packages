@@ -94,13 +94,23 @@ export function versions(...args: string[]) {
   ).then((value) => ({ package: value }));
 }
 export function synchronize(...args: string[]) {
-  const parsed = parseCommandArguments(args, { values: ["packages"] });
+  const parsed = parseCommandArguments(args, {
+    values: ["packages", "force", "approved-plan"],
+    booleans: ["schema"],
+  });
   const selected = typeof parsed.options.packages === "string"
     ? parsed.options.packages.split(",").filter(Boolean)
     : [];
   return packages.synchronize(
     selected,
     kernel.execution.optionalSecret("git-token"),
+    {
+      force_columns: typeof parsed.options.force === "string"
+        ? parsed.options.force.split(",").filter(Boolean)
+        : [],
+      approved_plan: parsed.options["approved-plan"] as string | undefined,
+      schema_preview: parsed.options.schema === true,
+    },
   ).then((packages) => ({
     packages,
   }));

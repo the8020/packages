@@ -2,9 +2,8 @@ import {
   kernel,
   type ProgramSummary as ExecutableProgram,
 } from "@the8020/kernel";
-// Public modules load under the importing package's map.
-// deno-lint-ignore no-import-prefix
-import { parse } from "npm:smol-toml@1.8.0";
+// @deno-types="./vendor/smol-toml.ts"
+import { parse } from "./vendor/smol-toml.js";
 
 export interface ProgramManifest {
   schema: 1;

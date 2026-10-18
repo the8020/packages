@@ -10,11 +10,77 @@ import {
 } from "@the8020/kernel";
 import remove from "../programs/delete/program.ts";
 import fetchRepository from "../programs/repository-fetch/program.ts";
-import { sourceInspect } from "./commands.ts";
+import { sourceInspect, synchronize } from "./commands.ts";
 
 (globalThis as unknown as Record<symbol, unknown>)[
   kernelDatabaseBackendSymbol
 ] = "sqlite";
+
+Deno.test("schema synchronization transports exact consent and rejects old native capability", async () => {
+  const globals = globalThis as unknown as Record<symbol, unknown>;
+  const original = globals[kernelInvokeSymbol];
+  const calls: Record<string, unknown>[] = [];
+  let version = 2;
+  globals[kernelInvokeSymbol] = ((operation, input) => {
+    if (operation === "database.execute") {
+      return Promise.resolve({
+        columns: ["value"],
+        rows: [[{
+          type: "json",
+          value: { id: "sys-a07a0d1fa1", name: "Test", role: "development" },
+        }]],
+      });
+    }
+    calls.push(input);
+    return Promise.resolve({
+      success: true,
+      result: input.operation === "activation.schema_evolution"
+        ? version
+        : { packages: [] },
+    });
+  }) satisfies KernelInvoke;
+  try {
+    await synchronize(
+      "--packages",
+      "acme/orders",
+      "--force",
+      "acme__orders__orders.status",
+      "--approved-plan",
+      "a".repeat(64),
+    );
+    assertEquals(calls, [{
+      operation: "activation.schema_evolution",
+      input: {},
+    }, {
+      operation: "package.synchronize",
+      input: {
+        packages: "acme/orders",
+        force_columns: "acme__orders__orders.status",
+        approved_plan: "a".repeat(64),
+        schema_preview: false,
+      },
+    }]);
+    version = 0;
+    calls.length = 0;
+    await assertRejects(
+      () =>
+        synchronize(
+          "--packages",
+          "acme/orders",
+          "--force",
+          "acme__orders__orders.status",
+        ),
+      Error,
+      "updated kernel",
+    );
+    assertEquals(calls, [{
+      operation: "activation.schema_evolution",
+      input: {},
+    }]);
+  } finally {
+    globals[kernelInvokeSymbol] = original;
+  }
+});
 
 Deno.test("package delete requires an ID and explicit confirmation", async () => {
   const calls: unknown[] = [];

@@ -118,6 +118,8 @@ below.
 - [types/AGENTS.md](types/AGENTS.md): Define shared package and program
   metadata, source/version fields, searchable value help, and administration
   links.
+- [vendor/AGENTS.md](vendor/AGENTS.md): Pin and bundle both existing TOML
+  parsers with original types and licenses.
 
 # Purpose
 
@@ -136,6 +138,12 @@ below.
   kernel's built-in `_8020_*` catalog.
 
 # Local Contracts
+
+- `vendor/` owns the committed external TOML bundles and original type
+  entrypoints; `deno task bundle` regenerates them before publication. Program
+  manifests keep smol-toml; `toml.ts` exposes the unchanged standard TOML parser
+  for service and authorization declarations. Application modules remain
+  ordinary imports.
 
 - Package `declarations/` files describe shared capabilities for developers and
   discovery tools. `auth.toml` maps authorization keys to descriptions;
@@ -198,6 +206,13 @@ below.
 - `packages.delete <package-id> --confirm` delegates to the shared kernel
   deletion API. It removes installed source and retires the live package/table
   catalog while retaining table data and activation history.
+- Synchronization accepts `--schema` for a read-only candidate plan and
+  `--force table-id.column[,table-id.column]` for exact incompatible-cell
+  NULL/default consent. Either requires one explicit package; normal application
+  permission/development-role checks remain. Native recovery and production
+  deployment use the same DB policy, cleanup-first repair and committed-receipt
+  recovery, not a second schema implementation. Force never authorizes package
+  deletion or trim.
 
 # Work Guidance
 
@@ -214,6 +229,15 @@ below.
 - Keep desired versions, active commits, and hook attempts authoritative in
   their database owners. Local paths and discovery indexes are derived; bound
   inspection and verify publication failures across the package/kernel boundary.
+
+## UI Rules
+
+- Do not add explanatory helper copy that restates what the control already
+  implies (e.g. "optional", "works without selection", "failure falls back to
+  X"). Prefer clear labels and option text; surface status in results when
+  needed, not as instructional paragraphs under every field.
+- Keep UI copy concise. Avoid tutorial-style descriptions unless the user
+  explicitly asks for onboarding help.
 
 # Verification
 

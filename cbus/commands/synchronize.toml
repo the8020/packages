@@ -2,7 +2,7 @@ version = 1
 command = "packages.synchronize"
 program = "the8020/packages/synchronize"
 summary = "Synchronize desired packages"
-usage = "[--packages <id,id,...>] [--git-token-stdin]"
+usage = "[--packages <id,id,...>] [--git-token-stdin] [--schema | --force <table-id.column,...>]"
 mutates_state = true
 restart_behavior = "none"
 [[secrets]]
@@ -14,3 +14,7 @@ stdin_option = "git-token-stdin"
 command = "packages.synchronize"
 [[examples]]
 command = "packages.synchronize --packages acme/private --git-token-stdin"
+[[examples]]
+command = "packages.synchronize --packages acme/orders --schema"
+[[examples]]
+command = "packages.synchronize --packages acme/orders --force acme__orders__documents.status"
