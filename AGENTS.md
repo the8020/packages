@@ -182,6 +182,16 @@ below.
   and default layout metadata. It reads bounded real TOML without importing
   program code. `listPrograms()` enriches native ready executable records; UUI
   discovery and loading share `readProgramManifest`.
+- `widgets.ts` owns the Home tile format. Each package may hold
+  `widgets/<name>.toml` (one tile: `schema = 1`, `title`, optional
+  `description`, `icon` as a Material Symbols name, `category` as lowercase
+  `/`-separated keys, `order`, required `[open]` with `program` and optional
+  string `arguments`, and optional `[data]` with a program, arguments and
+  `refresh` of 10–3600 seconds) and `widgets/categories.toml` (category keys
+  with `title`, optional `icon` and `order`). Texts are English; localization is
+  not part of the format yet. Unknown keys or invalid values reject only that
+  file as a reported problem. Categories merge by key across packages: the first
+  package in ID order defines each value. Reads are bounded and load no code.
 - Native program records contain no application metadata. Metadata errors are
   reported separately as `metadata_error`, retaining native identity/validity
   and healthy catalog entries. Invalid metadata offers no interactive launch;
