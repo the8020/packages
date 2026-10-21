@@ -15,6 +15,12 @@ export interface Widget {
   open: WidgetProgram;
   /** Optional live status, read by a non-interactive program. */
   data?: WidgetProgram & { refresh?: number };
+  /**
+   * Who sees the tile: users with the action for any value, or explicitly
+   * everyone signed in. Without it the tile is public too, but platform tiles
+   * must say so. Hiding is not enforcement.
+   */
+  visible?: { permission: string } | { public: true };
 }
 
 /** A program call: `namespace/package/program` with string arguments. */
@@ -48,6 +54,8 @@ const MAX_FILES_PER_PACKAGE = 256;
 const SEGMENT = /^[A-Za-z0-9][A-Za-z0-9._-]*$/;
 const CATEGORY = /^[a-z0-9][a-z0-9-]*(\/[a-z0-9][a-z0-9-]*)*$/;
 const ICON = /^[a-z0-9_]{1,64}$/;
+/** An exact declared action; patterns belong only in roles. */
+const ACTION = /^[A-Za-z0-9][A-Za-z0-9._-]{0,511}$/;
 
 /** Read every installed package's widget declarations without loading code. */
 export async function readWidgets(
@@ -119,6 +127,7 @@ export function parseWidget(text: string, id: string): Widget {
     "order",
     "open",
     "data",
+    "visible",
   ], "widget");
   if (source.schema !== 1n) throw new TypeError("widget schema must be 1");
   const open = table(source.open, "open");
@@ -136,6 +145,25 @@ export function parseWidget(text: string, id: string): Widget {
       data.refresh = refresh;
     }
   }
+  let visible: Widget["visible"];
+  if (source.visible !== undefined) {
+    const entry = table(source.visible, "visible");
+    allowOnly(entry, ["permission", "public"], "visible");
+    if (entry.public !== undefined) {
+      if (entry.public !== true || entry.permission !== undefined) {
+        throw new TypeError(
+          "visible.public must be true and exclude visible.permission",
+        );
+      }
+      visible = { public: true };
+    } else if (
+      typeof entry.permission !== "string" || !ACTION.test(entry.permission)
+    ) {
+      throw new TypeError("visible.permission must be an exact action name");
+    } else {
+      visible = { permission: entry.permission };
+    }
+  }
   return {
     id,
     package: parts.slice(0, 2).join("/"),
@@ -150,6 +178,7 @@ export function parseWidget(text: string, id: string): Widget {
     order: order(source.order ?? 0n, "order"),
     open: programCall(open, "open"),
     ...(data === undefined ? {} : { data }),
+    ...(visible === undefined ? {} : { visible }),
   };
 }
 

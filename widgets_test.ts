@@ -68,6 +68,37 @@ Deno.test("widget declarations accept an optional live data program", () => {
   }
 });
 
+Deno.test("widget declarations accept an exact visibility permission", () => {
+  assertEquals(
+    parseWidget(
+      `${users}\n[visible]\npermission = "the8020.users.user.view"\n`,
+      "the8020/users/users",
+    ).visible,
+    { permission: "the8020.users.user.view" },
+  );
+  assertEquals(
+    parseWidget(`${users}\n[visible]\npublic = true\n`, "the8020/users/users")
+      .visible,
+    { public: true },
+  );
+  for (
+    const [visible, message] of [
+      ['permission = "the8020.users.*"', "exact action name"],
+      ["permission = 1", "exact action name"],
+      ['permission = "a.b"\nrole = "x"', "unknown visible key role"],
+      ["public = false", "visible.public must be true"],
+      ['public = true\npermission = "a.b"', "exclude visible.permission"],
+    ] as const
+  ) {
+    assertThrows(
+      () =>
+        parseWidget(`${users}\n[visible]\n${visible}\n`, "the8020/users/users"),
+      TypeError,
+      message,
+    );
+  }
+});
+
 Deno.test("widget declarations reject unknown keys and invalid values", () => {
   for (
     const [text, message] of [

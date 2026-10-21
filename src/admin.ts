@@ -1,7 +1,8 @@
 import { kernel } from "@the8020/kernel";
 import { type ProgramMetadata, readProgramMetadata } from "../programs.ts";
 import { requireDevelopment } from "/p/the8020/system/profile.ts";
-import { requirePermission } from "/p/the8020/auth/mod.ts";
+import { filter, requirePermission } from "/p/the8020/auth/mod.ts";
+import { context } from "@the8020/context";
 
 interface ExecutablePackageProgram {
   program_id: string;
@@ -48,6 +49,24 @@ function sourcePackageId(source: string): string {
   return source;
 }
 
+const VIEW = "the8020.packages.package.view";
+
+/** Package reads are allowed per package ID. */
+function requireView(packageId: string) {
+  return requirePermission(VIEW, packageId);
+}
+
+/** Keep records of viewable packages; never audits. */
+export function viewablePackages<T extends { package_id: string }>(
+  rows: T[],
+): Promise<T[]> {
+  return filter(
+    context.username,
+    rows,
+    { package_id: VIEW } as Partial<Record<keyof T, string>>,
+  );
+}
+
 async function requireMutation(action: string, value: string) {
   await requirePermission(action, value);
   await requireDevelopment();
@@ -56,6 +75,11 @@ async function requireMutation(action: string, value: string) {
 /** Application package mutations shared by programs and administration screens. */
 export const packages = {
   ...kernel.packages,
+  async list<
+    Result extends { package_id: string } = { package_id: string },
+  >(): Promise<Result[]> {
+    return await viewablePackages(await kernel.packages.list<Result>());
+  },
   source: {
     /** Inspect a source; a secret name authenticates a private repository. */
     async inspect(source: string, options: { secret?: string } = {}) {
@@ -64,7 +88,7 @@ export const packages = {
         // Using a credential against an arbitrary URL needs the same authority
         // as recording that credential on the package.
         await requirePermission(
-          "packages.package.edit",
+          "the8020.packages.package.edit",
           sourcePackageId(source),
         );
       }
@@ -77,11 +101,13 @@ export const packages = {
   },
   versions: {
     async list(...args: Parameters<typeof kernel.packages.versions.list>) {
+      await requireView(args[0]);
       await requireDevelopment();
       return await kernel.packages.versions.list(...args);
     },
   },
   async inspect(packageId: string): Promise<PackageInspection> {
+    await requireView(packageId);
     const inspected = await kernel.packages.inspect<
       Omit<PackageInspection, "programs"> & {
         programs?: ExecutablePackageProgram[] | null;
@@ -101,7 +127,7 @@ export const packages = {
     return { ...inspected, programs };
   },
   async delete(packageId: string, confirm: true) {
-    await requireMutation("packages.package.delete", packageId);
+    await requireMutation("the8020.packages.package.delete", packageId);
     return kernel.packages.delete(packageId, confirm);
   },
   async synchronize(
@@ -110,15 +136,22 @@ export const packages = {
     schema: Parameters<typeof kernel.packages.synchronize>[3] = {},
   ) {
     for (const id of packageIds.length ? packageIds : ["*"]) {
-      await requireMutation("packages.package.synchronize", id);
+      await requireMutation("the8020.packages.package.synchronize", id);
     }
     return kernel.packages.synchronize(packageIds, gitToken, undefined, schema);
   },
   index: {
     ...kernel.packages.index,
+    async list() {
+      return await viewablePackages(await kernel.packages.index.list());
+    },
+    async inspect(packageId: string) {
+      await requireView(packageId);
+      return await kernel.packages.index.inspect(packageId);
+    },
     async set(input: Parameters<typeof kernel.packages.index.set>[0]) {
       await requireMutation(
-        "packages.package.edit",
+        "the8020.packages.package.edit",
         `${input.author}/${input.repository}`,
       );
       return kernel.packages.index.set(input);
@@ -127,7 +160,7 @@ export const packages = {
   local: {
     async create(input: Parameters<typeof kernel.packages.local.create>[0]) {
       await requireMutation(
-        "packages.package.create",
+        "the8020.packages.package.create",
         `${input.author}/${input.repository}`,
       );
       return kernel.packages.local.create(input);
@@ -135,11 +168,24 @@ export const packages = {
   },
   repository: {
     ...kernel.packages.repository,
+    async list() {
+      return await viewablePackages(
+        await kernel.packages.repository.list() as { package_id: string }[],
+      );
+    },
+    async status(packageId: string) {
+      await requireView(packageId);
+      return await kernel.packages.repository.status(packageId);
+    },
+    async inspect(packageId: string) {
+      await requireView(packageId);
+      return await kernel.packages.repository.inspect(packageId);
+    },
     async initialize(
       input: Parameters<typeof kernel.packages.repository.initialize>[0],
     ) {
       await requireMutation(
-        "packages.repository.edit",
+        "the8020.packages.repository.edit",
         String(input.package_id),
       );
       return kernel.packages.repository.initialize(input);
@@ -148,7 +194,7 @@ export const packages = {
       input: Parameters<typeof kernel.packages.repository.remote>[0],
     ) {
       await requireMutation(
-        "packages.repository.edit",
+        "the8020.packages.repository.edit",
         String(input.package_id),
       );
       return kernel.packages.repository.remote(input);
@@ -156,19 +202,22 @@ export const packages = {
     async checkout(
       input: Parameters<typeof kernel.packages.repository.checkout>[0],
     ) {
-      await requireMutation("packages.repository.edit", input.packageId);
+      await requireMutation(
+        "the8020.packages.repository.edit",
+        input.packageId,
+      );
       return kernel.packages.repository.checkout(input);
     },
     async fetch(packageId: string) {
-      await requireMutation("packages.repository.edit", packageId);
+      await requireMutation("the8020.packages.repository.edit", packageId);
       return kernel.packages.repository.fetch(packageId);
     },
     async pull(packageId: string) {
-      await requireMutation("packages.repository.edit", packageId);
+      await requireMutation("the8020.packages.repository.edit", packageId);
       return kernel.packages.repository.pull(packageId);
     },
     async push(packageId: string) {
-      await requireMutation("packages.repository.edit", packageId);
+      await requireMutation("the8020.packages.repository.edit", packageId);
       return kernel.packages.repository.push(packageId);
     },
   },

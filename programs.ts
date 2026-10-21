@@ -26,7 +26,9 @@ export interface ProgramSummary extends ExecutableProgram, ProgramMetadata {}
 
 /** Read application metadata alongside the native ready-executable catalog. */
 export async function listPrograms(): Promise<ProgramSummary[]> {
-  const programs = await kernel.programs.list();
+  // Programs are package contents: list only those of viewable packages.
+  const { viewablePackages } = await import("./src/admin.ts");
+  const programs = await viewablePackages(await kernel.programs.list());
   const result: ProgramSummary[] = [];
   for (const program of programs) {
     result.push({ ...program, ...await readProgramMetadata(program) });

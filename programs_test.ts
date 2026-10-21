@@ -6,6 +6,21 @@ import {
   type ProgramSummary,
 } from "@the8020/kernel";
 import { packages } from "./src/admin.ts";
+import { installContextProvider } from "../kernel/defaults/config/runtime/deno/context/runtime.ts";
+
+/** Run as the system principal, which bypasses application permissions. */
+const asSystem = () =>
+  installContextProvider(() => ({
+    type: "program",
+    id: "the8020/packages/test",
+    userId: "user:system",
+    username: "system",
+    authenticated: true,
+    nodeId: "test",
+    sandboxId: "test",
+    workerId: "test",
+    contextId: "test",
+  }));
 
 Deno.test("program manifests parse TOML and reject invalid UUI flags", async () => {
   const root = await Deno.makeTempDir({ prefix: "the8020-manifest-test-" });
@@ -130,7 +145,8 @@ Deno.test("application catalog reads metadata without loading code or changing n
       }
       throw new Error(`unexpected native operation ${operation}`);
     }) satisfies KernelInvoke;
-    const programs = await listPrograms();
+    const restoreContext = asSystem();
+    const programs = await listPrograms().finally(restoreContext);
     assertEquals(
       programs.map((program) => program.program_id),
       definitions.map((program) => program.program_id),
@@ -146,7 +162,10 @@ Deno.test("application catalog reads metadata without loading code or changing n
     );
     assertEquals(programs[2]!.uui, false);
     assertEquals(programs[2]!.metadata_error, undefined);
-    const inspection = await packages.inspect("acme/tools");
+    const restoreInspect = asSystem();
+    const inspection = await packages.inspect("acme/tools").finally(
+      restoreInspect,
+    );
     assertEquals(inspection.programs![0]!.uui, true);
     assertEquals(inspection.programs![1]!.valid, true);
     assertEquals(

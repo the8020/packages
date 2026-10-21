@@ -153,17 +153,23 @@ below.
   rules.
 
 - `src/admin.ts` is the application-facing package API shared by command
-  programs and UUI. It checks the declared `packages.package.*` and
-  `packages.repository.edit` permissions before native mutations. Values are
-  canonical package IDs; synchronizing the entire index checks value `*`. Reads
-  use typed kernel APIs; selected inspection adds package-owned program
+  programs and UUI. Reads require `the8020.packages.package.view` with the
+  package ID: `inspect`, `versions.list`, `index.inspect`, `repository.inspect`
+  and `repository.status` check it; `list`, `index.list`, `repository.list` and
+  `listPrograms()` keep only viewable packages through auth's unaudited `filter`
+  (`viewablePackages`). Source inspection of a not yet indexed URL keeps the
+  development check only. It checks the declared `packages.package.*` and
+  `the8020.packages.repository.edit` permissions before native mutations. Values
+  are canonical package IDs; synchronizing the entire index checks value `*`.
+  Reads use typed kernel APIs; selected inspection adds package-owned program
   metadata. Native command recovery remains independent and package commands run
   as system. `declarations/auth.toml` documents keys.
 - Source inspection accepts an optional global secret name for private
-  repositories. Naming one requires `packages.package.edit` on the package ID
-  derived from the URL's final two path segments, the same authority as storing
-  that secret on the package; public inspection keeps only the development
-  system check. The value is resolved only by the kernel and never returned.
+  repositories. Naming one requires `the8020.packages.package.edit` on the
+  package ID derived from the URL's final two path segments, the same authority
+  as storing that secret on the package; public inspection keeps only the
+  development system check. The value is resolved only by the kernel and never
+  returned.
 
 - Direct application package mutations additionally require the shared system
   role `development`, including when invoked as `system`. Test and production
@@ -186,12 +192,14 @@ below.
   `widgets/<name>.toml` (one tile: `schema = 1`, `title`, optional
   `description`, `icon` as a Material Symbols name, `category` as lowercase
   `/`-separated keys, `order`, required `[open]` with `program` and optional
-  string `arguments`, and optional `[data]` with a program, arguments and
-  `refresh` of 10–3600 seconds) and `widgets/categories.toml` (category keys
-  with `title`, optional `icon` and `order`). Texts are English; localization is
-  not part of the format yet. Unknown keys or invalid values reject only that
-  file as a reported problem. Categories merge by key across packages: the first
-  package in ID order defines each value. Reads are bounded and load no code.
+  string `arguments`, optional `[data]` with a program, arguments and `refresh`
+  of 10–3600 seconds, and optional `[visible]` with either an exact action
+  `permission` (no patterns) or `public = true`) and `widgets/categories.toml`
+  (category keys with `title`, optional `icon` and `order`). Texts are English;
+  localization is not part of the format yet. Unknown keys or invalid values
+  reject only that file as a reported problem. Categories merge by key across
+  packages: the first package in ID order defines each value. Reads are bounded
+  and load no code.
 - Native program records contain no application metadata. Metadata errors are
   reported separately as `metadata_error`, retaining native identity/validity
   and healthy catalog entries. Invalid metadata offers no interactive launch;
