@@ -1,3 +1,4 @@
+import { text } from "/p/the8020/i18n/mod.ts";
 import { assert, assertEquals } from "@std/assert";
 import {
   field,
@@ -25,7 +26,7 @@ Deno.test("Git fields retain meaning and independent paged choices across screen
   });
   const second = sourceVersion();
   const customized = field(first.optional(), { label: "Version to install" });
-  assertEquals(fieldMetadata(first)?.label, "Version");
+  assertEquals(text(fieldMetadata(first)?.label), "Version");
   assertEquals(
     fieldMetadata(customized)?.description,
     fieldMetadata(first)?.description,

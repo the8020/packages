@@ -1,3 +1,4 @@
+import { metadataText } from "./localization.ts";
 import {
   kernel,
   type ProgramSummary as ExecutableProgram,
@@ -31,7 +32,10 @@ export async function listPrograms(): Promise<ProgramSummary[]> {
   const programs = await viewablePackages(await kernel.programs.list());
   const result: ProgramSummary[] = [];
   for (const program of programs) {
-    result.push({ ...program, ...await readProgramMetadata(program) });
+    result.push({
+      ...program,
+      ...await readProgramMetadata(program, program.program_id),
+    });
   }
   return result;
 }
@@ -39,6 +43,7 @@ export async function listPrograms(): Promise<ProgramSummary[]> {
 /** Metadata failures leave executable identity and native diagnostics intact. */
 export async function readProgramMetadata(
   program: Pick<ExecutableProgram, "entrypoint" | "entrypoint_url">,
+  id?: string,
 ): Promise<ProgramMetadata> {
   try {
     if (!safeRelativePath(program.entrypoint)) {
@@ -53,7 +58,13 @@ export async function readProgramMetadata(
     }
     const manifest = await readProgramManifest(path);
     return {
-      description: manifest.description,
+      description: id
+        ? await metadataText(
+          id.split("/").slice(0, 2).join("/"),
+          `programs.${id.split("/")[2]}.description`,
+          manifest.description,
+        )
+        : manifest.description,
       discoverable: manifest.discoverable,
       uui: manifest.uui,
       ...(manifest.defaultLayout

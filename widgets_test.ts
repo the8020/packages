@@ -1,5 +1,10 @@
 import { assertEquals, assertThrows } from "@std/assert";
 import { parseWidget, parseWidgetCategories, readWidgets } from "./widgets.ts";
+import {
+  defaultConfiguration,
+  Localization,
+  withLocalization,
+} from "/p/the8020/i18n/mod.ts";
 
 const users = `schema = 1
 title = "Users"
@@ -185,6 +190,28 @@ Deno.test("installed widgets are read per package and isolate broken files", asy
       icon: "settings",
       order: 10,
     }]);
+    const localized = await withLocalization(
+      new Localization(
+        "cs",
+        defaultConfiguration,
+        (packageId) =>
+          Promise.resolve({
+            package: packageId,
+            language: "cs",
+            texts: packageId === "the8020/users"
+              ? {
+                "widgets.users.title": "Uživatelé",
+                "widgets.users.description": "Správa účtů",
+              }
+              : {} as Record<string, string>,
+          }),
+      ),
+      () => readWidgets(root),
+    );
+    assertEquals(localized.widgets[0]?.title, "Uživatelé");
+    assertEquals(localized.widgets[0]?.description, "Správa účtů");
+    assertEquals(localized.widgets[0]?.open, catalog.widgets[0]?.open);
+    assertEquals(localized.categories, catalog.categories);
   } finally {
     await Deno.remove(root, { recursive: true });
   }

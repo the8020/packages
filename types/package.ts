@@ -1,9 +1,9 @@
+import { msg } from "/p/the8020/packages/i18n/messages.ts";
 import { choiceHelp, field, z } from "/p/the8020/db/fields.ts";
 
 export const packageId: z.ZodString = field(z.string(), {
-  label: "Package",
-  description:
-    "Open a package to see its programs, services, and installed version.",
+  label: msg("package.package"),
+  description: msg("package.open_a_package_to_see_its_programs"),
   valueHelp: async (request) => {
     const { default: Packages } = await import("../tables/packages.ts");
     const { lookupPage } = await import("/p/the8020/db/lookup.ts");
@@ -23,39 +23,40 @@ export const packageId: z.ZodString = field(z.string(), {
 
 export const packageInfo = z.object({
   author: field(z.string(), {
-    label: "Author",
-    description: "The namespace that owns the package, such as `the8020`.",
+    label: msg("package.author"),
+    description: msg("package.the_namespace_that_owns_the_package_such"),
   }),
   repository: field(z.string(), {
-    label: "Repository",
-    description: "The package name within its author namespace.",
+    label: msg("package.repository"),
+    description: msg("package.the_package_name_within_its_author_namespace"),
   }),
   description: field(z.string(), {
-    label: "Description",
-    description: "What this package provides and when to use it.",
+    label: msg("package.description_label"),
+    description: msg("package.what_this_package_provides_and_when_to"),
   }),
   documentationUrl: field(z.string(), {
-    label: "Documentation",
-    description: "Where to find instructions for using this package.",
+    label: msg("package.documentation"),
+    description: msg("package.where_to_find_instructions_for_using_this"),
   }),
   license: field(z.string(), {
-    label: "License",
-    description:
-      "The terms under which this package may be used and distributed.",
+    label: msg("package.license"),
+    description: msg("package.the_terms_under_which_this_package_may"),
   }),
   valid: field(z.boolean(), {
-    label: "Valid",
-    description:
-      "Whether the package passed inspection and its declared content can be used.",
+    label: msg("package.valid"),
+    description: msg("package.whether_the_package_passed_inspection_and_its"),
   }),
   status: field(z.string(), {
-    label: "Status",
-    description: "Whether the package is ready to use or needs attention.",
-    valueHelp: choiceHelp(z.string(), ["Ready", "Needs attention"]),
+    label: msg("package.status"),
+    description: msg("package.whether_the_package_is_ready_to_use"),
+    valueHelp: choiceHelp(z.string(), [
+      msg("choices.ready"),
+      msg("package.needs_attention"),
+    ]),
   }),
   catalogState: field(z.string(), {
-    label: "Status",
-    description: "The package's activation state in the catalog.",
+    label: msg("package.status"),
+    description: msg("package.the_package_s_activation_state_in_the"),
     valueHelp: choiceHelp(z.string(), [
       "desired",
       "activating",
@@ -65,31 +66,31 @@ export const packageInfo = z.object({
     ]),
   }),
   serviceCount: field(z.number().int(), {
-    label: "Services",
-    description: "Number of services provided by this package.",
+    label: msg("package.services"),
+    description: msg("package.number_of_services_provided_by_this_package"),
   }),
   programCount: field(z.number().int(), {
-    label: "Programs",
-    description:
-      "Number of programs provided by this package, including hidden programs.",
+    label: msg("package.programs"),
+    description: msg("package.number_of_programs_provided_by_this_package"),
   }),
   fileCount: field(z.number().int(), {
-    label: "Visible files",
-    description: "Number of files included in this package inspection.",
+    label: msg("package.visible_files"),
+    description: msg("package.number_of_files_included_in_this_package"),
   }),
   validation: field(z.string(), {
-    label: "Validation",
-    description:
-      "Problems in the package declarations that must be corrected before use.",
+    label: msg("package.validation"),
+    description: msg("package.problems_in_the_package_declarations_that_must"),
   }),
   inspection: field(z.string(), {
-    label: "Inspection",
-    description:
-      "Problems encountered while reading or inspecting this package.",
+    label: msg("package.inspection"),
+    description: msg(
+      "package.problems_encountered_while_reading_or_inspecting_this",
+    ),
   }),
   issue: field(z.string(), {
-    label: "Needs attention",
-    description:
-      "Package validation or inspection problems to resolve before using its content.",
+    label: msg("package.needs_attention"),
+    description: msg(
+      "package.package_validation_or_inspection_problems_to_resolve",
+    ),
   }),
 });

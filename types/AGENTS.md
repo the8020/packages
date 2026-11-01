@@ -44,6 +44,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
 - Run `deno task check` and `deno task test` from the package root. UUI's
   existing Programs browser flow exercises program lookup and selection in Run
   program.
+- `package_test.ts` keeps manifest descriptions separate from field captions in
+  English and Czech.
 - `source_test.ts` checks independent field customization, version values,
   filtering, and page boundaries.
 

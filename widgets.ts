@@ -1,3 +1,4 @@
+import { metadataText } from "./localization.ts";
 // @deno-types="./vendor/smol-toml.ts"
 import { parse } from "./vendor/smol-toml.js";
 
@@ -91,12 +92,26 @@ export async function readWidgets(
         const text = await readBoundedText(path);
         if (name === "categories.toml") {
           for (const category of parseWidgetCategories(text)) {
+            category.title = await metadataText(
+              packageId,
+              `categories.${category.key}.title`,
+              category.title,
+            );
             mergeCategory(categories, category);
           }
         } else {
-          catalog.widgets.push(
-            parseWidget(text, `${packageId}/${name.slice(0, -5)}`),
+          const widget = parseWidget(text, `${packageId}/${name.slice(0, -5)}`);
+          widget.title = await metadataText(
+            packageId,
+            `widgets.${name.slice(0, -5)}.title`,
+            widget.title,
           );
+          widget.description = await metadataText(
+            packageId,
+            `widgets.${name.slice(0, -5)}.description`,
+            widget.description,
+          );
+          catalog.widgets.push(widget);
         }
       } catch (error) {
         catalog.problems.push({

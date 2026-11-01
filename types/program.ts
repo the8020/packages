@@ -1,9 +1,9 @@
+import { msg } from "/p/the8020/packages/i18n/messages.ts";
 import { choiceHelp, field, z } from "/p/the8020/db/fields.ts";
 
 export const programId: z.ZodString = field(z.string(), {
-  label: "Program",
-  description:
-    "Choose a program to run. **Interactive** programs open a screen; **background** programs run as jobs.",
+  label: msg("program.program"),
+  description: msg("program.choose_a_program_to_run_interactive_programs"),
   valueHelp: async (request) => {
     const { listPrograms } = await import("../programs.ts");
     const { queryValueHelp } = await import("/p/the8020/uui/lists.ts");
@@ -34,39 +34,40 @@ export const programId: z.ZodString = field(z.string(), {
 
 export const programInfo = z.object({
   name: field(z.string(), {
-    label: "Name",
-    description: "The short program name within its package.",
+    label: msg("program.name"),
+    description: msg("program.the_short_program_name_within_its_package"),
   }),
   kind: field(z.string(), {
-    label: "Runs as",
-    description:
-      "Interactive programs open a screen; background jobs run without an interactive screen. Unavailable programs cannot run.",
+    label: msg("program.runs_as"),
+    description: msg(
+      "program.interactive_programs_open_a_screen_background_jobs",
+    ),
     valueHelp: choiceHelp(z.string(), [
-      "Interactive",
-      "Background job",
-      "Unavailable",
+      msg("program.interactive"),
+      msg("choices.background_job"),
+      msg("choices.unavailable"),
     ]),
   }),
   description: field(z.string(), {
-    label: "Description",
-    description: "What this program does and when to run it.",
+    label: msg("package.description_label"),
+    description: msg("program.what_this_program_does_and_when_to"),
   }),
   uui: field(z.boolean(), {
-    label: "Interactive",
-    description:
-      "Whether this program can present screens in the current UUI session.",
+    label: msg("program.interactive"),
+    description: msg("program.whether_this_program_can_present_screens_in"),
   }),
   discoverable: field(z.boolean(), {
-    label: "Listed on Home",
-    description: "Whether an interactive program appears in the Home catalog.",
+    label: msg("program.listed_on_home"),
+    description: msg("program.whether_an_interactive_program_appears_in_the"),
   }),
   metadataError: field(z.string(), {
-    label: "Metadata error",
-    description:
-      "Why the program description or presentation metadata could not be read.",
+    label: msg("program.metadata_error"),
+    description: msg(
+      "program.why_the_program_description_or_presentation_metadata",
+    ),
   }),
   defaultLayout: field(z.string(), {
-    label: "Default layout",
-    description: "The layout declared for this program.",
+    label: msg("program.default_layout"),
+    description: msg("program.the_layout_declared_for_this_program"),
   }),
 });

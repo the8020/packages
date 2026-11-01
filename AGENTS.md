@@ -106,6 +106,8 @@ relevant child AGENTS.md
 
 ## Child DOX Index
 
+- [i18n/AGENTS.md](i18n/AGENTS.md): English and Czech presentation catalogs.
+
 This root retains repository-wide contracts and files outside the child scopes
 below.
 
@@ -268,3 +270,10 @@ below.
   reads, catalog/inspection composition without importing programs, table
   descriptors, identities, and bounded Git field lookup/customization. Tests use
   temporary files with read/write permission.
+
+## Metadata localization
+
+- `localization.ts` resolves displayed package/program/service/widget/category
+  and advisory authorization text in the current invocation. Parsers retain
+  literal TOML as source; catalog keys follow the local i18n contract. No kernel
+  policy or persisted manifest values depend on the selected language.

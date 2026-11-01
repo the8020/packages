@@ -1,3 +1,4 @@
+import { metadataText } from "../localization.ts";
 import { kernel } from "@the8020/kernel";
 import { type ProgramMetadata, readProgramMetadata } from "../programs.ts";
 import { requireDevelopment } from "/p/the8020/system/profile.ts";
@@ -76,9 +77,21 @@ async function requireMutation(action: string, value: string) {
 export const packages = {
   ...kernel.packages,
   async list<
-    Result extends { package_id: string } = { package_id: string },
+    Result extends { package_id: string; description?: string } = {
+      package_id: string;
+    },
   >(): Promise<Result[]> {
-    return await viewablePackages(await kernel.packages.list<Result>());
+    const rows = await viewablePackages(await kernel.packages.list<Result>());
+    for (const row of rows) {
+      if (typeof row.description === "string") {
+        row.description = await metadataText(
+          row.package_id,
+          "package.description",
+          row.description,
+        );
+      }
+    }
+    return rows;
   },
   source: {
     /** Inspect a source; a secret name authenticates a private repository. */
@@ -120,11 +133,19 @@ export const packages = {
           ? await readProgramMetadata({
             entrypoint: program.entrypoint,
             entrypoint_url: program.entrypoint_url,
-          })
+          }, program.program_id)
           : { description: "", uui: false, discoverable: false };
       programs.push({ ...program, ...metadata });
     }
-    return { ...inspected, programs };
+    return {
+      ...inspected,
+      programs,
+      description: await metadataText(
+        packageId,
+        "package.description",
+        inspected.description ?? "",
+      ),
+    };
   },
   async delete(packageId: string, confirm: true) {
     await requireMutation("the8020.packages.package.delete", packageId);
