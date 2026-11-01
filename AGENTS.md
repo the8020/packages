@@ -106,7 +106,8 @@ relevant child AGENTS.md
 
 ## Child DOX Index
 
-- [i18n/AGENTS.md](i18n/AGENTS.md): English and Czech presentation catalogs.
+- [i18n/AGENTS.md](i18n/AGENTS.md): Complete built-in-language presentation
+  catalogs.
 
 This root retains repository-wide contracts and files outside the child scopes
 below.
@@ -197,11 +198,11 @@ below.
   string `arguments`, optional `[data]` with a program, arguments and `refresh`
   of 10–3600 seconds, and optional `[visible]` with either an exact action
   `permission` (no patterns) or `public = true`) and `widgets/categories.toml`
-  (category keys with `title`, optional `icon` and `order`). Texts are English;
-  localization is not part of the format yet. Unknown keys or invalid values
-  reject only that file as a reported problem. Categories merge by key across
-  packages: the first package in ID order defines each value. Reads are bounded
-  and load no code.
+  (category keys with `title`, optional `icon` and `order`). TOML texts remain
+  English source; `localization.ts` resolves their package-owned catalog keys
+  for display. Unknown keys or invalid values reject only that file as a
+  reported problem. Categories merge by key across packages: the first package
+  in ID order defines each value. Reads are bounded and load no code.
 - Native program records contain no application metadata. Metadata errors are
   reported separately as `metadata_error`, retaining native identity/validity
   and healthy catalog entries. Invalid metadata offers no interactive launch;

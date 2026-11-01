@@ -71,7 +71,7 @@
     "source.whether_this_git_reference_is_a_branch": "Zda je tato reference Git větev nebo tag.",
     "source.reference": "Odkaz",
     "source.the_branch_or_tag_name_advertised_by": "Název větve nebo tagu nabízený repozitářem.",
-    "source.authored": "Čas vytvoření commitu",
+    "source.authored": "Čas commitu",
     "source.when_the_author_recorded_this_commit": "Kdy autor zaznamenal tento commit.",
     "source.commit_author": "Autor commitu",
     "source.the_name_of_the_person_who_authored": "Jméno autora tohoto commitu.",
