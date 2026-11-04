@@ -6,9 +6,9 @@ Parent DOX: [packages DOX](../AGENTS.md).
 
 # Ownership
 
-- Own `packages.ts`, `activations.ts`, `activation_packages.ts`, and
-  `hook_runs.ts` and their descriptor tests; physical schema deployment remains
-  kernel-owned.
+- Own `packages.ts`, `activations.ts`, `activation_packages.ts`,
+  `synchronizations.ts`, and `hook_runs.ts` and their descriptor tests; physical
+  schema deployment remains kernel-owned.
 
 # Local Contracts
 
@@ -16,6 +16,12 @@ Parent DOX: [packages DOX](../AGENTS.md).
   table identity follows the package and file path.
 - Exact active commits and activation phases are durable; hook attempts and
   success are recorded independently.
+- `synchronizations` binds a native staged-set activation to its bounded
+  non-secret desired and previous source settings. Native admission writes it
+  with activation membership; publication compares the previous settings and
+  commits desired settings with active versions. It contains no credentials or
+  filesystem paths. Its absence disables the new set protocol while legacy
+  synchronization remains available to install the additive schema.
 - `published` means source/schema and package records are published, while
   runtime indexing or backup cleanup may still need retry. Only completion of
   that work moves the activation to `complete`.
