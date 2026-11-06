@@ -125,6 +125,9 @@
     "source.tag_name": "标签 {name}",
     "source.remote_branch": "{name}（远程）",
     "source.current_branch": "{name}（当前）",
-    "package.description_label": "说明"
+    "package.description_label": "说明",
+    "secret_usages.package_id": "软件包 {id}",
+    "secret_usages.repository_credentials": "代码仓库凭据",
+    "programs.secret-usages.description": "列出代码仓库凭据使用指定机密的软件包"
   }
 }

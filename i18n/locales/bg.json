@@ -125,6 +125,9 @@
     "source.tag_name": "Таг {name}",
     "source.remote_branch": "{name} (отдалечен)",
     "source.current_branch": "{name} (текущ)",
-    "package.description_label": "Описание"
+    "package.description_label": "Описание",
+    "secret_usages.package_id": "Пакет {id}",
+    "secret_usages.repository_credentials": "Идентификационни данни за хранилището",
+    "programs.secret-usages.description": "Показва пакетите, чиито идентификационни данни за хранилище използват дадените тайни"
   }
 }

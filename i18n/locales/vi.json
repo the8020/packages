@@ -125,6 +125,9 @@
     "source.tag_name": "Thẻ {name}",
     "source.remote_branch": "{name} (từ xa)",
     "source.current_branch": "{name} (hiện tại)",
-    "package.description_label": "Mô tả"
+    "package.description_label": "Mô tả",
+    "secret_usages.package_id": "Gói {id}",
+    "secret_usages.repository_credentials": "Thông tin xác thực kho mã",
+    "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho"
   }
 }

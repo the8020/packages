@@ -125,6 +125,9 @@
     "source.tag_name": "Tags {name}",
     "source.remote_branch": "{name} (attāls)",
     "source.current_branch": "{name} (pašreizējais)",
-    "package.description_label": "Apraksts"
+    "package.description_label": "Apraksts",
+    "secret_usages.package_id": "Pakotne {id}",
+    "secret_usages.repository_credentials": "Repozitorija akreditācijas dati",
+    "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus"
   }
 }

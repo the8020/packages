@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (distante)",
     "source.current_branch": "{name} (actuelle)",
-    "package.description_label": "Description"
+    "package.description_label": "Description",
+    "secret_usages.package_id": "Paquet {id}",
+    "secret_usages.repository_credentials": "Identifiants du dépôt",
+    "programs.secret-usages.description": "Lister les paquets dont les identifiants de dépôt utilisent les secrets indiqués"
   }
 }

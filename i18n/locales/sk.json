@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (vzdialená)",
     "source.current_branch": "{name} (aktuálna)",
-    "package.description_label": "Popis"
+    "package.description_label": "Popis",
+    "secret_usages.package_id": "Balíček {id}",
+    "secret_usages.repository_credentials": "Prihlasovacie údaje k repozitáru",
+    "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje"
   }
 }

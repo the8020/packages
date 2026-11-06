@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (saat ini)",
-    "package.description_label": "Deskripsi"
+    "package.description_label": "Deskripsi",
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Kredensial repositori",
+    "programs.secret-usages.description": "Daftar paket yang kredensial repositorinya menggunakan rahasia tertentu"
   }
 }

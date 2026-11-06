@@ -125,6 +125,9 @@
     "source.tag_name": "แท็ก {name}",
     "source.remote_branch": "{name} (รีโมต)",
     "source.current_branch": "{name} (ปัจจุบัน)",
-    "package.description_label": "คำอธิบาย"
+    "package.description_label": "คำอธิบาย",
+    "secret_usages.package_id": "แพ็กเกจ {id}",
+    "secret_usages.repository_credentials": "ข้อมูลรับรองคลังโค้ด",
+    "programs.secret-usages.description": "แสดงแพ็กเกจที่ข้อมูลรับรองคลังโค้ดใช้ข้อมูลลับที่ระบุ"
   }
 }

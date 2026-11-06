@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (kasalukuyan)",
-    "package.description_label": "Paglalarawan"
+    "package.description_label": "Paglalarawan",
+    "secret_usages.package_id": "Package {id}",
+    "secret_usages.repository_credentials": "Mga kredensyal ng repository",
+    "programs.secret-usages.description": "Ilista ang mga package na gumagamit ng mga ibinigay na sikreto sa kanilang kredensyal ng repository"
   }
 }

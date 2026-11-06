@@ -125,6 +125,9 @@
     "source.tag_name": "Merki {name}",
     "source.remote_branch": "{name} (fjartengt)",
     "source.current_branch": "{name} (núverandi)",
-    "package.description_label": "Lýsing"
+    "package.description_label": "Lýsing",
+    "secret_usages.package_id": "Pakki {id}",
+    "secret_usages.repository_credentials": "Auðkenni kóðasafns",
+    "programs.secret-usages.description": "Birta pakka þar sem auðkenni kóðasafns nota tilgreind leyndarmál"
   }
 }

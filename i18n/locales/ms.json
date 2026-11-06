@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (jauh)",
     "source.current_branch": "{name} (semasa)",
-    "package.description_label": "Perihalan"
+    "package.description_label": "Perihalan",
+    "secret_usages.package_id": "Pakej {id}",
+    "secret_usages.repository_credentials": "Bukti kelayakan repositori",
+    "programs.secret-usages.description": "Senaraikan pakej yang bukti kelayakan repositorinya menggunakan rahsia yang diberikan"
   }
 }

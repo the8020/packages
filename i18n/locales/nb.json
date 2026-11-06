@@ -125,6 +125,9 @@
     "source.tag_name": "Tagg {name}",
     "source.remote_branch": "{name} (ekstern)",
     "source.current_branch": "{name} (gjeldende)",
-    "package.description_label": "Beskrivelse"
+    "package.description_label": "Beskrivelse",
+    "secret_usages.package_id": "Pakke {id}",
+    "secret_usages.repository_credentials": "Påloggingsinformasjon for repository",
+    "programs.secret-usages.description": "Vis pakker der påloggingsinformasjonen for repository bruker de angitte hemmelighetene"
   }
 }

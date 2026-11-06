@@ -125,6 +125,9 @@
     "source.tag_name": "برچسب {name}",
     "source.remote_branch": "{name} (راه‌دور)",
     "source.current_branch": "{name} (فعلی)",
-    "package.description_label": "توضیحات"
+    "package.description_label": "توضیحات",
+    "secret_usages.package_id": "بسته {id}",
+    "secret_usages.repository_credentials": "اطلاعات احراز هویت مخزن",
+    "programs.secret-usages.description": "فهرست بسته‌هایی که اطلاعات احراز هویت مخزنشان از رازهای داده‌شده استفاده می‌کند"
   }
 }

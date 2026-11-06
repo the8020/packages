@@ -125,6 +125,9 @@
     "source.tag_name": "Тег {name}",
     "source.remote_branch": "{name} (віддалена)",
     "source.current_branch": "{name} (поточна)",
-    "package.description_label": "Опис"
+    "package.description_label": "Опис",
+    "secret_usages.package_id": "Пакет {id}",
+    "secret_usages.repository_credentials": "Облікові дані репозиторію",
+    "programs.secret-usages.description": "Показує пакети, облікові дані репозиторію яких використовують задані секрети"
   }
 }

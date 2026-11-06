@@ -125,6 +125,9 @@
     "source.tag_name": "Žyma {name}",
     "source.remote_branch": "{name} (nuotolinė)",
     "source.current_branch": "{name} (dabartinė)",
-    "package.description_label": "Aprašymas"
+    "package.description_label": "Aprašymas",
+    "secret_usages.package_id": "Paketas {id}",
+    "secret_usages.repository_credentials": "Saugyklos prisijungimo duomenys",
+    "programs.secret-usages.description": "Rodyti paketus, kurių saugyklos prisijungimo duomenys naudoja nurodytas paslaptis"
   }
 }

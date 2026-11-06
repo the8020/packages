@@ -125,6 +125,9 @@
     "source.tag_name": "Címke: {name}",
     "source.remote_branch": "{name} (távoli)",
     "source.current_branch": "{name} (aktuális)",
-    "package.description_label": "Leírás"
+    "package.description_label": "Leírás",
+    "secret_usages.package_id": "Csomag: {id}",
+    "secret_usages.repository_credentials": "Tároló hitelesítő adatai",
+    "programs.secret-usages.description": "Azon csomagok listázása, amelyek tárolóhitelesítő adatai a megadott titkokat használják"
   }
 }

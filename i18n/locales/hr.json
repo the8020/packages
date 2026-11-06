@@ -125,6 +125,9 @@
     "source.tag_name": "Oznaka {name}",
     "source.remote_branch": "{name} (udaljena)",
     "source.current_branch": "{name} (trenutačna)",
-    "package.description_label": "Opis"
+    "package.description_label": "Opis",
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Vjerodajnice repozitorija",
+    "programs.secret-usages.description": "Prikazuje pakete čije vjerodajnice repozitorija koriste zadane tajne"
   }
 }

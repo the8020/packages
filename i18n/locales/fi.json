@@ -125,6 +125,9 @@
     "source.tag_name": "Versiotunniste {name}",
     "source.remote_branch": "{name} (etä)",
     "source.current_branch": "{name} (nykyinen)",
-    "package.description_label": "Kuvaus"
+    "package.description_label": "Kuvaus",
+    "secret_usages.package_id": "Paketti {id}",
+    "secret_usages.repository_credentials": "Lähdekoodivaraston tunnistetiedot",
+    "programs.secret-usages.description": "Luettele paketit, joiden lähdekoodivaraston tunnistetiedot käyttävät annettuja salaisuuksia"
   }
 }

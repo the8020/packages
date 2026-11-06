@@ -125,6 +125,9 @@
     "source.tag_name": "Etiket {name}",
     "source.remote_branch": "{name} (uzak)",
     "source.current_branch": "{name} (geçerli)",
-    "package.description_label": "Açıklama"
+    "package.description_label": "Açıklama",
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Depo kimlik bilgileri",
+    "programs.secret-usages.description": "Depo kimlik bilgileri verilen gizli bilgileri kullanan paketleri listele"
   }
 }

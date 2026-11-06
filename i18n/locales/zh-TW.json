@@ -125,6 +125,9 @@
     "source.tag_name": "標籤 {name}",
     "source.remote_branch": "{name}（遠端）",
     "source.current_branch": "{name}（目前）",
-    "package.description_label": "說明"
+    "package.description_label": "說明",
+    "secret_usages.package_id": "套件 {id}",
+    "secret_usages.repository_credentials": "程式碼儲存庫認證資訊",
+    "programs.secret-usages.description": "列出程式碼儲存庫認證資訊使用指定機密的套件"
   }
 }

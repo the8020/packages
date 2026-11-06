@@ -125,6 +125,9 @@
     "source.tag_name": "タグ {name}",
     "source.remote_branch": "{name}（リモート）",
     "source.current_branch": "{name}（現在）",
-    "package.description_label": "説明"
+    "package.description_label": "説明",
+    "secret_usages.package_id": "パッケージ {id}",
+    "secret_usages.repository_credentials": "リポジトリ認証情報",
+    "programs.secret-usages.description": "指定したシークレットをリポジトリ認証情報に使用しているパッケージを一覧表示"
   }
 }

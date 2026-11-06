@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (aktuell)",
-    "package.description_label": "Beschreibung"
+    "package.description_label": "Beschreibung",
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Repository-Zugangsdaten",
+    "programs.secret-usages.description": "Pakete auflisten, deren Repository-Zugangsdaten die angegebenen Geheimnisse verwenden"
   }
 }

@@ -125,6 +125,9 @@
     "source.tag_name": "Silt {name}",
     "source.remote_branch": "{name} (kaug)",
     "source.current_branch": "{name} (praegune)",
-    "package.description_label": "Kirjeldus"
+    "package.description_label": "Kirjeldus",
+    "secret_usages.package_id": "Pakett {id}",
+    "secret_usages.repository_credentials": "Hoidla pääsuandmed",
+    "programs.secret-usages.description": "Loetle paketid, mille hoidla pääsuandmed kasutavad antud saladusi"
   }
 }

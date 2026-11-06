@@ -125,6 +125,9 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (aktuel)",
-    "package.description_label": "Beskrivelse"
+    "package.description_label": "Beskrivelse",
+    "secret_usages.package_id": "Pakke {id}",
+    "secret_usages.repository_credentials": "Repository-loginoplysninger",
+    "programs.secret-usages.description": "Vis pakker, hvis repository-loginoplysninger bruger de angivne hemmeligheder"
   }
 }

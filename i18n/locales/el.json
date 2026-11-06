@@ -125,6 +125,9 @@
     "source.tag_name": "Ετικέτα {name}",
     "source.remote_branch": "{name} (απομακρυσμένο)",
     "source.current_branch": "{name} (τρέχον)",
-    "package.description_label": "Περιγραφή"
+    "package.description_label": "Περιγραφή",
+    "secret_usages.package_id": "Πακέτο {id}",
+    "secret_usages.repository_credentials": "Διαπιστευτήρια αποθετηρίου",
+    "programs.secret-usages.description": "Λίστα πακέτων των οποίων τα διαπιστευτήρια αποθετηρίου χρησιμοποιούν τα δεδομένα απόρρητα"
   }
 }

@@ -125,6 +125,9 @@
     "source.tag_name": "الوسم {name}",
     "source.remote_branch": "{name} (بعيد)",
     "source.current_branch": "{name} (حالي)",
-    "package.description_label": "الوصف"
+    "package.description_label": "الوصف",
+    "secret_usages.package_id": "الحزمة {id}",
+    "secret_usages.repository_credentials": "بيانات اعتماد المستودع",
+    "programs.secret-usages.description": "عرض الحزم التي تستخدم بيانات اعتماد مستودعاتها الأسرار المحددة"
   }
 }

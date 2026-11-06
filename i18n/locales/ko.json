@@ -125,6 +125,9 @@
     "source.tag_name": "태그 {name}",
     "source.remote_branch": "{name}(원격)",
     "source.current_branch": "{name}(현재)",
-    "package.description_label": "설명"
+    "package.description_label": "설명",
+    "secret_usages.package_id": "패키지 {id}",
+    "secret_usages.repository_credentials": "저장소 자격 증명",
+    "programs.secret-usages.description": "지정한 시크릿을 저장소 자격 증명에 사용하는 패키지 목록 조회"
   }
 }

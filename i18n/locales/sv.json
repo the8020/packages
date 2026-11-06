@@ -125,6 +125,9 @@
     "source.tag_name": "Tagg {name}",
     "source.remote_branch": "{name} (fjärr)",
     "source.current_branch": "{name} (aktuell)",
-    "package.description_label": "Beskrivning"
+    "package.description_label": "Beskrivning",
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Inloggningsuppgifter för repository",
+    "programs.secret-usages.description": "Lista paket vars inloggningsuppgifter för repository använder angivna hemligheter"
   }
 }

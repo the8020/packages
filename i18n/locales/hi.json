@@ -125,6 +125,9 @@
     "source.tag_name": "टैग {name}",
     "source.remote_branch": "{name} (रिमोट)",
     "source.current_branch": "{name} (वर्तमान)",
-    "package.description_label": "विवरण"
+    "package.description_label": "विवरण",
+    "secret_usages.package_id": "पैकेज {id}",
+    "secret_usages.repository_credentials": "रिपॉज़िटरी क्रेडेंशियल",
+    "programs.secret-usages.description": "उन पैकेजों की सूची दिखाएँ जिनके रिपॉज़िटरी क्रेडेंशियल दिए गए सीक्रेट का उपयोग करते हैं"
   }
 }

@@ -125,6 +125,9 @@
     "source.tag_name": "תג {name}",
     "source.remote_branch": "{name} (מרוחק)",
     "source.current_branch": "{name} (נוכחי)",
-    "package.description_label": "תיאור"
+    "package.description_label": "תיאור",
+    "secret_usages.package_id": "חבילה {id}",
+    "secret_usages.repository_credentials": "פרטי גישה למאגר",
+    "programs.secret-usages.description": "הצגת חבילות שפרטי הגישה למאגר שלהן משתמשים בסודות שצוינו"
   }
 }
