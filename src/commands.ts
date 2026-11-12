@@ -9,8 +9,10 @@ import {
   exportablePackageIds,
   exportPackageList,
   importPackageList,
+  missingDependencies,
   packageListFile,
   previewImport,
+  withDependencies,
 } from "./transfer.ts";
 
 function packageIdentity(value: string) {
@@ -175,16 +177,21 @@ export function repositoryRemote(...args: string[]) {
   }).then((repository) => ({ repository }));
 }
 export async function exportList(...args: string[]) {
-  const parsed = parseCommandArguments(args, { booleans: ["all", "check"] });
+  const parsed = parseCommandArguments(args, {
+    booleans: ["all", "check", "with-dependencies"],
+  });
   if ((parsed.options.all === true) === (parsed.positionals.length > 0)) {
     throw new AdminCommandError({
       code: "invalid_arguments",
       message: "name package IDs or use --all",
     });
   }
-  const ids = parsed.options.all === true
+  const requested = parsed.options.all === true
     ? await exportablePackageIds()
     : parsed.positionals;
+  const ids = parsed.options["with-dependencies"] === true
+    ? await withDependencies(requested)
+    : requested;
   const { file, problems } = await exportPackageList(ids);
   if (!file) {
     throw new AdminCommandError({
@@ -194,9 +201,13 @@ export async function exportList(...args: string[]) {
       details: { problems },
     });
   }
-  return parsed.options.check === true
-    ? { checked: file.packages.length }
-    : file;
+  if (parsed.options.check !== true) return file;
+  // Missing dependencies only warn; the list file itself has a fixed format.
+  const missing = await missingDependencies(ids);
+  return {
+    checked: file.packages.length,
+    ...(Object.keys(missing).length ? { missing_dependencies: missing } : {}),
+  };
 }
 export async function importList(...args: string[]) {
   const parsed = parseCommandArguments(args, {

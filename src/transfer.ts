@@ -33,7 +33,12 @@ export type PackageListFile = z.infer<typeof packageListFile>;
 /** The subset of the authorized packages API used by transfer. */
 export type TransferApi = Pick<
   typeof packages,
-  "index" | "repository" | "source" | "versions" | "synchronize"
+  | "index"
+  | "repository"
+  | "source"
+  | "versions"
+  | "synchronize"
+  | "dependencies"
 >;
 
 export type ExportProblemCode =
@@ -151,6 +156,60 @@ export async function exportPackageList(
   return problems.length
     ? { problems }
     : { file: { schema: 1, packages: entries }, problems };
+}
+
+/** Platform packages exist on every system and are left out of dependencies. */
+export function isPlatformPackage(packageId: string): boolean {
+  return packageId.startsWith("the8020/");
+}
+
+async function nonPlatformDependencies(
+  packageId: string,
+  api: TransferApi,
+): Promise<string[]> {
+  try {
+    return (await api.dependencies(packageId)).filter((id) =>
+      !isPlatformPackage(id)
+    );
+  } catch {
+    // An unreadable package is reported by its own verification.
+    return [];
+  }
+}
+
+/** Non-platform dependencies of each listed package that the list lacks. */
+export async function missingDependencies(
+  packageIds: string[],
+  api: TransferApi = packages,
+): Promise<Record<string, string[]>> {
+  const listed = new Set(packageIds);
+  const missing: Record<string, string[]> = {};
+  for (const packageId of listed) {
+    const absent = (await nonPlatformDependencies(packageId, api)).filter((
+      id,
+    ) => !listed.has(id));
+    if (absent.length) missing[packageId] = absent;
+  }
+  return missing;
+}
+
+/** The list followed by every missing non-platform dependency, transitively. */
+export async function withDependencies(
+  packageIds: string[],
+  api: TransferApi = packages,
+): Promise<string[]> {
+  const result = [...new Set(packageIds)];
+  const listed = new Set(result);
+  for (let index = 0; index < result.length; index++) {
+    if (result.length > MAX_PACKAGES) break;
+    for (const id of await nonPlatformDependencies(result[index]!, api)) {
+      if (!listed.has(id)) {
+        listed.add(id);
+        result.push(id);
+      }
+    }
+  }
+  return result;
 }
 
 /** Exportable catalog: every viewable package that is not retired. */

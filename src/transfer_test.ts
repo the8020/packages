@@ -6,8 +6,14 @@ import type {
 } from "@the8020/kernel";
 import type { TransferApi } from "./transfer.ts";
 
-const { exportPackageList, importPackageList, packageListFile, previewImport } =
-  await import("./transfer.ts");
+const {
+  exportPackageList,
+  importPackageList,
+  missingDependencies,
+  packageListFile,
+  previewImport,
+  withDependencies,
+} = await import("./transfer.ts");
 
 const c = (n: number) => n.toString(16).padStart(40, "0");
 
@@ -17,6 +23,7 @@ interface FakePackage {
   remoteId?: string;
   references?: PackageSourceInspection["references"];
   history?: [string, string[]][];
+  dependencies?: string[];
 }
 
 function fakeApi(packages: Record<string, FakePackage>) {
@@ -77,6 +84,10 @@ function fakeApi(packages: Record<string, FakePackage>) {
           })),
         } as PackageVersions),
     },
+    dependencies: (id: string) =>
+      packages[id]
+        ? Promise.resolve(packages[id].dependencies ?? [])
+        : Promise.reject(new Error("not installed")),
     synchronize: (ids: string[]) => {
       calls.push(`synchronize ${ids.join(",")}`);
       return Promise.resolve(
@@ -375,4 +386,24 @@ Deno.test("import keeps the listed name and reports local and installation failu
 
 Deno.test("export requires at least one package", async () => {
   await assertRejects(() => exportPackageList([], fakeApi({}).api), RangeError);
+});
+
+Deno.test("dependencies warn and can be added without platform packages", async () => {
+  const { api } = fakeApi({
+    "acme/hub": {
+      index: {},
+      dependencies: ["acme/log", "acme/mail", "the8020/uui"],
+    },
+    "acme/mail": { index: {}, dependencies: ["acme/log", "acme/smtp"] },
+    "acme/log": { index: {}, dependencies: ["the8020/db"] },
+  });
+  assertEquals(await missingDependencies(["acme/hub", "acme/log"], api), {
+    "acme/hub": ["acme/mail"],
+  });
+  assertEquals(await withDependencies(["acme/hub"], api), [
+    "acme/hub",
+    "acme/log",
+    "acme/mail",
+    "acme/smtp",
+  ]);
 });

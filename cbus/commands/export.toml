@@ -2,11 +2,13 @@ version = 1
 command = "packages.export"
 program = "the8020/packages/export"
 summary = "Export a verified package list"
-description = "Fetch each package and confirm its running commit is in its Git remote; any problem withholds the list."
-usage = "<package-id>... | --all [--check]"
+description = "Fetch each package and confirm its running commit is in its Git remote; any problem withholds the list. --with-dependencies adds imported non-platform packages; --check also lists dependencies missing from the list."
+usage = "<package-id>... | --all [--with-dependencies] [--check]"
 mutates_state = true
 restart_behavior = "none"
 [[examples]]
 command = "packages.export dlis/eet dlis/log"
+[[examples]]
+command = "packages.export dlis/controlhub --with-dependencies"
 [[examples]]
 command = "packages.export --all --check"
