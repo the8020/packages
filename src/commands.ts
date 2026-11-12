@@ -193,21 +193,21 @@ export async function exportList(...args: string[]) {
     ? await withDependencies(requested)
     : requested;
   const { file, problems } = await exportPackageList(ids);
+  // Missing dependencies only warn; the list file itself has a fixed format.
+  const warning = async () => {
+    const missing = await missingDependencies(ids);
+    return Object.keys(missing).length ? { missing_dependencies: missing } : {};
+  };
   if (!file) {
     throw new AdminCommandError({
       code: "export_blocked",
       message:
         `${problems.length} of ${ids.length} packages cannot be exported`,
-      details: { problems },
+      details: { problems, ...await warning() },
     });
   }
   if (parsed.options.check !== true) return file;
-  // Missing dependencies only warn; the list file itself has a fixed format.
-  const missing = await missingDependencies(ids);
-  return {
-    checked: file.packages.length,
-    ...(Object.keys(missing).length ? { missing_dependencies: missing } : {}),
-  };
+  return { checked: file.packages.length, ...await warning() };
 }
 export async function importList(...args: string[]) {
   const parsed = parseCommandArguments(args, {

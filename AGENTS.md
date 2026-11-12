@@ -243,9 +243,9 @@ below.
   explicit overwrite, and may synchronize the imported packages once.
   Dependencies ignore platform `the8020/*` packages and never block export:
   `missingDependencies` reports listed packages whose dependencies the list
-  lacks (`packages.export --check` returns them as `missing_dependencies`), and
-  `withDependencies` appends missing ones transitively
-  (`packages.export --with-dependencies`).
+  lacks (`packages.export --check` and a blocked export return them as
+  `missing_dependencies`), and `withDependencies` appends missing ones
+  transitively (`packages.export --with-dependencies`).
 - `src/dependencies.ts` derives a package's dependencies from its code: other
   packages imported through `/p/<namespace>/<package>/` (static, side-effect,
   re-export and literal dynamic imports) in source files outside tests (`_test`,
