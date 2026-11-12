@@ -4,6 +4,7 @@ import { type ProgramMetadata, readProgramMetadata } from "../programs.ts";
 import { requireDevelopment } from "/p/the8020/system/profile.ts";
 import { filter, requirePermission } from "/p/the8020/auth/mod.ts";
 import { context } from "@the8020/context";
+import { importedPackages, PACKAGE_ID } from "./dependencies.ts";
 
 interface ExecutablePackageProgram {
   program_id: string;
@@ -111,6 +112,17 @@ export const packages = {
         secret ? { secret } : {},
       );
     },
+  },
+  /** Other packages imported by the active source of a viewable package. */
+  async dependencies(packageId: string): Promise<string[]> {
+    if (!PACKAGE_ID.test(packageId)) {
+      throw new TypeError(`invalid package ID ${packageId}`);
+    }
+    await requireView(packageId);
+    return await importedPackages(
+      `/workspace/packages/${packageId}`,
+      packageId,
+    );
   },
   versions: {
     async list(...args: Parameters<typeof kernel.packages.versions.list>) {

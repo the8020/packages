@@ -241,6 +241,14 @@ below.
   writes `index.set` under the listed package ID, pins the commit when the tag
   moved, never overwrites a local package, changes a different version only with
   explicit overwrite, and may synchronize the imported packages once.
+- `src/dependencies.ts` derives a package's dependencies from its code: other
+  packages imported through `/p/<namespace>/<package>/` (static, side-effect,
+  re-export and literal dynamic imports) in source files outside tests (`_test`,
+  `.test`, `_e2e`, `_fixture`, `_scenarios`, `_bench`), `.git`, `node_modules`
+  and `public`. Manifests declare no dependencies and no versions.
+  `packages.dependencies(id)` validates the ID, requires view permission and
+  reads the active tree under `/workspace/packages`; computed imports are not
+  detected.
 - Synchronization accepts `--schema` for a read-only candidate plan and
   `--force table-id.column[,table-id.column]` for exact incompatible-cell
   NULL/default consent. Either requires one explicit package; normal application
@@ -283,8 +291,9 @@ below.
   programs.
 - `deno task test` verifies command parsing/errors, bounded program metadata
   reads, catalog/inspection composition without importing programs, table
-  descriptors, identities, and bounded Git field lookup/customization. Tests use
-  temporary files with read/write permission.
+  descriptors, identities, bounded Git field lookup/customization, and
+  dependency detection from imports. Tests use temporary files with read/write
+  permission.
 
 ## Metadata localization
 
