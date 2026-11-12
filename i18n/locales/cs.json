@@ -1,6 +1,8 @@
 {
   "name": "Čeština",
   "texts": {
+    "programs.export.description": "Export ověřených verzí balíčků jako přenosného seznamu",
+    "programs.import.description": "Import přenosného seznamu balíčků",
     "package.package": "Balíček",
     "package.open_a_package_to_see_its_programs": "Otevřete balíček pro zobrazení programů, služeb a nainstalované verze.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (vzdálená)",
     "source.current_branch": "{name} (aktuální)",
     "package.description_label": "Popis",
-    "programs.export.description": "Export ověřených verzí balíčků jako přenosného seznamu",
-    "programs.import.description": "Import přenosného seznamu balíčků"
+    "secret_usages.package_id": "Balíček {id}",
+    "secret_usages.repository_credentials": "Přihlašovací údaje k repozitáři",
+    "programs.secret-usages.description": "Výpis balíčků, jejichž přihlašovací údaje k repozitáři používají zadané tajné údaje"
   }
 }

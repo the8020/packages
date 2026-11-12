@@ -1,6 +1,8 @@
 {
   "name": "हिन्दी",
   "texts": {
+    "programs.export.description": "सत्यापित पैकेज संस्करणों को पोर्टेबल सूची के रूप में निर्यात करें",
+    "programs.import.description": "पोर्टेबल पैकेज सूची आयात करें",
     "package.package": "पैकेज",
     "package.open_a_package_to_see_its_programs": "प्रोग्राम, सेवाएँ और इंस्टॉल संस्करण देखने के लिए पैकेज खोलें।",
     "package.author": "लेखक",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (रिमोट)",
     "source.current_branch": "{name} (वर्तमान)",
     "package.description_label": "विवरण",
-    "programs.export.description": "सत्यापित पैकेज संस्करणों को पोर्टेबल सूची के रूप में निर्यात करें",
-    "programs.import.description": "पोर्टेबल पैकेज सूची आयात करें"
+    "secret_usages.package_id": "पैकेज {id}",
+    "secret_usages.repository_credentials": "रिपॉज़िटरी क्रेडेंशियल",
+    "programs.secret-usages.description": "उन पैकेजों की सूची दिखाएँ जिनके रिपॉज़िटरी क्रेडेंशियल दिए गए सीक्रेट का उपयोग करते हैं"
   }
 }

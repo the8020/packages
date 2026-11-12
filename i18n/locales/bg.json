@@ -1,6 +1,8 @@
 {
   "name": "Български",
   "texts": {
+    "programs.export.description": "Експорт на проверени версии на пакети като преносим списък",
+    "programs.import.description": "Импорт на преносим списък с пакети",
     "package.package": "Пакет",
     "package.open_a_package_to_see_its_programs": "Отворете пакет, за да видите програмите, услугите и инсталираната му версия.",
     "package.author": "Автор",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (отдалечен)",
     "source.current_branch": "{name} (текущ)",
     "package.description_label": "Описание",
-    "programs.export.description": "Експорт на проверени версии на пакети като преносим списък",
-    "programs.import.description": "Импорт на преносим списък с пакети"
+    "secret_usages.package_id": "Пакет {id}",
+    "secret_usages.repository_credentials": "Идентификационни данни за хранилището",
+    "programs.secret-usages.description": "Показва пакетите, чиито идентификационни данни за хранилище използват дадените тайни"
   }
 }

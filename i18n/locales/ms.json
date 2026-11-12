@@ -1,6 +1,8 @@
 {
   "name": "Bahasa Melayu",
   "texts": {
+    "programs.export.description": "Eksport versi pakej yang disahkan sebagai senarai mudah alih",
+    "programs.import.description": "Import senarai pakej mudah alih",
     "package.package": "Pakej",
     "package.open_a_package_to_see_its_programs": "Buka pakej untuk melihat program, perkhidmatan dan versi terpasangnya.",
     "package.author": "Pengarang",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (jauh)",
     "source.current_branch": "{name} (semasa)",
     "package.description_label": "Perihalan",
-    "programs.export.description": "Eksport versi pakej yang disahkan sebagai senarai mudah alih",
-    "programs.import.description": "Import senarai pakej mudah alih"
+    "secret_usages.package_id": "Pakej {id}",
+    "secret_usages.repository_credentials": "Bukti kelayakan repositori",
+    "programs.secret-usages.description": "Senaraikan pakej yang bukti kelayakan repositorinya menggunakan rahsia yang diberikan"
   }
 }

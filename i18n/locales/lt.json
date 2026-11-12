@@ -1,6 +1,8 @@
 {
   "name": "Lietuvių",
   "texts": {
+    "programs.export.description": "Eksportuoti patikrintas paketų versijas kaip perkeliamą sąrašą",
+    "programs.import.description": "Importuoti perkeliamą paketų sąrašą",
     "package.package": "Paketas",
     "package.open_a_package_to_see_its_programs": "Atverkite paketą, kad pamatytumėte jo programas, tarnybas ir įdiegtą versiją.",
     "package.author": "Autorius",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (nuotolinė)",
     "source.current_branch": "{name} (dabartinė)",
     "package.description_label": "Aprašymas",
-    "programs.export.description": "Eksportuoti patikrintas paketų versijas kaip perkeliamą sąrašą",
-    "programs.import.description": "Importuoti perkeliamą paketų sąrašą"
+    "secret_usages.package_id": "Paketas {id}",
+    "secret_usages.repository_credentials": "Saugyklos prisijungimo duomenys",
+    "programs.secret-usages.description": "Rodyti paketus, kurių saugyklos prisijungimo duomenys naudoja nurodytas paslaptis"
   }
 }

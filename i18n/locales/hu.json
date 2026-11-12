@@ -1,6 +1,8 @@
 {
   "name": "Magyar",
   "texts": {
+    "programs.export.description": "Ellenőrzött csomagverziók exportálása hordozható listaként",
+    "programs.import.description": "Hordozható csomaglista importálása",
     "package.package": "Csomag",
     "package.open_a_package_to_see_its_programs": "Nyissa meg a csomagot a programok, szolgáltatások és telepített verzió megtekintéséhez.",
     "package.author": "Szerző",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (távoli)",
     "source.current_branch": "{name} (aktuális)",
     "package.description_label": "Leírás",
-    "programs.export.description": "Ellenőrzött csomagverziók exportálása hordozható listaként",
-    "programs.import.description": "Hordozható csomaglista importálása"
+    "secret_usages.package_id": "Csomag: {id}",
+    "secret_usages.repository_credentials": "Tároló hitelesítő adatai",
+    "programs.secret-usages.description": "Azon csomagok listázása, amelyek tárolóhitelesítő adatai a megadott titkokat használják"
   }
 }

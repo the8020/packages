@@ -1,6 +1,8 @@
 {
   "name": "Ελληνικά",
   "texts": {
+    "programs.export.description": "Εξαγωγή επαληθευμένων εκδόσεων πακέτων ως φορητή λίστα",
+    "programs.import.description": "Εισαγωγή φορητής λίστας πακέτων",
     "package.package": "Πακέτο",
     "package.open_a_package_to_see_its_programs": "Ανοίξτε πακέτο για να δείτε τα προγράμματα, τις υπηρεσίες και την εγκατεστημένη έκδοσή του.",
     "package.author": "Δημιουργός",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (απομακρυσμένο)",
     "source.current_branch": "{name} (τρέχον)",
     "package.description_label": "Περιγραφή",
-    "programs.export.description": "Εξαγωγή επαληθευμένων εκδόσεων πακέτων ως φορητή λίστα",
-    "programs.import.description": "Εισαγωγή φορητής λίστας πακέτων"
+    "secret_usages.package_id": "Πακέτο {id}",
+    "secret_usages.repository_credentials": "Διαπιστευτήρια αποθετηρίου",
+    "programs.secret-usages.description": "Λίστα πακέτων των οποίων τα διαπιστευτήρια αποθετηρίου χρησιμοποιούν τα δεδομένα απόρρητα"
   }
 }

@@ -1,6 +1,8 @@
 {
   "name": "Bahasa Indonesia",
   "texts": {
+    "programs.export.description": "Ekspor versi paket terverifikasi sebagai daftar portabel",
+    "programs.import.description": "Impor daftar paket portabel",
     "package.package": "Paket",
     "package.open_a_package_to_see_its_programs": "Buka paket untuk melihat program, layanan, dan versi terpasangnya.",
     "package.author": "Penulis",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (saat ini)",
     "package.description_label": "Deskripsi",
-    "programs.export.description": "Ekspor versi paket terverifikasi sebagai daftar portabel",
-    "programs.import.description": "Impor daftar paket portabel"
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Kredensial repositori",
+    "programs.secret-usages.description": "Daftar paket yang kredensial repositorinya menggunakan rahasia tertentu"
   }
 }

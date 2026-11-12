@@ -1,6 +1,8 @@
 {
   "name": "Tiếng Việt",
   "texts": {
+    "programs.export.description": "Xuất các phiên bản gói đã xác minh thành danh sách di động",
+    "programs.import.description": "Nhập danh sách gói di động",
     "package.package": "Gói",
     "package.open_a_package_to_see_its_programs": "Mở gói để xem chương trình, dịch vụ và phiên bản đã cài.",
     "package.author": "Tác giả",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (từ xa)",
     "source.current_branch": "{name} (hiện tại)",
     "package.description_label": "Mô tả",
-    "programs.export.description": "Xuất các phiên bản gói đã xác minh thành danh sách di động",
-    "programs.import.description": "Nhập danh sách gói di động"
+    "secret_usages.package_id": "Gói {id}",
+    "secret_usages.repository_credentials": "Thông tin xác thực kho mã",
+    "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho"
   }
 }

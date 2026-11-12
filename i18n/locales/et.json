@@ -1,6 +1,8 @@
 {
   "name": "Eesti",
   "texts": {
+    "programs.export.description": "Ekspordi kontrollitud paketiversioonid teisaldatava loendina",
+    "programs.import.description": "Impordi teisaldatav paketiloend",
     "package.package": "Pakett",
     "package.open_a_package_to_see_its_programs": "Ava pakett, et näha selle programme, teenuseid ja paigaldatud versiooni.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (kaug)",
     "source.current_branch": "{name} (praegune)",
     "package.description_label": "Kirjeldus",
-    "programs.export.description": "Ekspordi kontrollitud paketiversioonid teisaldatava loendina",
-    "programs.import.description": "Impordi teisaldatav paketiloend"
+    "secret_usages.package_id": "Pakett {id}",
+    "secret_usages.repository_credentials": "Hoidla pääsuandmed",
+    "programs.secret-usages.description": "Loetle paketid, mille hoidla pääsuandmed kasutavad antud saladusi"
   }
 }

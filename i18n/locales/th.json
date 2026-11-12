@@ -1,6 +1,8 @@
 {
   "name": "ไทย",
   "texts": {
+    "programs.export.description": "ส่งออกเวอร์ชันแพ็กเกจที่ตรวจสอบแล้วเป็นรายการที่ย้ายได้",
+    "programs.import.description": "นำเข้ารายการแพ็กเกจที่ย้ายได้",
     "package.package": "แพ็กเกจ",
     "package.open_a_package_to_see_its_programs": "เปิดแพ็กเกจเพื่อดูโปรแกรม บริการ และรุ่นที่ติดตั้ง",
     "package.author": "ผู้เขียน",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (รีโมต)",
     "source.current_branch": "{name} (ปัจจุบัน)",
     "package.description_label": "คำอธิบาย",
-    "programs.export.description": "ส่งออกเวอร์ชันแพ็กเกจที่ตรวจสอบแล้วเป็นรายการที่ย้ายได้",
-    "programs.import.description": "นำเข้ารายการแพ็กเกจที่ย้ายได้"
+    "secret_usages.package_id": "แพ็กเกจ {id}",
+    "secret_usages.repository_credentials": "ข้อมูลรับรองคลังโค้ด",
+    "programs.secret-usages.description": "แสดงแพ็กเกจที่ข้อมูลรับรองคลังโค้ดใช้ข้อมูลลับที่ระบุ"
   }
 }

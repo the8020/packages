@@ -1,6 +1,8 @@
 {
   "name": "Srpski (latinica)",
   "texts": {
+    "programs.export.description": "Izvoz proverenih verzija paketa kao prenosive liste",
+    "programs.import.description": "Uvoz prenosive liste paketa",
     "package.package": "Paket",
     "package.open_a_package_to_see_its_programs": "Otvori paket da vidiš njegove programe, servise i instaliranu verziju.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (udaljena)",
     "source.current_branch": "{name} (trenutna)",
     "package.description_label": "Opis",
-    "programs.export.description": "Izvoz proverenih verzija paketa kao prenosive liste",
-    "programs.import.description": "Uvoz prenosive liste paketa"
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Akreditivi repozitorijuma",
+    "programs.secret-usages.description": "Prikazuje pakete čiji akreditivi repozitorijuma koriste zadate tajne"
   }
 }

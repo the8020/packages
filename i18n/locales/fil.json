@@ -1,6 +1,8 @@
 {
   "name": "Filipino",
   "texts": {
+    "programs.export.description": "I-export ang mga na-verify na bersyon ng package bilang portable na listahan",
+    "programs.import.description": "Mag-import ng portable na listahan ng package",
     "package.package": "Package",
     "package.open_a_package_to_see_its_programs": "Buksan ang package para makita ang mga programa, serbisyo, at naka-install na bersyon nito.",
     "package.author": "May-akda",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (kasalukuyan)",
     "package.description_label": "Paglalarawan",
-    "programs.export.description": "I-export ang mga na-verify na bersyon ng package bilang portable na listahan",
-    "programs.import.description": "Mag-import ng portable na listahan ng package"
+    "secret_usages.package_id": "Package {id}",
+    "secret_usages.repository_credentials": "Mga kredensyal ng repository",
+    "programs.secret-usages.description": "Ilista ang mga package na gumagamit ng mga ibinigay na sikreto sa kanilang kredensyal ng repository"
   }
 }

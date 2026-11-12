@@ -1,6 +1,8 @@
 {
   "name": "Nederlands",
   "texts": {
+    "programs.export.description": "Geverifieerde pakketversies exporteren als overdraagbare lijst",
+    "programs.import.description": "Overdraagbare pakketlijst importeren",
     "package.package": "Pakket",
     "package.open_a_package_to_see_its_programs": "Open een pakket voor de programma's, services en geïnstalleerde versie.",
     "package.author": "Auteur",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (extern)",
     "source.current_branch": "{name} (huidig)",
     "package.description_label": "Beschrijving",
-    "programs.export.description": "Geverifieerde pakketversies exporteren als overdraagbare lijst",
-    "programs.import.description": "Overdraagbare pakketlijst importeren"
+    "secret_usages.package_id": "Pakket {id}",
+    "secret_usages.repository_credentials": "Repository-inloggegevens",
+    "programs.secret-usages.description": "Pakketten weergeven waarvan de repository-inloggegevens de opgegeven geheimen gebruiken"
   }
 }

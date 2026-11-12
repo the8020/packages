@@ -1,6 +1,8 @@
 {
   "name": "Svenska",
   "texts": {
+    "programs.export.description": "Exportera verifierade paketversioner som en flyttbar lista",
+    "programs.import.description": "Importera en flyttbar paketlista",
     "package.package": "Paket",
     "package.open_a_package_to_see_its_programs": "Öppna ett paket för att se program, tjänster och installerad version.",
     "package.author": "Författare",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (fjärr)",
     "source.current_branch": "{name} (aktuell)",
     "package.description_label": "Beskrivning",
-    "programs.export.description": "Exportera verifierade paketversioner som en flyttbar lista",
-    "programs.import.description": "Importera en flyttbar paketlista"
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Inloggningsuppgifter för repository",
+    "programs.secret-usages.description": "Lista paket vars inloggningsuppgifter för repository använder angivna hemligheter"
   }
 }

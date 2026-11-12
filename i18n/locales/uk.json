@@ -1,6 +1,8 @@
 {
   "name": "Українська",
   "texts": {
+    "programs.export.description": "Експорт перевірених версій пакетів як переносного списку",
+    "programs.import.description": "Імпорт переносного списку пакетів",
     "package.package": "Пакет",
     "package.open_a_package_to_see_its_programs": "Відкрийте пакет, щоб переглянути його програми, сервіси та встановлену версію.",
     "package.author": "Автор",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (віддалена)",
     "source.current_branch": "{name} (поточна)",
     "package.description_label": "Опис",
-    "programs.export.description": "Експорт перевірених версій пакетів як переносного списку",
-    "programs.import.description": "Імпорт переносного списку пакетів"
+    "secret_usages.package_id": "Пакет {id}",
+    "secret_usages.repository_credentials": "Облікові дані репозиторію",
+    "programs.secret-usages.description": "Показує пакети, облікові дані репозиторію яких використовують задані секрети"
   }
 }

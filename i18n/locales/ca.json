@@ -1,6 +1,8 @@
 {
   "name": "Català",
   "texts": {
+    "programs.export.description": "Exporta versions de paquets verificades com a llista portable",
+    "programs.import.description": "Importa una llista portable de paquets",
     "package.package": "Paquet",
     "package.open_a_package_to_see_its_programs": "Obre un paquet per veure'n els programes, els serveis i la versió instal·lada.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remota)",
     "source.current_branch": "{name} (actual)",
     "package.description_label": "Descripció",
-    "programs.export.description": "Exporta versions de paquets verificades com a llista portable",
-    "programs.import.description": "Importa una llista portable de paquets"
+    "secret_usages.package_id": "Paquet {id}",
+    "secret_usages.repository_credentials": "Credencials del repositori",
+    "programs.secret-usages.description": "Llista els paquets les credencials de repositori dels quals utilitzen els secrets indicats"
   }
 }

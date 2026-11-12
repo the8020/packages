@@ -1,6 +1,8 @@
 {
   "name": "Deutsch",
   "texts": {
+    "programs.export.description": "Geprüfte Paketversionen als portable Liste exportieren",
+    "programs.import.description": "Portable Paketliste importieren",
     "package.package": "Paket",
     "package.open_a_package_to_see_its_programs": "Öffnen Sie ein Paket, um seine Programme, Dienste und installierte Version zu sehen.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (aktuell)",
     "package.description_label": "Beschreibung",
-    "programs.export.description": "Geprüfte Paketversionen als portable Liste exportieren",
-    "programs.import.description": "Portable Paketliste importieren"
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Repository-Zugangsdaten",
+    "programs.secret-usages.description": "Pakete auflisten, deren Repository-Zugangsdaten die angegebenen Geheimnisse verwenden"
   }
 }

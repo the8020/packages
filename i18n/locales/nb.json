@@ -1,6 +1,8 @@
 {
   "name": "Norsk bokmål",
   "texts": {
+    "programs.export.description": "Eksporter verifiserte pakkeversjoner som en flyttbar liste",
+    "programs.import.description": "Importer en flyttbar pakkeliste",
     "package.package": "Pakke",
     "package.open_a_package_to_see_its_programs": "Åpne en pakke for å se programmer, tjenester og installert versjon.",
     "package.author": "Forfatter",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (ekstern)",
     "source.current_branch": "{name} (gjeldende)",
     "package.description_label": "Beskrivelse",
-    "programs.export.description": "Eksporter verifiserte pakkeversjoner som en flyttbar liste",
-    "programs.import.description": "Importer en flyttbar pakkeliste"
+    "secret_usages.package_id": "Pakke {id}",
+    "secret_usages.repository_credentials": "Påloggingsinformasjon for repository",
+    "programs.secret-usages.description": "Vis pakker der påloggingsinformasjonen for repository bruker de angitte hemmelighetene"
   }
 }

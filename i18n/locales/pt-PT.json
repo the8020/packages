@@ -1,6 +1,8 @@
 {
   "name": "Português (Portugal)",
   "texts": {
+    "programs.export.description": "Exportar versões de pacotes verificadas como lista portátil",
+    "programs.import.description": "Importar uma lista portátil de pacotes",
     "package.package": "Pacote",
     "package.open_a_package_to_see_its_programs": "Abra um pacote para ver os seus programas, serviços e a versão instalada.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remoto)",
     "source.current_branch": "{name} (atual)",
     "package.description_label": "Descrição",
-    "programs.export.description": "Exportar versões de pacotes verificadas como lista portátil",
-    "programs.import.description": "Importar uma lista portátil de pacotes"
+    "secret_usages.package_id": "Pacote {id}",
+    "secret_usages.repository_credentials": "Credenciais do repositório",
+    "programs.secret-usages.description": "Listar pacotes cujas credenciais de repositório utilizam os segredos indicados"
   }
 }

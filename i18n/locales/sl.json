@@ -1,6 +1,8 @@
 {
   "name": "Slovenščina",
   "texts": {
+    "programs.export.description": "Izvoz preverjenih različic paketov kot prenosljivega seznama",
+    "programs.import.description": "Uvoz prenosljivega seznama paketov",
     "package.package": "Paket",
     "package.open_a_package_to_see_its_programs": "Odprite paket za pregled njegovih programov, storitev in nameščene različice.",
     "package.author": "Avtor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (oddaljena)",
     "source.current_branch": "{name} (trenutna)",
     "package.description_label": "Opis",
-    "programs.export.description": "Izvoz preverjenih različic paketov kot prenosljivega seznama",
-    "programs.import.description": "Uvoz prenosljivega seznama paketov"
+    "secret_usages.package_id": "Paket {id}",
+    "secret_usages.repository_credentials": "Poverilnice repozitorija",
+    "programs.secret-usages.description": "Prikaže pakete, katerih poverilnice repozitorija uporabljajo podane skrivnosti"
   }
 }

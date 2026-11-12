@@ -20,6 +20,9 @@ Parent DOX: [packages DOX](../AGENTS.md).
   commit checkout remain explicit source-changing actions.
 - The hidden `delete` program requires a package ID and `--confirm` before
   calling `kernel.packages.delete`.
+- `secret-usages` implements the `the8020/secrets` usage contract: non-retired
+  packages whose repository credential names a requested secret, opening the
+  admin-core package detail.
 
 # Work Guidance
 

@@ -1,6 +1,8 @@
 {
   "name": "Русский",
   "texts": {
+    "programs.export.description": "Экспорт проверенных версий пакетов в виде переносимого списка",
+    "programs.import.description": "Импорт переносимого списка пакетов",
     "package.package": "Пакет",
     "package.open_a_package_to_see_its_programs": "Откройте пакет, чтобы посмотреть его программы, сервисы и установленную версию.",
     "package.author": "Автор",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (удалённая)",
     "source.current_branch": "{name} (текущая)",
     "package.description_label": "Описание",
-    "programs.export.description": "Экспорт проверенных версий пакетов в виде переносимого списка",
-    "programs.import.description": "Импорт переносимого списка пакетов"
+    "secret_usages.package_id": "Пакет {id}",
+    "secret_usages.repository_credentials": "Учётные данные репозитория",
+    "programs.secret-usages.description": "Показывает пакеты, учётные данные репозитория которых используют указанные секреты"
   }
 }

@@ -1,6 +1,8 @@
 {
   "name": "Suomi",
   "texts": {
+    "programs.export.description": "Vie tarkistetut pakettiversiot siirrettävänä luettelona",
+    "programs.import.description": "Tuo siirrettävä pakettiluettelo",
     "package.package": "Paketti",
     "package.open_a_package_to_see_its_programs": "Avaa paketti nähdäksesi sen ohjelmat, palvelut ja asennetun version.",
     "package.author": "Tekijä",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (etä)",
     "source.current_branch": "{name} (nykyinen)",
     "package.description_label": "Kuvaus",
-    "programs.export.description": "Vie tarkistetut pakettiversiot siirrettävänä luettelona",
-    "programs.import.description": "Tuo siirrettävä pakettiluettelo"
+    "secret_usages.package_id": "Paketti {id}",
+    "secret_usages.repository_credentials": "Lähdekoodivaraston tunnistetiedot",
+    "programs.secret-usages.description": "Luettele paketit, joiden lähdekoodivaraston tunnistetiedot käyttävät annettuja salaisuuksia"
   }
 }

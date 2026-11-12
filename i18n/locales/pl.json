@@ -1,6 +1,8 @@
 {
   "name": "Polski",
   "texts": {
+    "programs.export.description": "Eksport zweryfikowanych wersji pakietów jako przenośnej listy",
+    "programs.import.description": "Import przenośnej listy pakietów",
     "package.package": "Pakiet",
     "package.open_a_package_to_see_its_programs": "Otwórz pakiet, aby zobaczyć jego programy, usługi i zainstalowaną wersję.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (zdalna)",
     "source.current_branch": "{name} (bieżąca)",
     "package.description_label": "Opis",
-    "programs.export.description": "Eksport zweryfikowanych wersji pakietów jako przenośnej listy",
-    "programs.import.description": "Import przenośnej listy pakietów"
+    "secret_usages.package_id": "Pakiet {id}",
+    "secret_usages.repository_credentials": "Dane dostępu do repozytorium",
+    "programs.secret-usages.description": "Wyświetla pakiety, których dane dostępu do repozytorium używają podanych sekretów"
   }
 }

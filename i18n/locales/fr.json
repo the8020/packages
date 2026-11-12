@@ -1,6 +1,8 @@
 {
   "name": "Français",
   "texts": {
+    "programs.export.description": "Exporter les versions de paquets vérifiées sous forme de liste portable",
+    "programs.import.description": "Importer une liste de paquets portable",
     "package.package": "Paquet",
     "package.open_a_package_to_see_its_programs": "Ouvrez un paquet pour consulter ses programmes, ses services et sa version installée.",
     "package.author": "Auteur",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (distante)",
     "source.current_branch": "{name} (actuelle)",
     "package.description_label": "Description",
-    "programs.export.description": "Exporter les versions de paquets vérifiées sous forme de liste portable",
-    "programs.import.description": "Importer une liste de paquets portable"
+    "secret_usages.package_id": "Paquet {id}",
+    "secret_usages.repository_credentials": "Identifiants du dépôt",
+    "programs.secret-usages.description": "Lister les paquets dont les identifiants de dépôt utilisent les secrets indiqués"
   }
 }

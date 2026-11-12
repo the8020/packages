@@ -1,6 +1,8 @@
 {
   "name": "English",
   "texts": {
+    "programs.export.description": "Export verified package versions as a portable list",
+    "programs.import.description": "Import a portable package list",
     "package.package": "Package",
     "package.open_a_package_to_see_its_programs": "Open a package to see its programs, services, and installed version.",
     "package.author": "Author",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (current)",
     "package.description_label": "Description",
-    "programs.export.description": "Export verified package versions as a portable list",
-    "programs.import.description": "Import a portable package list"
+    "secret_usages.package_id": "Package {id}",
+    "secret_usages.repository_credentials": "Repository credentials",
+    "programs.secret-usages.description": "Report packages whose repository credentials use given secrets"
   }
 }

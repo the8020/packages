@@ -1,6 +1,8 @@
 {
   "name": "Latviešu",
   "texts": {
+    "programs.export.description": "Eksportēt pārbaudītas pakotņu versijas kā pārnesamu sarakstu",
+    "programs.import.description": "Importēt pārnesamu pakotņu sarakstu",
     "package.package": "Pakotne",
     "package.open_a_package_to_see_its_programs": "Atveriet pakotni, lai skatītu tās programmas, pakalpojumus un instalēto versiju.",
     "package.author": "Autors",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (attāls)",
     "source.current_branch": "{name} (pašreizējais)",
     "package.description_label": "Apraksts",
-    "programs.export.description": "Eksportēt pārbaudītas pakotņu versijas kā pārnesamu sarakstu",
-    "programs.import.description": "Importēt pārnesamu pakotņu sarakstu"
+    "secret_usages.package_id": "Pakotne {id}",
+    "secret_usages.repository_credentials": "Repozitorija akreditācijas dati",
+    "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus"
   }
 }

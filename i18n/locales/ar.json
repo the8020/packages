@@ -1,13 +1,15 @@
 {
   "name": "العربية",
   "texts": {
+    "programs.export.description": "تصدير إصدارات الحزم الموثّقة كقائمة قابلة للنقل",
+    "programs.import.description": "استيراد قائمة حزم قابلة للنقل",
     "package.package": "الحزمة",
     "package.open_a_package_to_see_its_programs": "افتح حزمة لعرض برامجها وخدماتها وإصدارها المثبّت.",
     "package.author": "المؤلف",
     "package.the_namespace_that_owns_the_package_such": "نطاق الأسماء المالك للحزمة، مثل `the8020`.",
     "package.repository": "المستودع",
     "package.the_package_name_within_its_author_namespace": "اسم الحزمة ضمن نطاق أسماء مؤلفها.",
-    "package.description": "الحزم المطلوبة في ⁦80|20⁩ وسجل التفعيل",
+    "package.description": "الحزم المطلوبة في \u206680|20\u2069 وسجل التفعيل",
     "package.what_this_package_provides_and_when_to": "ما توفره هذه الحزمة ومتى تُستخدم.",
     "package.documentation": "التوثيق",
     "package.where_to_find_instructions_for_using_this": "مكان العثور على تعليمات استخدام هذه الحزمة.",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (بعيد)",
     "source.current_branch": "{name} (حالي)",
     "package.description_label": "الوصف",
-    "programs.export.description": "تصدير إصدارات الحزم الموثّقة كقائمة قابلة للنقل",
-    "programs.import.description": "استيراد قائمة حزم قابلة للنقل"
+    "secret_usages.package_id": "الحزمة {id}",
+    "secret_usages.repository_credentials": "بيانات اعتماد المستودع",
+    "programs.secret-usages.description": "عرض الحزم التي تستخدم بيانات اعتماد مستودعاتها الأسرار المحددة"
   }
 }

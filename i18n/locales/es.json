@@ -1,6 +1,8 @@
 {
   "name": "Español",
   "texts": {
+    "programs.export.description": "Exportar versiones de paquetes verificadas como lista portable",
+    "programs.import.description": "Importar una lista portable de paquetes",
     "package.package": "Paquete",
     "package.open_a_package_to_see_its_programs": "Abra un paquete para ver sus programas, servicios y versión instalada.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remota)",
     "source.current_branch": "{name} (actual)",
     "package.description_label": "Descripción",
-    "programs.export.description": "Exportar versiones de paquetes verificadas como lista portable",
-    "programs.import.description": "Importar una lista portable de paquetes"
+    "secret_usages.package_id": "Paquete {id}",
+    "secret_usages.repository_credentials": "Credenciales del repositorio",
+    "programs.secret-usages.description": "Listar los paquetes cuyas credenciales de repositorio usan los secretos indicados"
   }
 }

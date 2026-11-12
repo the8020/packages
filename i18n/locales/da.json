@@ -1,6 +1,8 @@
 {
   "name": "Dansk",
   "texts": {
+    "programs.export.description": "Eksportér verificerede pakkeversioner som en flytbar liste",
+    "programs.import.description": "Importér en flytbar pakkeliste",
     "package.package": "Pakke",
     "package.open_a_package_to_see_its_programs": "Åbn en pakke for at se dens programmer, tjenester og installerede version.",
     "package.author": "Forfatter",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (aktuel)",
     "package.description_label": "Beskrivelse",
-    "programs.export.description": "Eksportér verificerede pakkeversioner som en flytbar liste",
-    "programs.import.description": "Importér en flytbar pakkeliste"
+    "secret_usages.package_id": "Pakke {id}",
+    "secret_usages.repository_credentials": "Repository-loginoplysninger",
+    "programs.secret-usages.description": "Vis pakker, hvis repository-loginoplysninger bruger de angivne hemmeligheder"
   }
 }

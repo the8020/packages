@@ -1,6 +1,8 @@
 {
   "name": "Română",
   "texts": {
+    "programs.export.description": "Exportă versiunile verificate ale pachetelor ca listă portabilă",
+    "programs.import.description": "Importă o listă portabilă de pachete",
     "package.package": "Pachet",
     "package.open_a_package_to_see_its_programs": "Deschideți un pachet pentru a vedea programele, serviciile și versiunea instalată.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (la distanță)",
     "source.current_branch": "{name} (curentă)",
     "package.description_label": "Descriere",
-    "programs.export.description": "Exportă versiunile verificate ale pachetelor ca listă portabilă",
-    "programs.import.description": "Importă o listă portabilă de pachete"
+    "secret_usages.package_id": "Pachet {id}",
+    "secret_usages.repository_credentials": "Credențiale depozit",
+    "programs.secret-usages.description": "Listează pachetele ale căror credențiale de depozit folosesc secretele indicate"
   }
 }

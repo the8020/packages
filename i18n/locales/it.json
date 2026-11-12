@@ -1,6 +1,8 @@
 {
   "name": "Italiano",
   "texts": {
+    "programs.export.description": "Esporta le versioni verificate dei pacchetti come elenco portabile",
+    "programs.import.description": "Importa un elenco portabile di pacchetti",
     "package.package": "Pacchetto",
     "package.open_a_package_to_see_its_programs": "Apri un pacchetto per vedere programmi, servizi e versione installata.",
     "package.author": "Autore",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (remoto)",
     "source.current_branch": "{name} (corrente)",
     "package.description_label": "Descrizione",
-    "programs.export.description": "Esporta le versioni verificate dei pacchetti come elenco portabile",
-    "programs.import.description": "Importa un elenco portabile di pacchetti"
+    "secret_usages.package_id": "Pacchetto {id}",
+    "secret_usages.repository_credentials": "Credenziali del repository",
+    "programs.secret-usages.description": "Elenca i pacchetti le cui credenziali del repository usano i segreti indicati"
   }
 }

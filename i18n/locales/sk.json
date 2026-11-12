@@ -1,6 +1,8 @@
 {
   "name": "Slovenčina",
   "texts": {
+    "programs.export.description": "Export overených verzií balíčkov ako prenosného zoznamu",
+    "programs.import.description": "Import prenosného zoznamu balíčkov",
     "package.package": "Balíček",
     "package.open_a_package_to_see_its_programs": "Otvorte balíček na zobrazenie programov, služieb a nainštalovanej verzie.",
     "package.author": "Autor",
@@ -126,7 +128,8 @@
     "source.remote_branch": "{name} (vzdialená)",
     "source.current_branch": "{name} (aktuálna)",
     "package.description_label": "Popis",
-    "programs.export.description": "Export overených verzií balíčkov ako prenosného zoznamu",
-    "programs.import.description": "Import prenosného zoznamu balíčkov"
+    "secret_usages.package_id": "Balíček {id}",
+    "secret_usages.repository_credentials": "Prihlasovacie údaje k repozitáru",
+    "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje"
   }
 }
