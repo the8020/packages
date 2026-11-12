@@ -161,7 +161,12 @@ Deno.test("any unverifiable package withholds the whole export", async () => {
   );
   assertEquals(result.file, undefined);
   assertEquals(result.problems, [
-    { package: "acme/ahead", code: "not_in_remote", detail: c(9) },
+    {
+      package: "acme/ahead",
+      code: "not_in_remote",
+      detail: c(9),
+      source: "https://git.example/acme/ahead.git",
+    },
     { package: "acme/noremote", code: "no_remote" },
     { package: "acme/inactive", code: "not_active" },
   ]);

@@ -46,6 +46,8 @@ export interface ExportProblem {
   code: ExportProblemCode;
   /** Missing commit or failure message. */
   detail?: string;
+  /** Git remote that lacks the running commit. */
+  source?: string;
 }
 export interface ExportResult {
   /** Present only when every requested package passed verification. */
@@ -96,7 +98,12 @@ async function exportEntry(
   });
   const versions = await api.versions.list(packageId, HISTORY_LIMIT);
   if (!inRemote(commit, source.references, versions)) {
-    return { package: packageId, code: "not_in_remote", detail: commit };
+    return {
+      package: packageId,
+      code: "not_in_remote",
+      detail: commit,
+      source: source.source,
+    };
   }
   const tag = source.references.find((reference) =>
     reference.kind === "tag" && reference.commit === commit
