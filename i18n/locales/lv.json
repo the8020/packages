@@ -125,6 +125,8 @@
     "source.tag_name": "Tags {name}",
     "source.remote_branch": "{name} (attāls)",
     "source.current_branch": "{name} (pašreizējais)",
-    "package.description_label": "Apraksts"
+    "package.description_label": "Apraksts",
+    "programs.export.description": "Eksportēt pārbaudītas pakotņu versijas kā pārnesamu sarakstu",
+    "programs.import.description": "Importēt pārnesamu pakotņu sarakstu"
   }
 }

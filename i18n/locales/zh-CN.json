@@ -125,6 +125,8 @@
     "source.tag_name": "标签 {name}",
     "source.remote_branch": "{name}（远程）",
     "source.current_branch": "{name}（当前）",
-    "package.description_label": "说明"
+    "package.description_label": "说明",
+    "programs.export.description": "将已验证的包版本导出为可移植列表",
+    "programs.import.description": "导入可移植的包列表"
   }
 }

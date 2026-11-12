@@ -4,6 +4,14 @@ import {
   parseCommandArguments,
   requiredCommandArgument,
 } from "/p/the8020/packages/commands.ts";
+import { z } from "/p/the8020/db/fields.ts";
+import {
+  exportablePackageIds,
+  exportPackageList,
+  importPackageList,
+  packageListFile,
+  previewImport,
+} from "./transfer.ts";
 
 function packageIdentity(value: string) {
   const parts = value.split("/");
@@ -165,4 +173,70 @@ export function repositoryRemote(...args: string[]) {
     name: parsed.options.name,
     url: parsed.options.url,
   }).then((repository) => ({ repository }));
+}
+export async function exportList(...args: string[]) {
+  const parsed = parseCommandArguments(args, { booleans: ["all", "check"] });
+  if ((parsed.options.all === true) === (parsed.positionals.length > 0)) {
+    throw new AdminCommandError({
+      code: "invalid_arguments",
+      message: "name package IDs or use --all",
+    });
+  }
+  const ids = parsed.options.all === true
+    ? await exportablePackageIds()
+    : parsed.positionals;
+  const { file, problems } = await exportPackageList(ids);
+  if (!file) {
+    throw new AdminCommandError({
+      code: "export_blocked",
+      message:
+        `${problems.length} of ${ids.length} packages cannot be exported`,
+      details: { problems },
+    });
+  }
+  return parsed.options.check === true
+    ? { checked: file.packages.length }
+    : file;
+}
+export async function importList(...args: string[]) {
+  const parsed = parseCommandArguments(args, {
+    values: ["packages"],
+    booleans: ["overwrite", "install", "dry-run"],
+  });
+  const text = requiredCommandArgument(parsed.positionals, 0, "package list");
+  let file;
+  try {
+    file = packageListFile.parse(JSON.parse(text));
+  } catch (error) {
+    throw new AdminCommandError({
+      code: "invalid_arguments",
+      message: `invalid package list: ${
+        error instanceof z.ZodError
+          ? z.prettifyError(error)
+          : error instanceof Error
+          ? error.message
+          : String(error)
+      }`,
+    });
+  }
+  if (parsed.options["dry-run"] === true) {
+    return { packages: await previewImport(file) };
+  }
+  const packages = await importPackageList(file, {
+    packages: typeof parsed.options.packages === "string"
+      ? parsed.options.packages.split(",").filter(Boolean)
+      : undefined,
+    overwrite: parsed.options.overwrite === true,
+    install: parsed.options.install === true,
+  });
+  if (packages.some((item) => item.outcome === "failed")) {
+    throw new AdminCommandError({
+      code: "import_failed",
+      message: `${
+        packages.filter((item) => item.outcome === "failed").length
+      } packages failed to import`,
+      details: { packages },
+    });
+  }
+  return { packages };
 }

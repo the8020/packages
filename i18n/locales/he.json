@@ -7,7 +7,7 @@
     "package.the_namespace_that_owns_the_package_such": "מרחב השמות שבבעלותו החבילה, כגון `the8020`.",
     "package.repository": "מאגר",
     "package.the_package_name_within_its_author_namespace": "שם החבילה בתוך מרחב השמות של היוצר.",
-    "package.description": "חבילות רצויות והיסטוריית הפעלה ב־\u206680|20\u2069",
+    "package.description": "חבילות רצויות והיסטוריית הפעלה ב־⁦80|20⁩",
     "package.what_this_package_provides_and_when_to": "מה החבילה מספקת ומתי להשתמש בה.",
     "package.documentation": "תיעוד",
     "package.where_to_find_instructions_for_using_this": "היכן למצוא הוראות לשימוש בחבילה.",
@@ -125,6 +125,8 @@
     "source.tag_name": "תג {name}",
     "source.remote_branch": "{name} (מרוחק)",
     "source.current_branch": "{name} (נוכחי)",
-    "package.description_label": "תיאור"
+    "package.description_label": "תיאור",
+    "programs.export.description": "ייצוא גרסאות חבילות מאומתות כרשימה ניידת",
+    "programs.import.description": "ייבוא רשימת חבילות ניידת"
   }
 }

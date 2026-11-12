@@ -125,6 +125,8 @@
     "source.tag_name": "태그 {name}",
     "source.remote_branch": "{name}(원격)",
     "source.current_branch": "{name}(현재)",
-    "package.description_label": "설명"
+    "package.description_label": "설명",
+    "programs.export.description": "검증된 패키지 버전을 이식 가능한 목록으로 내보내기",
+    "programs.import.description": "이식 가능한 패키지 목록 가져오기"
   }
 }

@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (zdalna)",
     "source.current_branch": "{name} (bieżąca)",
-    "package.description_label": "Opis"
+    "package.description_label": "Opis",
+    "programs.export.description": "Eksport zweryfikowanych wersji pakietów jako przenośnej listy",
+    "programs.import.description": "Import przenośnej listy pakietów"
   }
 }

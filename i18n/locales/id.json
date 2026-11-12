@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (saat ini)",
-    "package.description_label": "Deskripsi"
+    "package.description_label": "Deskripsi",
+    "programs.export.description": "Ekspor versi paket terverifikasi sebagai daftar portabel",
+    "programs.import.description": "Impor daftar paket portabel"
   }
 }

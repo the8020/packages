@@ -125,6 +125,8 @@
     "source.tag_name": "Silt {name}",
     "source.remote_branch": "{name} (kaug)",
     "source.current_branch": "{name} (praegune)",
-    "package.description_label": "Kirjeldus"
+    "package.description_label": "Kirjeldus",
+    "programs.export.description": "Ekspordi kontrollitud paketiversioonid teisaldatava loendina",
+    "programs.import.description": "Impordi teisaldatav paketiloend"
   }
 }

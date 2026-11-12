@@ -125,6 +125,8 @@
     "source.tag_name": "Oznaka {name}",
     "source.remote_branch": "{name} (udaljena)",
     "source.current_branch": "{name} (trenutna)",
-    "package.description_label": "Opis"
+    "package.description_label": "Opis",
+    "programs.export.description": "Izvoz proverenih verzija paketa kao prenosive liste",
+    "programs.import.description": "Uvoz prenosive liste paketa"
   }
 }

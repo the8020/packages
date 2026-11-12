@@ -125,6 +125,8 @@
     "source.tag_name": "Thẻ {name}",
     "source.remote_branch": "{name} (từ xa)",
     "source.current_branch": "{name} (hiện tại)",
-    "package.description_label": "Mô tả"
+    "package.description_label": "Mô tả",
+    "programs.export.description": "Xuất các phiên bản gói đã xác minh thành danh sách di động",
+    "programs.import.description": "Nhập danh sách gói di động"
   }
 }

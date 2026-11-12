@@ -7,7 +7,7 @@
     "package.the_namespace_that_owns_the_package_such": "فضای نام مالک بسته، مانند `the8020`.",
     "package.repository": "مخزن",
     "package.the_package_name_within_its_author_namespace": "نام بسته در فضای نام پدیدآورندهٔ آن.",
-    "package.description": "بسته‌های مطلوب و تاریخچهٔ فعال‌سازی \u206680|20\u2069",
+    "package.description": "بسته‌های مطلوب و تاریخچهٔ فعال‌سازی ⁦80|20⁩",
     "package.what_this_package_provides_and_when_to": "آنچه این بسته ارائه می‌کند و زمان استفاده از آن.",
     "package.documentation": "مستندات",
     "package.where_to_find_instructions_for_using_this": "محل یافتن راهنمای استفاده از این بسته.",
@@ -125,6 +125,8 @@
     "source.tag_name": "برچسب {name}",
     "source.remote_branch": "{name} (راه‌دور)",
     "source.current_branch": "{name} (فعلی)",
-    "package.description_label": "توضیحات"
+    "package.description_label": "توضیحات",
+    "programs.export.description": "صدور نسخه‌های تأییدشدهٔ بسته‌ها به‌صورت فهرست قابل انتقال",
+    "programs.import.description": "ورود فهرست قابل انتقال بسته‌ها"
   }
 }

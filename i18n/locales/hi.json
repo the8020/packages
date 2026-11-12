@@ -125,6 +125,8 @@
     "source.tag_name": "टैग {name}",
     "source.remote_branch": "{name} (रिमोट)",
     "source.current_branch": "{name} (वर्तमान)",
-    "package.description_label": "विवरण"
+    "package.description_label": "विवरण",
+    "programs.export.description": "सत्यापित पैकेज संस्करणों को पोर्टेबल सूची के रूप में निर्यात करें",
+    "programs.import.description": "पोर्टेबल पैकेज सूची आयात करें"
   }
 }

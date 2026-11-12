@@ -125,6 +125,8 @@
     "source.tag_name": "Címke: {name}",
     "source.remote_branch": "{name} (távoli)",
     "source.current_branch": "{name} (aktuális)",
-    "package.description_label": "Leírás"
+    "package.description_label": "Leírás",
+    "programs.export.description": "Ellenőrzött csomagverziók exportálása hordozható listaként",
+    "programs.import.description": "Hordozható csomaglista importálása"
   }
 }

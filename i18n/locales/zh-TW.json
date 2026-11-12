@@ -125,6 +125,8 @@
     "source.tag_name": "標籤 {name}",
     "source.remote_branch": "{name}（遠端）",
     "source.current_branch": "{name}（目前）",
-    "package.description_label": "說明"
+    "package.description_label": "說明",
+    "programs.export.description": "將已驗證的套件版本匯出為可攜式清單",
+    "programs.import.description": "匯入可攜式套件清單"
   }
 }

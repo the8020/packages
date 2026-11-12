@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (kasalukuyan)",
-    "package.description_label": "Paglalarawan"
+    "package.description_label": "Paglalarawan",
+    "programs.export.description": "I-export ang mga na-verify na bersyon ng package bilang portable na listahan",
+    "programs.import.description": "Mag-import ng portable na listahan ng package"
   }
 }

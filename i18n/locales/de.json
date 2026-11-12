@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remote)",
     "source.current_branch": "{name} (aktuell)",
-    "package.description_label": "Beschreibung"
+    "package.description_label": "Beschreibung",
+    "programs.export.description": "Geprüfte Paketversionen als portable Liste exportieren",
+    "programs.import.description": "Portable Paketliste importieren"
   }
 }

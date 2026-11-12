@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (vzdialená)",
     "source.current_branch": "{name} (aktuálna)",
-    "package.description_label": "Popis"
+    "package.description_label": "Popis",
+    "programs.export.description": "Export overených verzií balíčkov ako prenosného zoznamu",
+    "programs.import.description": "Import prenosného zoznamu balíčkov"
   }
 }

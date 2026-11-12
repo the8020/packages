@@ -125,6 +125,8 @@
     "source.tag_name": "タグ {name}",
     "source.remote_branch": "{name}（リモート）",
     "source.current_branch": "{name}（現在）",
-    "package.description_label": "説明"
+    "package.description_label": "説明",
+    "programs.export.description": "検証済みのパッケージバージョンを移植可能なリストとしてエクスポート",
+    "programs.import.description": "移植可能なパッケージリストをインポート"
   }
 }

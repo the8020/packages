@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (extern)",
     "source.current_branch": "{name} (huidig)",
-    "package.description_label": "Beschrijving"
+    "package.description_label": "Beschrijving",
+    "programs.export.description": "Geverifieerde pakketversies exporteren als overdraagbare lijst",
+    "programs.import.description": "Overdraagbare pakketlijst importeren"
   }
 }

@@ -125,6 +125,8 @@
     "source.tag_name": "Merki {name}",
     "source.remote_branch": "{name} (fjartengt)",
     "source.current_branch": "{name} (núverandi)",
-    "package.description_label": "Lýsing"
+    "package.description_label": "Lýsing",
+    "programs.export.description": "Flytja út staðfestar pakkaútgáfur sem færanlegan lista",
+    "programs.import.description": "Flytja inn færanlegan pakkalista"
   }
 }

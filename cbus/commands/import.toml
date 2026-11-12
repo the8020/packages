@@ -1,0 +1,10 @@
+version = 1
+command = "packages.import"
+program = "the8020/packages/import"
+summary = "Import a package list"
+description = "Write new packages to the desired index; existing packages with another version change only with --overwrite."
+usage = "<package-list-json> [--packages <id,id>] [--overwrite] [--install] [--dry-run]"
+mutates_state = true
+restart_behavior = "none"
+[[examples]]
+command = "packages.import '{\"schema\":1,\"packages\":[...]}' --dry-run"

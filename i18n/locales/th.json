@@ -125,6 +125,8 @@
     "source.tag_name": "แท็ก {name}",
     "source.remote_branch": "{name} (รีโมต)",
     "source.current_branch": "{name} (ปัจจุบัน)",
-    "package.description_label": "คำอธิบาย"
+    "package.description_label": "คำอธิบาย",
+    "programs.export.description": "ส่งออกเวอร์ชันแพ็กเกจที่ตรวจสอบแล้วเป็นรายการที่ย้ายได้",
+    "programs.import.description": "นำเข้ารายการแพ็กเกจที่ย้ายได้"
   }
 }

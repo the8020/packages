@@ -125,6 +125,8 @@
     "source.tag_name": "Tagg {name}",
     "source.remote_branch": "{name} (fjärr)",
     "source.current_branch": "{name} (aktuell)",
-    "package.description_label": "Beskrivning"
+    "package.description_label": "Beskrivning",
+    "programs.export.description": "Exportera verifierade paketversioner som en flyttbar lista",
+    "programs.import.description": "Importera en flyttbar paketlista"
   }
 }

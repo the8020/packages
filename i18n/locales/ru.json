@@ -125,6 +125,8 @@
     "source.tag_name": "Тег {name}",
     "source.remote_branch": "{name} (удалённая)",
     "source.current_branch": "{name} (текущая)",
-    "package.description_label": "Описание"
+    "package.description_label": "Описание",
+    "programs.export.description": "Экспорт проверенных версий пакетов в виде переносимого списка",
+    "programs.import.description": "Импорт переносимого списка пакетов"
   }
 }

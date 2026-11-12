@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (jauh)",
     "source.current_branch": "{name} (semasa)",
-    "package.description_label": "Perihalan"
+    "package.description_label": "Perihalan",
+    "programs.export.description": "Eksport versi pakej yang disahkan sebagai senarai mudah alih",
+    "programs.import.description": "Import senarai pakej mudah alih"
   }
 }

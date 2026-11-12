@@ -125,6 +125,8 @@
     "source.tag_name": "Tag {name}",
     "source.remote_branch": "{name} (remoto)",
     "source.current_branch": "{name} (corrente)",
-    "package.description_label": "Descrizione"
+    "package.description_label": "Descrizione",
+    "programs.export.description": "Esporta le versioni verificate dei pacchetti come elenco portabile",
+    "programs.import.description": "Importa un elenco portabile di pacchetti"
   }
 }

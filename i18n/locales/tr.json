@@ -125,6 +125,8 @@
     "source.tag_name": "Etiket {name}",
     "source.remote_branch": "{name} (uzak)",
     "source.current_branch": "{name} (geçerli)",
-    "package.description_label": "Açıklama"
+    "package.description_label": "Açıklama",
+    "programs.export.description": "Doğrulanmış paket sürümlerini taşınabilir liste olarak dışa aktar",
+    "programs.import.description": "Taşınabilir paket listesini içe aktar"
   }
 }
