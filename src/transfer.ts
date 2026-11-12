@@ -372,13 +372,9 @@ export async function importPackageList(
 
 /** Set `origin` to the listed source when an installed repository has none. */
 async function ensureRemote(item: ImportPreview, api: TransferApi) {
-  let repository;
-  try {
-    repository = await api.repository.inspect(item.package);
-  } catch {
-    return; // Not installed yet: nothing to configure.
-  }
-  if (repository.remote_url) return;
+  const repository = await api.repository.inspect(item.package);
+  // Without an installed repository (status "absent") there is nothing to set.
+  if (repository.status === "absent" || repository.remote_url) return;
   await api.repository.remote({
     package_id: item.package,
     name: "origin",

@@ -24,6 +24,8 @@ interface FakePackage {
   references?: PackageSourceInspection["references"];
   history?: [string, string[]][];
   dependencies?: string[];
+  /** No installed repository, as reported by the kernel. */
+  absent?: boolean;
 }
 
 function fakeApi(packages: Record<string, FakePackage>) {
@@ -53,7 +55,10 @@ function fakeApi(packages: Record<string, FakePackage>) {
     },
     repository: {
       inspect: (id: string) =>
-        Promise.resolve({ remote_url: packages[id]!.remote }),
+        Promise.resolve({
+          remote_url: packages[id]!.remote,
+          status: packages[id]!.absent ? "absent" : "clean",
+        }),
       fetch: (id: string) => {
         calls.push(`fetch ${id}`);
         return Promise.resolve({});
@@ -414,6 +419,11 @@ Deno.test("dependencies warn and can be added without platform packages", async 
 
 Deno.test("import sets a missing origin remote on installed packages", async () => {
   const { api, calls } = fakeApi({
+    "acme/pending": {
+      index: { state: "retired" } as Partial<PackageIndex>,
+      remote: "https://git.example/acme/pending.git",
+      absent: true,
+    },
     "acme/new": {
       index: { state: "retired" } as Partial<PackageIndex>,
       remote: "https://git.example/acme/new.git",
@@ -436,6 +446,11 @@ Deno.test("import sets a missing origin remote on installed packages", async () 
   const outcomes = await importPackageList(
     list(
       {
+        package: "acme/pending",
+        source: "https://git.example/acme/pending.git",
+        commit: c(1),
+      },
+      {
         package: "acme/new",
         source: "https://git.example/acme/new.git",
         commit: c(1),
@@ -450,6 +465,7 @@ Deno.test("import sets a missing origin remote on installed packages", async () 
     api,
   );
   assertEquals(outcomes.map((item) => [item.outcome, item.code]), [
+    ["imported", undefined],
     ["imported", undefined],
     ["skipped", "same"],
   ]);
