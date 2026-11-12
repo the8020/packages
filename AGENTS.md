@@ -234,10 +234,11 @@ below.
   the authorized API and blocks it when it is not active, has no remote, its
   remote URL derives another package ID (including letter case), or its running
   commit is neither a remote reference nor an ancestor of one; any blocked
-  package withholds the whole list. Import previews new/same/different/local
-  rows without contacting remotes, rechecks source identity before `index.set`,
-  pins the commit when the tag moved, never overwrites a local package, changes
-  a different version only with explicit overwrite, and may synchronize the
+  package withholds the whole list. `verifyExportEntry` checks one package so
+  screens can report progress. Import previews new/same/different/local rows
+  without contacting remotes, rechecks source identity before `index.set`, pins
+  the commit when the tag moved, never overwrites a local package, changes a
+  different version only with explicit overwrite, and may synchronize the
   imported packages once.
 - Synchronization accepts `--schema` for a read-only candidate plan and
   `--force table-id.column[,table-id.column]` for exact incompatible-cell

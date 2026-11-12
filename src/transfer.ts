@@ -114,6 +114,18 @@ async function exportEntry(
   };
 }
 
+/** Verify one package for export; failures become a `failed` problem. */
+export async function verifyExportEntry(
+  packageId: string,
+  api: TransferApi = packages,
+): Promise<PackageListEntry | ExportProblem> {
+  try {
+    return await exportEntry(packageId, api);
+  } catch (error) {
+    return { package: packageId, code: "failed", detail: failure(error) };
+  }
+}
+
 /**
  * Export running versions after proving each is committed in its Git remote.
  * Any problem withholds the whole file.
@@ -129,17 +141,9 @@ export async function exportPackageList(
   const entries: PackageListEntry[] = [];
   const problems: ExportProblem[] = [];
   for (const packageId of ids) {
-    try {
-      const entry = await exportEntry(packageId, api);
-      if ("code" in entry) problems.push(entry);
-      else entries.push(entry);
-    } catch (error) {
-      problems.push({
-        package: packageId,
-        code: "failed",
-        detail: failure(error),
-      });
-    }
+    const entry = await verifyExportEntry(packageId, api);
+    if ("code" in entry) problems.push(entry);
+    else entries.push(entry);
   }
   return problems.length
     ? { problems }
