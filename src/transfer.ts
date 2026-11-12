@@ -264,6 +264,7 @@ export type ImportOutcomeCode =
   | "not_selected"
   | "local"
   | "install"
+  | "remote"
   | "failed";
 export interface ImportOutcome extends ImportPreview {
   outcome: "imported" | "skipped" | "failed";
@@ -352,5 +353,35 @@ export async function importPackageList(
       }
     }
   }
+  // Installed packages keep their Git remote so they can be fetched, pushed
+  // and exported again; unchanged packages get a missing remote on re-import.
+  for (const item of outcomes) {
+    if (item.outcome !== "imported" && item.code !== "same") continue;
+    try {
+      await ensureRemote(item, api);
+    } catch (cause) {
+      Object.assign(item, {
+        outcome: "failed",
+        code: "remote",
+        detail: failure(cause),
+      });
+    }
+  }
   return outcomes;
+}
+
+/** Set `origin` to the listed source when an installed repository has none. */
+async function ensureRemote(item: ImportPreview, api: TransferApi) {
+  let repository;
+  try {
+    repository = await api.repository.inspect(item.package);
+  } catch {
+    return; // Not installed yet: nothing to configure.
+  }
+  if (repository.remote_url) return;
+  await api.repository.remote({
+    package_id: item.package,
+    name: "origin",
+    url: item.source,
+  });
 }

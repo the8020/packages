@@ -240,7 +240,9 @@ below.
   Import previews new/same/different/local rows without contacting remotes,
   writes `index.set` under the listed package ID, pins the commit when the tag
   moved, never overwrites a local package, changes a different version only with
-  explicit overwrite, and may synchronize the imported packages once.
+  explicit overwrite, and may synchronize the imported packages once. An
+  installed imported or unchanged package without a Git remote gets `origin` set
+  to the listed source, so it can be fetched, pushed and exported again.
   Dependencies ignore platform `the8020/*` packages and never block export:
   `missingDependencies` reports listed packages whose dependencies the list
   lacks (`packages.export --check` and a blocked export return them as

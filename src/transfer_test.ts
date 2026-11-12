@@ -58,6 +58,10 @@ function fakeApi(packages: Record<string, FakePackage>) {
         calls.push(`fetch ${id}`);
         return Promise.resolve({});
       },
+      remote: (input: Record<string, unknown>) => {
+        calls.push(`remote ${JSON.stringify(input)}`);
+        return Promise.resolve({});
+      },
     },
     source: {
       inspect: (source: string) => {
@@ -405,5 +409,64 @@ Deno.test("dependencies warn and can be added without platform packages", async 
     "acme/log",
     "acme/mail",
     "acme/smtp",
+  ]);
+});
+
+Deno.test("import sets a missing origin remote on installed packages", async () => {
+  const { api, calls } = fakeApi({
+    "acme/new": {
+      index: { state: "retired" } as Partial<PackageIndex>,
+      remote: "https://git.example/acme/new.git",
+    },
+    "acme/same": {
+      index: {
+        source: "https://git.example/acme/same.git",
+        active_commit: c(1),
+      },
+      remote: "https://git.example/acme/same.git",
+    },
+  });
+  // Installed repositories report no remote, as on a freshly installed system.
+  const inspect = api.repository.inspect;
+  api.repository.inspect = ((id: string) =>
+    inspect(id).then((repository) => ({
+      ...repository,
+      remote_url: undefined,
+    }))) as typeof inspect;
+  const outcomes = await importPackageList(
+    list(
+      {
+        package: "acme/new",
+        source: "https://git.example/acme/new.git",
+        commit: c(1),
+      },
+      {
+        package: "acme/same",
+        source: "https://git.example/acme/same.git",
+        commit: c(1),
+      },
+    ),
+    { install: true },
+    api,
+  );
+  assertEquals(outcomes.map((item) => [item.outcome, item.code]), [
+    ["imported", undefined],
+    ["skipped", "same"],
+  ]);
+  assertEquals(calls.filter((call) => call.startsWith("remote")), [
+    `remote ${
+      JSON.stringify({
+        package_id: "acme/new",
+        name: "origin",
+        url: "https://git.example/acme/new.git",
+      })
+    }`,
+    `remote ${
+      JSON.stringify({
+        package_id: "acme/same",
+        name: "origin",
+        url: "https://git.example/acme/same.git",
+      })
+    }`,
   ]);
 });
