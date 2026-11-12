@@ -231,15 +231,16 @@ below.
   source, exact running commit, a remote tag only when it points at that commit,
   and a secret name, never its value) shared by `packages.export`,
   `packages.import` and admin-core screens. Export fetches each package through
-  the authorized API and blocks it when it is not active, has no remote, its
-  remote URL derives another package ID (including letter case), or its running
-  commit is neither a remote reference nor an ancestor of one; any blocked
-  package withholds the whole list. `verifyExportEntry` checks one package so
-  screens can report progress. Import previews new/same/different/local rows
-  without contacting remotes, rechecks source identity before `index.set`, pins
-  the commit when the tag moved, never overwrites a local package, changes a
-  different version only with explicit overwrite, and may synchronize the
-  imported packages once.
+  the authorized API and blocks it when it is not active, has no remote, or its
+  running commit is neither a remote reference nor an ancestor of one; any
+  blocked package withholds the whole list. The listed package ID is the target
+  name as installed in the source system; the Git URL is only where the code
+  comes from, so a URL deriving another name (including letter case) is not an
+  error. `verifyExportEntry` checks one package so screens can report progress.
+  Import previews new/same/different/local rows without contacting remotes,
+  writes `index.set` under the listed package ID, pins the commit when the tag
+  moved, never overwrites a local package, changes a different version only with
+  explicit overwrite, and may synchronize the imported packages once.
 - Synchronization accepts `--schema` for a read-only candidate plan and
   `--force table-id.column[,table-id.column]` for exact incompatible-cell
   NULL/default consent. Either requires one explicit package; normal application

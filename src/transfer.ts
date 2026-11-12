@@ -39,13 +39,12 @@ export type TransferApi = Pick<
 export type ExportProblemCode =
   | "not_active"
   | "no_remote"
-  | "identity"
   | "not_in_remote"
   | "failed";
 export interface ExportProblem {
   package: string;
   code: ExportProblemCode;
-  /** Remote-derived package ID, missing commit, or failure message. */
+  /** Missing commit or failure message. */
   detail?: string;
 }
 export interface ExportResult {
@@ -95,9 +94,6 @@ async function exportEntry(
   const source = await api.source.inspect(repository.remote_url, {
     secret: index.secret,
   });
-  if (source.package_id !== packageId) {
-    return { package: packageId, code: "identity", detail: source.package_id };
-  }
   const versions = await api.versions.list(packageId, HISTORY_LIMIT);
   if (!inRemote(commit, source.references, versions)) {
     return { package: packageId, code: "not_in_remote", detail: commit };
@@ -201,7 +197,6 @@ export type ImportOutcomeCode =
   | "different"
   | "not_selected"
   | "local"
-  | "identity"
   | "install"
   | "failed";
 export interface ImportOutcome extends ImportPreview {
@@ -223,14 +218,8 @@ async function importEntry(
   api: TransferApi,
 ): Promise<ImportOutcome> {
   const source = await api.source.inspect(item.source, { secret: item.secret });
-  if (source.package_id !== item.package) {
-    return {
-      ...item,
-      outcome: "failed",
-      code: "identity",
-      detail: source.package_id,
-    };
-  }
+  // The listed package ID is the target name; the Git URL is only its source.
+  const [author, repository] = item.package.split("/") as [string, string];
   // A moved or missing tag must not change the exported code: pin the commit.
   const tagged = item.tag !== undefined &&
     source.references.some((reference) =>
@@ -238,8 +227,8 @@ async function importEntry(
       reference.commit === item.commit
     );
   await api.index.set({
-    author: source.author,
-    repository: source.repository,
+    author,
+    repository,
     source: item.source,
     ...(tagged ? { tag: item.tag } : { commit: item.commit }),
     ...(item.secret ? { secret: item.secret } : {}),

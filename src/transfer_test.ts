@@ -149,12 +149,6 @@ Deno.test("any unverifiable package withholds the whole export", async () => {
     },
     "acme/noremote": { index: { active_commit: c(1) } },
     "acme/inactive": { index: {}, remote: "https://git.example/x/y.git" },
-    "acme/casing": {
-      index: { active_commit: c(1) },
-      remote: "https://git.example/acme/Casing.git",
-      remoteId: "acme/Casing",
-      references: [{ kind: "branch", name: "main", commit: c(1) }],
-    },
   });
   const result = await exportPackageList(
     [
@@ -162,7 +156,6 @@ Deno.test("any unverifiable package withholds the whole export", async () => {
       "acme/ahead",
       "acme/noremote",
       "acme/inactive",
-      "acme/casing",
     ],
     api,
   );
@@ -171,7 +164,6 @@ Deno.test("any unverifiable package withholds the whole export", async () => {
     { package: "acme/ahead", code: "not_in_remote", detail: c(9) },
     { package: "acme/noremote", code: "no_remote" },
     { package: "acme/inactive", code: "not_active" },
-    { package: "acme/casing", code: "identity", detail: "acme/Casing" },
   ]);
 });
 
@@ -322,7 +314,7 @@ Deno.test("import keeps different versions unless overwrite is chosen", async ()
   ]);
 });
 
-Deno.test("import reports identity, local, and installation failures", async () => {
+Deno.test("import keeps the listed name and reports local and installation failures", async () => {
   const { api, calls } = fakeApi({
     "acme/Casing": {
       index: { state: "retired" } as Partial<PackageIndex>,
@@ -359,12 +351,21 @@ Deno.test("import reports identity, local, and installation failures", async () 
   assertEquals(
     outcomes.map((item) => [item.outcome, item.code, item.detail]),
     [
-      ["failed", "identity", "acme/casing"],
+      ["imported", undefined, undefined],
       ["failed", "local", undefined],
       ["failed", "install", "hook failed"],
     ],
   );
-  assertEquals(calls.at(-1), "synchronize acme/broken");
+  // The Git URL derives another name; the listed one is the target.
+  assert(calls.includes(`set ${
+    JSON.stringify({
+      author: "acme",
+      repository: "Casing",
+      source: "https://git.example/acme/casing.git",
+      commit: c(1),
+    })
+  }`));
+  assertEquals(calls.at(-1), "synchronize acme/Casing,acme/broken");
 });
 
 Deno.test("export requires at least one package", async () => {
