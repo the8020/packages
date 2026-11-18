@@ -1,3 +1,5 @@
+import { localizedText as resolveMessage } from "/p/the8020/i18n/mod.ts";
+import { msg as messageSymbol } from "/p/the8020/packages/i18n/messages.ts";
 import { z } from "/p/the8020/db/fields.ts";
 import { secretName } from "/p/the8020/secrets/types/secret.ts";
 import type {
@@ -144,7 +146,13 @@ export async function exportPackageList(
 ): Promise<ExportResult> {
   const ids = [...new Set(packageIds)];
   if (!ids.length || ids.length > MAX_PACKAGES) {
-    throw new RangeError(`Export 1 to ${MAX_PACKAGES} packages.`);
+    throw new RangeError(
+      await resolveMessage(
+        messageSymbol("errors.export_1_to_packages", {
+          MAX_PACKAGES: String(MAX_PACKAGES),
+        }),
+      ),
+    );
   }
   const entries: PackageListEntry[] = [];
   const problems: ExportProblem[] = [];

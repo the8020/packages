@@ -130,6 +130,8 @@
     "package.description_label": "Popis",
     "secret_usages.package_id": "Balíček {id}",
     "secret_usages.repository_credentials": "Prihlasovacie údaje k repozitáru",
-    "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje"
+    "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje",
+    "errors.export_1_to_packages": "Vývoz 1 až {MAX_PACKAGES} balíkov.",
+    "errors.invalid_package_id": "neplatný identifikátor balenia {packageId}"
   }
 }

@@ -130,6 +130,8 @@
     "package.description_label": "Описание",
     "secret_usages.package_id": "Пакет {id}",
     "secret_usages.repository_credentials": "Учётные данные репозитория",
-    "programs.secret-usages.description": "Показывает пакеты, учётные данные репозитория которых используют указанные секреты"
+    "programs.secret-usages.description": "Показывает пакеты, учётные данные репозитория которых используют указанные секреты",
+    "errors.export_1_to_packages": "Экспорт пакетов 1 - {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "недействительный идентификатор упаковки {packageId}"
   }
 }

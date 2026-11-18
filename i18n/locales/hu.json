@@ -130,6 +130,8 @@
     "package.description_label": "Leírás",
     "secret_usages.package_id": "Csomag: {id}",
     "secret_usages.repository_credentials": "Tároló hitelesítő adatai",
-    "programs.secret-usages.description": "Azon csomagok listázása, amelyek tárolóhitelesítő adatai a megadott titkokat használják"
+    "programs.secret-usages.description": "Azon csomagok listázása, amelyek tárolóhitelesítő adatai a megadott titkokat használják",
+    "errors.export_1_to_packages": "Export 1 és {MAX_PACKAGES} csomag között.",
+    "errors.invalid_package_id": "nem érvényes csomag ID {packageId}"
   }
 }

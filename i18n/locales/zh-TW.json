@@ -130,6 +130,8 @@
     "package.description_label": "說明",
     "secret_usages.package_id": "套件 {id}",
     "secret_usages.repository_credentials": "程式碼儲存庫認證資訊",
-    "programs.secret-usages.description": "列出程式碼儲存庫認證資訊使用指定機密的套件"
+    "programs.secret-usages.description": "列出程式碼儲存庫認證資訊使用指定機密的套件",
+    "errors.export_1_to_packages": "輸出1至{MAX_PACKAGES}個包裹.",
+    "errors.invalid_package_id": "沒有有效的包裝ID{packageId}"
   }
 }

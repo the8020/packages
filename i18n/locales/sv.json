@@ -130,6 +130,8 @@
     "package.description_label": "Beskrivning",
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Inloggningsuppgifter för repository",
-    "programs.secret-usages.description": "Lista paket vars inloggningsuppgifter för repository använder angivna hemligheter"
+    "programs.secret-usages.description": "Lista paket vars inloggningsuppgifter för repository använder angivna hemligheter",
+    "errors.export_1_to_packages": "Exporterar 1 till {MAX_PACKAGES} paket.",
+    "errors.invalid_package_id": "Oegentligt paket ID {packageId}"
   }
 }

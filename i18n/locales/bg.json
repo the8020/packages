@@ -130,6 +130,8 @@
     "package.description_label": "Описание",
     "secret_usages.package_id": "Пакет {id}",
     "secret_usages.repository_credentials": "Идентификационни данни за хранилището",
-    "programs.secret-usages.description": "Показва пакетите, чиито идентификационни данни за хранилище използват дадените тайни"
+    "programs.secret-usages.description": "Показва пакетите, чиито идентификационни данни за хранилище използват дадените тайни",
+    "errors.export_1_to_packages": "Износ на пакети от 1 до {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "невалиден идентификационен номер на опаковката {packageId}"
   }
 }

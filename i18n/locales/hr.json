@@ -130,6 +130,8 @@
     "package.description_label": "Opis",
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Vjerodajnice repozitorija",
-    "programs.secret-usages.description": "Prikazuje pakete čije vjerodajnice repozitorija koriste zadane tajne"
+    "programs.secret-usages.description": "Prikazuje pakete čije vjerodajnice repozitorija koriste zadane tajne",
+    "errors.export_1_to_packages": "Izvoz paketa 1 do {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "Nevaljan paket ID {packageId}"
   }
 }

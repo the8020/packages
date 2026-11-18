@@ -130,6 +130,8 @@
     "package.description_label": "विवरण",
     "secret_usages.package_id": "पैकेज {id}",
     "secret_usages.repository_credentials": "रिपॉज़िटरी क्रेडेंशियल",
-    "programs.secret-usages.description": "उन पैकेजों की सूची दिखाएँ जिनके रिपॉज़िटरी क्रेडेंशियल दिए गए सीक्रेट का उपयोग करते हैं"
+    "programs.secret-usages.description": "उन पैकेजों की सूची दिखाएँ जिनके रिपॉज़िटरी क्रेडेंशियल दिए गए सीक्रेट का उपयोग करते हैं",
+    "errors.export_1_to_packages": "1 से {MAX_PACKAGES} पैकेज निर्यात करें।",
+    "errors.invalid_package_id": "अवैध पैकेज आईडी {packageId}"
   }
 }

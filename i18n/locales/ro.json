@@ -130,6 +130,8 @@
     "package.description_label": "Descriere",
     "secret_usages.package_id": "Pachet {id}",
     "secret_usages.repository_credentials": "Credențiale depozit",
-    "programs.secret-usages.description": "Listează pachetele ale căror credențiale de depozit folosesc secretele indicate"
+    "programs.secret-usages.description": "Listează pachetele ale căror credențiale de depozit folosesc secretele indicate",
+    "errors.export_1_to_packages": "Exportarea pachetelor 1 - {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "ID-ul de pachet nu valabil {packageId}"
   }
 }

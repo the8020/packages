@@ -130,6 +130,8 @@
     "package.description_label": "Apraksts",
     "secret_usages.package_id": "Pakotne {id}",
     "secret_usages.repository_credentials": "Repozitorija akreditācijas dati",
-    "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus"
+    "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus",
+    "errors.export_1_to_packages": "Eksportēt 1 līdz {MAX_PACKAGES} iepakojumus.",
+    "errors.invalid_package_id": "nepareizi iepakojuma identifikācija {packageId}"
   }
 }

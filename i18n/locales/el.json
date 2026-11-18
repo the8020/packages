@@ -130,6 +130,8 @@
     "package.description_label": "Περιγραφή",
     "secret_usages.package_id": "Πακέτο {id}",
     "secret_usages.repository_credentials": "Διαπιστευτήρια αποθετηρίου",
-    "programs.secret-usages.description": "Λίστα πακέτων των οποίων τα διαπιστευτήρια αποθετηρίου χρησιμοποιούν τα δεδομένα απόρρητα"
+    "programs.secret-usages.description": "Λίστα πακέτων των οποίων τα διαπιστευτήρια αποθετηρίου χρησιμοποιούν τα δεδομένα απόρρητα",
+    "errors.export_1_to_packages": "Εξαγωγή 1 έως {MAX_PACKAGES} πακέτων.",
+    "errors.invalid_package_id": "Απαράβλητο αναγνωριστικό πακέτου {packageId}"
   }
 }

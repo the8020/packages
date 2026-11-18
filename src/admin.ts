@@ -1,3 +1,5 @@
+import { localizedText as resolveMessage } from "/p/the8020/i18n/mod.ts";
+import { msg as messageSymbol } from "/p/the8020/packages/i18n/messages.ts";
 import { metadataText } from "../localization.ts";
 import { kernel } from "@the8020/kernel";
 import { type ProgramMetadata, readProgramMetadata } from "../programs.ts";
@@ -116,7 +118,13 @@ export const packages = {
   /** Other packages imported by the active source of a viewable package. */
   async dependencies(packageId: string): Promise<string[]> {
     if (!PACKAGE_ID.test(packageId)) {
-      throw new TypeError(`invalid package ID ${packageId}`);
+      throw new TypeError(
+        await resolveMessage(
+          messageSymbol("errors.invalid_package_id", {
+            packageId: String(packageId),
+          }),
+        ),
+      );
     }
     await requireView(packageId);
     return await importedPackages(

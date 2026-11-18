@@ -130,6 +130,8 @@
     "package.description_label": "Beskrivelse",
     "secret_usages.package_id": "Pakke {id}",
     "secret_usages.repository_credentials": "Repository-loginoplysninger",
-    "programs.secret-usages.description": "Vis pakker, hvis repository-loginoplysninger bruger de angivne hemmeligheder"
+    "programs.secret-usages.description": "Vis pakker, hvis repository-loginoplysninger bruger de angivne hemmeligheder",
+    "errors.export_1_to_packages": "Eksport 1 til {MAX_PACKAGES} pakker.",
+    "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}"
   }
 }

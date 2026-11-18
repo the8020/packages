@@ -130,6 +130,8 @@
     "package.description_label": "Opis",
     "secret_usages.package_id": "Pakiet {id}",
     "secret_usages.repository_credentials": "Dane dostępu do repozytorium",
-    "programs.secret-usages.description": "Wyświetla pakiety, których dane dostępu do repozytorium używają podanych sekretów"
+    "programs.secret-usages.description": "Wyświetla pakiety, których dane dostępu do repozytorium używają podanych sekretów",
+    "errors.export_1_to_packages": "Wywóz 1 do {MAX_PACKAGES} paczek.",
+    "errors.invalid_package_id": "nieważny identyfikator pakietu {packageId}"
   }
 }

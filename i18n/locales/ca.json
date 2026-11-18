@@ -130,6 +130,8 @@
     "package.description_label": "Descripció",
     "secret_usages.package_id": "Paquet {id}",
     "secret_usages.repository_credentials": "Credencials del repositori",
-    "programs.secret-usages.description": "Llista els paquets les credencials de repositori dels quals utilitzen els secrets indicats"
+    "programs.secret-usages.description": "Llista els paquets les credencials de repositori dels quals utilitzen els secrets indicats",
+    "errors.export_1_to_packages": "Exportar paquets 1 a {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "Identificació de paquete no válida {packageId}"
   }
 }

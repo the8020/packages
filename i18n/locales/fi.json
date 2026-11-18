@@ -130,6 +130,8 @@
     "package.description_label": "Kuvaus",
     "secret_usages.package_id": "Paketti {id}",
     "secret_usages.repository_credentials": "Lähdekoodivaraston tunnistetiedot",
-    "programs.secret-usages.description": "Luettele paketit, joiden lähdekoodivaraston tunnistetiedot käyttävät annettuja salaisuuksia"
+    "programs.secret-usages.description": "Luettele paketit, joiden lähdekoodivaraston tunnistetiedot käyttävät annettuja salaisuuksia",
+    "errors.export_1_to_packages": "Vienti 1 - {MAX_PACKAGES} pakettia.",
+    "errors.invalid_package_id": "virallinen pakkaus-ID {packageId}"
   }
 }

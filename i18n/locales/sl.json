@@ -130,6 +130,8 @@
     "package.description_label": "Opis",
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Poverilnice repozitorija",
-    "programs.secret-usages.description": "Prikaže pakete, katerih poverilnice repozitorija uporabljajo podane skrivnosti"
+    "programs.secret-usages.description": "Prikaže pakete, katerih poverilnice repozitorija uporabljajo podane skrivnosti",
+    "errors.export_1_to_packages": "Izvoz pakete 1 do {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "nepovpračen identifikacijski številek paketa {packageId}"
   }
 }

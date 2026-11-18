@@ -130,6 +130,8 @@
     "package.description_label": "Mô tả",
     "secret_usages.package_id": "Gói {id}",
     "secret_usages.repository_credentials": "Thông tin xác thực kho mã",
-    "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho"
+    "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho",
+    "errors.export_1_to_packages": "Xuất khẩu 1 đến {MAX_PACKAGES} gói.",
+    "errors.invalid_package_id": "ID gói không hợp lệ {packageId}"
   }
 }

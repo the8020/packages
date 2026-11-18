@@ -130,6 +130,8 @@
     "package.description_label": "Descrizione",
     "secret_usages.package_id": "Pacchetto {id}",
     "secret_usages.repository_credentials": "Credenziali del repository",
-    "programs.secret-usages.description": "Elenca i pacchetti le cui credenziali del repository usano i segreti indicati"
+    "programs.secret-usages.description": "Elenca i pacchetti le cui credenziali del repository usano i segreti indicati",
+    "errors.export_1_to_packages": "Esportare pacchetti da 1 a {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "ID del pacchetto non valido {packageId}"
   }
 }
