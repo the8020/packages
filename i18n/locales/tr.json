@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Depo kimlik bilgileri",
     "programs.secret-usages.description": "Depo kimlik bilgileri verilen gizli bilgileri kullanan paketleri listele",
     "errors.export_1_to_packages": "1 ila {MAX_PACKAGES} paket ihraç.",
-    "errors.invalid_package_id": "geçersiz paket kimliği {packageId}"
+    "errors.invalid_package_id": "geçersiz paket kimliği {packageId}",
+    "program.shortcut": "Kısa kod",
+    "program.shortcut_help": "Harf veya rakamla başlayan, 1–20 harf, rakam, _ veya - içeren program kodu. Büyük/küçük harf ayrımı yapılmaz."
   }
 }

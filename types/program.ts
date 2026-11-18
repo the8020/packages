@@ -1,6 +1,14 @@
 import { msg } from "/p/the8020/packages/i18n/messages.ts";
 import { choiceHelp, field, z } from "/p/the8020/db/fields.ts";
 
+export const programShortcut = field(
+  z.string().regex(/^[a-z0-9][a-z0-9_-]{0,19}$/i),
+  {
+    label: msg("program.shortcut"),
+    description: msg("program.shortcut_help"),
+  },
+);
+
 export const programId: z.ZodString = field(z.string(), {
   label: msg("program.program"),
   description: msg("program.choose_a_program_to_run_interactive_programs"),

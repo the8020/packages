@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Repozitorija akreditācijas dati",
     "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus",
     "errors.export_1_to_packages": "Eksportēt 1 līdz {MAX_PACKAGES} iepakojumus.",
-    "errors.invalid_package_id": "nepareizi iepakojuma identifikācija {packageId}"
+    "errors.invalid_package_id": "nepareizi iepakojuma identifikācija {packageId}",
+    "program.shortcut": "Īskods",
+    "program.shortcut_help": "Programmas kods ar 1–20 burtiem, cipariem, _ vai -, kas sākas ar burtu vai ciparu. Lielo un mazo burtu atšķirība netiek ņemta vērā."
   }
 }

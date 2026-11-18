@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Dane dostępu do repozytorium",
     "programs.secret-usages.description": "Wyświetla pakiety, których dane dostępu do repozytorium używają podanych sekretów",
     "errors.export_1_to_packages": "Wywóz 1 do {MAX_PACKAGES} paczek.",
-    "errors.invalid_package_id": "nieważny identyfikator pakietu {packageId}"
+    "errors.invalid_package_id": "nieważny identyfikator pakietu {packageId}",
+    "program.shortcut": "Skrót",
+    "program.shortcut_help": "Kod programu złożony z 1–20 liter, cyfr, _ lub -, zaczynający się literą lub cyfrą. Wielkość liter nie ma znaczenia."
   }
 }

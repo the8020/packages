@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Identifiants du dépôt",
     "programs.secret-usages.description": "Lister les paquets dont les identifiants de dépôt utilisent les secrets indiqués",
     "errors.export_1_to_packages": "Exporter des colis de 1 à {MAX_PACKAGES}.",
-    "errors.invalid_package_id": "Identification de colis non valide {packageId}"
+    "errors.invalid_package_id": "Identification de colis non valide {packageId}",
+    "program.shortcut": "Raccourci",
+    "program.shortcut_help": "Code de programme de 1 à 20 lettres, chiffres, _ ou -, commençant par une lettre ou un chiffre. La casse est ignorée."
   }
 }

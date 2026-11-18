@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Prihlasovacie údaje k repozitáru",
     "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje",
     "errors.export_1_to_packages": "Vývoz 1 až {MAX_PACKAGES} balíkov.",
-    "errors.invalid_package_id": "neplatný identifikátor balenia {packageId}"
+    "errors.invalid_package_id": "neplatný identifikátor balenia {packageId}",
+    "program.shortcut": "Skratka",
+    "program.shortcut_help": "Kód programu s 1–20 písmenami, číslicami, _ alebo -, začínajúci písmenom alebo číslicou. Veľkosť písmen sa nerozlišuje."
   }
 }

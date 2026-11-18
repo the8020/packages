@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "代码仓库凭据",
     "programs.secret-usages.description": "列出代码仓库凭据使用指定机密的软件包",
     "errors.export_1_to_packages": "输出1至{MAX_PACKAGES}包.",
-    "errors.invalid_package_id": "无效的包装ID{packageId}"
+    "errors.invalid_package_id": "无效的包装ID{packageId}",
+    "program.shortcut": "快捷码",
+    "program.shortcut_help": "由1–20个英文字母、数字、_或-组成的程序代码，以字母或数字开头，不区分大小写。"
   }
 }

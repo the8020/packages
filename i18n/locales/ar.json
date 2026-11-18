@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "بيانات اعتماد المستودع",
     "programs.secret-usages.description": "عرض الحزم التي تستخدم بيانات اعتماد مستودعاتها الأسرار المحددة",
     "errors.export_1_to_packages": "تصدير حزمة 1 إلى {MAX_PACKAGES}",
-    "errors.invalid_package_id": "هوية الحزمة غير صالحة {packageId}"
+    "errors.invalid_package_id": "هوية الحزمة غير صالحة {packageId}",
+    "program.shortcut": "رمز مختصر",
+    "program.shortcut_help": "رمز برنامج من 1–20 حرفًا أو رقمًا أو _ أو -، يبدأ بحرف أو رقم. لا فرق بين الأحرف الكبيرة والصغيرة."
   }
 }

@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Repository-loginoplysninger",
     "programs.secret-usages.description": "Vis pakker, hvis repository-loginoplysninger bruger de angivne hemmeligheder",
     "errors.export_1_to_packages": "Eksport 1 til {MAX_PACKAGES} pakker.",
-    "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}"
+    "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}",
+    "program.shortcut": "Genvej",
+    "program.shortcut_help": "Programkode med 1–20 bogstaver, cifre, _ eller -, som starter med et bogstav eller ciffer. Store og små bogstaver er ens."
   }
 }

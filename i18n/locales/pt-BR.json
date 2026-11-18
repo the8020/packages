@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Credenciais do repositório",
     "programs.secret-usages.description": "Listar pacotes cujas credenciais de repositório usam os segredos informados",
     "errors.export_1_to_packages": "Exportação de 1 a {MAX_PACKAGES} pacotes.",
-    "errors.invalid_package_id": "ID de pacote inválido {packageId}"
+    "errors.invalid_package_id": "ID de pacote inválido {packageId}",
+    "program.shortcut": "Atalho",
+    "program.shortcut_help": "Código de programa com 1–20 letras, dígitos, _ ou -, começando com uma letra ou dígito. Não diferencia maiúsculas e minúsculas."
   }
 }

@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Akreditivi repozitorijuma",
     "programs.secret-usages.description": "Prikazuje pakete čiji akreditivi repozitorijuma koriste zadate tajne",
     "errors.export_1_to_packages": "Izvoz paketa od 1 do {MAX_PACKAGES}.",
-    "errors.invalid_package_id": "nevažni identifikator paketa {packageId}"
+    "errors.invalid_package_id": "nevažni identifikator paketa {packageId}",
+    "program.shortcut": "Prečica",
+    "program.shortcut_help": "Kod programa od 1–20 slova, cifara, _ ili -, koji počinje slovom ili cifrom. Veličina slova nije bitna."
   }
 }

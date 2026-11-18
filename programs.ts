@@ -1,4 +1,5 @@
 import { metadataText } from "./localization.ts";
+import { programShortcut } from "./types/program.ts";
 import {
   kernel,
   type ProgramSummary as ExecutableProgram,
@@ -13,12 +14,14 @@ export interface ProgramManifest {
   defaultLayout?: string;
   discoverable: boolean;
   uui: boolean;
+  shortcut?: string;
 }
 
 export interface ProgramMetadata {
   description: string;
   discoverable: boolean;
   uui: boolean;
+  shortcut?: string;
   default_layout?: string;
   metadata_error?: string;
 }
@@ -67,6 +70,7 @@ export async function readProgramMetadata(
         : manifest.description,
       discoverable: manifest.discoverable,
       uui: manifest.uui,
+      ...(manifest.shortcut ? { shortcut: manifest.shortcut } : {}),
       ...(manifest.defaultLayout
         ? { default_layout: manifest.defaultLayout }
         : {}),
@@ -116,6 +120,7 @@ export async function readProgramManifest(
     default_layout: defaultLayout,
     discoverable = true,
     uui = false,
+    shortcut,
   } = source;
   const entrypoint = declaredEntrypoint === ""
     ? "program.ts"
@@ -125,6 +130,7 @@ export async function readProgramManifest(
     description.trim().length === 0 || typeof entrypoint !== "string" ||
     !safeRelativePath(entrypoint) || typeof discoverable !== "boolean" ||
     typeof uui !== "boolean" ||
+    (shortcut !== undefined && !programShortcut.safeParse(shortcut).success) ||
     (defaultLayout !== undefined &&
       (typeof defaultLayout !== "string" ||
         (defaultLayout !== "" && !safeRelativePath(defaultLayout)))) ||
@@ -136,6 +142,7 @@ export async function readProgramManifest(
         "default_layout",
         "discoverable",
         "uui",
+        "shortcut",
       ].includes(key)
     )
   ) {
@@ -148,6 +155,9 @@ export async function readProgramManifest(
     defaultLayout: defaultLayout || undefined,
     discoverable,
     uui,
+    ...(typeof shortcut === "string"
+      ? { shortcut: shortcut.toUpperCase() }
+      : {}),
   };
 }
 

@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Thông tin xác thực kho mã",
     "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho",
     "errors.export_1_to_packages": "Xuất khẩu 1 đến {MAX_PACKAGES} gói.",
-    "errors.invalid_package_id": "ID gói không hợp lệ {packageId}"
+    "errors.invalid_package_id": "ID gói không hợp lệ {packageId}",
+    "program.shortcut": "Mã tắt",
+    "program.shortcut_help": "Mã chương trình gồm 1–20 chữ cái, chữ số, _ hoặc -, bắt đầu bằng chữ cái hoặc chữ số. Không phân biệt chữ hoa và chữ thường."
   }
 }

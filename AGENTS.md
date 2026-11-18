@@ -197,6 +197,11 @@ below.
   and default layout metadata. It reads bounded real TOML without importing
   program code. `listPrograms()` enriches native ready executable records; UUI
   discovery and loading share `readProgramManifest`.
+- Program manifests may declare `shortcut`: 1–20 ASCII letters, digits, `_` or
+  `-`, starting with a letter or digit. Metadata exposes uppercase codes;
+  matching is case-insensitive. Standalone first-party UUI programs declare
+  their defaults in their manifests. UUI owns lookup, collisions and personal
+  overrides; native execution remains independent.
 - `widgets.ts` owns the Home tile format. Each package may hold
   `widgets/<name>.toml` (one tile: `schema = 1`, `title`, optional
   `description`, `icon` as a Material Symbols name, `category` as lowercase

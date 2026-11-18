@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "פרטי גישה למאגר",
     "programs.secret-usages.description": "הצגת חבילות שפרטי הגישה למאגר שלהן משתמשים בסודות שצוינו",
     "errors.export_1_to_packages": "ייצוא 1 ל-{MAX_PACKAGES} חבילות.",
-    "errors.invalid_package_id": "איד חבילה לא חוקי {packageId}"
+    "errors.invalid_package_id": "איד חבילה לא חוקי {packageId}",
+    "program.shortcut": "קוד קיצור",
+    "program.shortcut_help": "קוד תוכנית בן 1–20 אותיות, ספרות, _ או -, המתחיל באות או בספרה. אין הבחנה בין אותיות גדולות לקטנות."
   }
 }

@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Hoidla pääsuandmed",
     "programs.secret-usages.description": "Loetle paketid, mille hoidla pääsuandmed kasutavad antud saladusi",
     "errors.export_1_to_packages": "Ekspordipakendid 1 kuni {MAX_PACKAGES}.",
-    "errors.invalid_package_id": "kehtetu pakendi ID {packageId}"
+    "errors.invalid_package_id": "kehtetu pakendi ID {packageId}",
+    "program.shortcut": "Kiirkood",
+    "program.shortcut_help": "Programmikood 1–20 tähe, numbri, _ või - märgiga, algab tähe või numbriga. Tähesuurust ei eristata."
   }
 }

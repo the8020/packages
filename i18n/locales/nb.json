@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "Påloggingsinformasjon for repository",
     "programs.secret-usages.description": "Vis pakker der påloggingsinformasjonen for repository bruker de angitte hemmelighetene",
     "errors.export_1_to_packages": "Eksport 1 til {MAX_PACKAGES} pakker.",
-    "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}"
+    "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}",
+    "program.shortcut": "Snarvei",
+    "program.shortcut_help": "Programkode med 1–20 bokstaver, sifre, _ eller -, som begynner med en bokstav eller et siffer. Store og små bokstaver er like."
   }
 }

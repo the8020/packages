@@ -132,6 +132,8 @@
     "secret_usages.repository_credentials": "रिपॉज़िटरी क्रेडेंशियल",
     "programs.secret-usages.description": "उन पैकेजों की सूची दिखाएँ जिनके रिपॉज़िटरी क्रेडेंशियल दिए गए सीक्रेट का उपयोग करते हैं",
     "errors.export_1_to_packages": "1 से {MAX_PACKAGES} पैकेज निर्यात करें।",
-    "errors.invalid_package_id": "अवैध पैकेज आईडी {packageId}"
+    "errors.invalid_package_id": "अवैध पैकेज आईडी {packageId}",
+    "program.shortcut": "शॉर्टकट",
+    "program.shortcut_help": "1–20 अक्षरों, अंकों, _ या - का प्रोग्राम कोड, जो अक्षर या अंक से शुरू हो। बड़े और छोटे अक्षरों में अंतर नहीं किया जाता।"
   }
 }
