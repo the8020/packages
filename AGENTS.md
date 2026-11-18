@@ -142,6 +142,12 @@ below.
 
 # Local Contracts
 
+- `version.ts` exposes only an installed package's checkout commit and modified
+  flag for ordinary diagnostic presentation, without package-view permission. It
+  uses local native repository inspection, never the remote-fetching version
+  history API. Paths, remotes, credentials and history remain behind the
+  existing administrative APIs and their permissions.
+
 - `vendor/` owns the committed external TOML bundles and original type
   entrypoints; `deno task bundle` regenerates them before publication. Program
   manifests keep smol-toml; `toml.ts` exposes the unchanged standard TOML parser
@@ -290,6 +296,8 @@ below.
   explicitly asks for onboarding help.
 
 # Verification
+
+- `version_test.ts` checks the exact local lookup and narrow public projection.
 
 - Run package tasks inside an 80|20 Deno workspace; its root config supplies
   platform imports. The package config owns dependencies and tasks.
