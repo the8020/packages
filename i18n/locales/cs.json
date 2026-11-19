@@ -1,6 +1,7 @@
 {
   "name": "Čeština",
   "texts": {
+    "programs.repair.description": "Opravit ze zdrojového repozitáře",
     "programs.export.description": "Export ověřených verzí balíčků jako přenosného seznamu",
     "programs.import.description": "Import přenosného seznamu balíčků",
     "package.package": "Balíček",
@@ -92,7 +93,7 @@
     "source.selected": "Vybrané",
     "source.whether_this_commit_matches_the_requested_package": "Zda commit odpovídá požadované verzi balíčku.",
     "source.version": "Verze",
-    "source.choose_latest_tag_name_or_commit_hash": "Vyberte `latest`, `tag:<name>` nebo `commit:<hash>`, případně vyhledejte verzi v nápovědě pole. Použití nahradí nainstalovanou verzi.",
+    "source.choose_latest_tag_name_or_commit_hash": "Vyberte značku, commit nebo výchozí větev. Synchronizace nainstaluje uloženou verzi.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Nejnovější výchozí větev",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Exportujte 1 až {MAX_PACKAGES} balíčků.",
     "errors.invalid_package_id": "Neplatné ID balíčku {packageId}",
     "program.shortcut": "Zkratka",
-    "program.shortcut_help": "Kód programu o 1–20 písmenech, číslicích, _ nebo -, začínající písmenem nebo číslicí. Na velikosti písmen nezáleží."
+    "program.shortcut_help": "Kód programu o 1–20 písmenech, číslicích, _ nebo -, začínající písmenem nebo číslicí. Na velikosti písmen nezáleží.",
+    "errors.confirm_upstream": "Potvrďte opravu ze zdrojového repozitáře.",
+    "errors.upstream_credential": "Vyberte přihlašovací údaj pro zdrojový repozitář.",
+    "errors.select_version": "Vyberte dostupnou verzi.",
+    "errors.schema_selection": "Vynucená změna schématu vyžaduje jednu konkrétní verzi balíčku; odstranění balíčku je samostatná operace.",
+    "errors.difference_limit": "Počet rozdílů mezi balíčky přesahuje 10 000."
   }
 }

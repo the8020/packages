@@ -1,6 +1,7 @@
 {
   "name": "Tiếng Việt",
   "texts": {
+    "programs.repair.description": "Sửa từ kho nguồn",
     "programs.export.description": "Xuất các phiên bản gói đã xác minh thành danh sách di động",
     "programs.import.description": "Nhập danh sách gói di động",
     "package.package": "Gói",
@@ -92,7 +93,7 @@
     "source.selected": "Đã chọn",
     "source.whether_this_commit_matches_the_requested_package": "Commit này có khớp phiên bản gói yêu cầu hay không.",
     "source.version": "Phiên bản",
-    "source.choose_latest_tag_name_or_commit_hash": "Chọn `latest`, `tag:<name>` hoặc `commit:<hash>`, hay tìm phiên bản có sẵn trong trợ giúp trường. Áp dụng sẽ thay phiên bản đã cài.",
+    "source.choose_latest_tag_name_or_commit_hash": "Chọn thẻ, commit hoặc nhánh mặc định. Thao tác đồng bộ sẽ cài đặt phiên bản đã lưu.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Nhánh mặc định mới nhất",
     "source.tag_tag": "Thẻ {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Xuất khẩu 1 đến {MAX_PACKAGES} gói.",
     "errors.invalid_package_id": "ID gói không hợp lệ {packageId}",
     "program.shortcut": "Mã tắt",
-    "program.shortcut_help": "Mã chương trình gồm 1–20 chữ cái, chữ số, _ hoặc -, bắt đầu bằng chữ cái hoặc chữ số. Không phân biệt chữ hoa và chữ thường."
+    "program.shortcut_help": "Mã chương trình gồm 1–20 chữ cái, chữ số, _ hoặc -, bắt đầu bằng chữ cái hoặc chữ số. Không phân biệt chữ hoa và chữ thường.",
+    "errors.confirm_upstream": "Xác nhận sửa chữa từ kho nguồn.",
+    "errors.upstream_credential": "Chọn thông tin xác thực cho kho nguồn.",
+    "errors.select_version": "Chọn phiên bản có sẵn.",
+    "errors.schema_selection": "Sức mạnh của chương trình yêu cầu một phiên bản gói cụ thể; loại bỏ gói là riêng biệt.",
+    "errors.difference_limit": "Có hơn 10.000 khác biệt giữa các gói."
   }
 }

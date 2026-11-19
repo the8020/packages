@@ -1,6 +1,7 @@
 {
   "name": "English",
   "texts": {
+    "programs.repair.description": "Repair from upstream",
     "programs.export.description": "Export verified package versions as a portable list",
     "programs.import.description": "Import a portable package list",
     "package.package": "Package",
@@ -92,7 +93,7 @@
     "source.selected": "Selected",
     "source.whether_this_commit_matches_the_requested_package": "Whether this commit matches the requested package version.",
     "source.version": "Version",
-    "source.choose_latest_tag_name_or_commit_hash": "Choose `latest`, `tag:<name>`, or `commit:<hash>`, or search the available versions in field help. Applying replaces the installed version.",
+    "source.choose_latest_tag_name_or_commit_hash": "Select a tag, commit or default branch. Sync installs the saved version.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Latest default branch",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Export 1 to {MAX_PACKAGES} packages.",
     "errors.invalid_package_id": "invalid package ID {packageId}",
     "program.shortcut": "Shortcut",
-    "program.shortcut_help": "A program code of 1–20 letters, digits, _ or -, starting with a letter or digit. Letter case is ignored."
+    "program.shortcut_help": "A program code of 1–20 letters, digits, _ or -, starting with a letter or digit. Letter case is ignored.",
+    "errors.confirm_upstream": "Confirm upstream repair.",
+    "errors.upstream_credential": "Select an upstream credential.",
+    "errors.select_version": "Select an available version.",
+    "errors.schema_selection": "Schema force requires one explicit package version; package removal is separate.",
+    "errors.difference_limit": "More than 10,000 package differences."
   }
 }

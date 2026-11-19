@@ -1,6 +1,7 @@
 {
   "name": "Hrvatski",
   "texts": {
+    "programs.repair.description": "Popravi iz izvornog repozitorija",
     "programs.export.description": "Izvoz provjerenih verzija paketa kao prenosivog popisa",
     "programs.import.description": "Uvoz prenosivog popisa paketa",
     "package.package": "Paket",
@@ -92,7 +93,7 @@
     "source.selected": "Odabran",
     "source.whether_this_commit_matches_the_requested_package": "Odgovara li ovaj commit zatraženoj verziji paketa.",
     "source.version": "Verzija",
-    "source.choose_latest_tag_name_or_commit_hash": "Odaberite `latest`, `tag:<name>` ili `commit:<hash>`, ili pretražite dostupne verzije u pomoći za polje. Primjena zamjenjuje instaliranu verziju.",
+    "source.choose_latest_tag_name_or_commit_hash": "Odaberite oznaku, commit ili zadanu granu. Sinkronizacija instalira spremljenu verziju.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Najnovija zadana grana",
     "source.tag_tag": "Oznaka {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Izvoz paketa 1 do {MAX_PACKAGES}.",
     "errors.invalid_package_id": "Nevaljan paket ID {packageId}",
     "program.shortcut": "Kratica",
-    "program.shortcut_help": "Kod programa od 1–20 slova, znamenki, _ ili -, koji počinje slovom ili znamenkom. Veličina slova nije bitna."
+    "program.shortcut_help": "Kod programa od 1–20 slova, znamenki, _ ili -, koji počinje slovom ili znamenkom. Veličina slova nije bitna.",
+    "errors.confirm_upstream": "Potvrdite popravak iz izvornog repozitorija.",
+    "errors.upstream_credential": "Odaberite vjerodajnicu za izvorni repozitorij.",
+    "errors.select_version": "Izaberite dostupnu verziju.",
+    "errors.schema_selection": "Prisilna promjena sheme zahtijeva jednu izričito odabranu verziju paketa; uklanjanje paketa zaseban je postupak.",
+    "errors.difference_limit": "Postoji više od 10.000 razlika među paketima."
   }
 }

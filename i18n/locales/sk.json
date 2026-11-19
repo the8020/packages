@@ -1,6 +1,7 @@
 {
   "name": "Slovenčina",
   "texts": {
+    "programs.repair.description": "Opraviť zo zdrojového repozitára",
     "programs.export.description": "Export overených verzií balíčkov ako prenosného zoznamu",
     "programs.import.description": "Import prenosného zoznamu balíčkov",
     "package.package": "Balíček",
@@ -92,7 +93,7 @@
     "source.selected": "Vybrané",
     "source.whether_this_commit_matches_the_requested_package": "Či commit zodpovedá požadovanej verzii balíčka.",
     "source.version": "Verzia",
-    "source.choose_latest_tag_name_or_commit_hash": "Vyberte `latest`, `tag:<name>` alebo `commit:<hash>`, prípadne vyhľadajte verziu v pomocníkovi poľa. Použitie nahradí nainštalovanú verziu.",
+    "source.choose_latest_tag_name_or_commit_hash": "Vyberte značku, commit alebo predvolenú vetvu. Synchronizácia nainštaluje uloženú verziu.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Najnovšia predvolená vetva",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Vývoz 1 až {MAX_PACKAGES} balíkov.",
     "errors.invalid_package_id": "neplatný identifikátor balenia {packageId}",
     "program.shortcut": "Skratka",
-    "program.shortcut_help": "Kód programu s 1–20 písmenami, číslicami, _ alebo -, začínajúci písmenom alebo číslicou. Veľkosť písmen sa nerozlišuje."
+    "program.shortcut_help": "Kód programu s 1–20 písmenami, číslicami, _ alebo -, začínajúci písmenom alebo číslicou. Veľkosť písmen sa nerozlišuje.",
+    "errors.confirm_upstream": "Potvrďte opravu zo zdrojového repozitára.",
+    "errors.upstream_credential": "Vyberte prihlasovacie údaje pre zdrojový repozitár.",
+    "errors.select_version": "Vyberte dostupnú verziu.",
+    "errors.schema_selection": "Sila schémy vyžaduje jednu výslovnú verziu balenia; odstránenie balenia je samostatné.",
+    "errors.difference_limit": "Počet rozdielov medzi balíkmi presahuje 10 000."
   }
 }

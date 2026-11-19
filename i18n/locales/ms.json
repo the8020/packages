@@ -1,6 +1,7 @@
 {
   "name": "Bahasa Melayu",
   "texts": {
+    "programs.repair.description": "Baiki daripada repositori asal",
     "programs.export.description": "Eksport versi pakej yang disahkan sebagai senarai mudah alih",
     "programs.import.description": "Import senarai pakej mudah alih",
     "package.package": "Pakej",
@@ -92,7 +93,7 @@
     "source.selected": "Terpilih",
     "source.whether_this_commit_matches_the_requested_package": "Sama ada komit ini sepadan dengan versi pakej yang diminta.",
     "source.version": "Versi",
-    "source.choose_latest_tag_name_or_commit_hash": "Pilih `latest`, `tag:<name>` atau `commit:<hash>`, atau cari versi tersedia dalam bantuan medan. Penggunaan menggantikan versi terpasang.",
+    "source.choose_latest_tag_name_or_commit_hash": "Pilih tag, komit atau cabang lalai. Penyegerakan memasang versi yang disimpan.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Cabang lalai terkini",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Mengeksport 1 hingga {MAX_PACKAGES} pakej.",
     "errors.invalid_package_id": "ID pakej yang tidak sah {packageId}",
     "program.shortcut": "Kod pintas",
-    "program.shortcut_help": "Kod program dengan 1–20 huruf, digit, _ atau -, bermula dengan huruf atau digit. Huruf besar dan kecil dianggap sama."
+    "program.shortcut_help": "Kod program dengan 1–20 huruf, digit, _ atau -, bermula dengan huruf atau digit. Huruf besar dan kecil dianggap sama.",
+    "errors.confirm_upstream": "Sahkan pembaikan daripada repositori asal.",
+    "errors.upstream_credential": "Pilih kelayakan untuk repositori asal.",
+    "errors.select_version": "Pilih versi yang tersedia.",
+    "errors.schema_selection": "Kekuatan skema memerlukan satu versi pakej yang jelas; penghapusan pakej adalah berasingan.",
+    "errors.difference_limit": "Terdapat lebih daripada 10,000 perbezaan pakej."
   }
 }

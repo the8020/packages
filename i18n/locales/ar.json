@@ -1,6 +1,7 @@
 {
   "name": "العربية",
   "texts": {
+    "programs.repair.description": "إصلاح من المستودع الأصلي",
     "programs.export.description": "تصدير إصدارات الحزم الموثّقة كقائمة قابلة للنقل",
     "programs.import.description": "استيراد قائمة حزم قابلة للنقل",
     "package.package": "الحزمة",
@@ -92,7 +93,7 @@
     "source.selected": "محدد",
     "source.whether_this_commit_matches_the_requested_package": "ما إذا كان هذا التثبيت يطابق إصدار الحزمة المطلوب.",
     "source.version": "الإصدار",
-    "source.choose_latest_tag_name_or_commit_hash": "اختر `latest` أو `tag:<name>` أو `commit:<hash>`، أو ابحث في الإصدارات المتاحة عبر مساعدة الحقل. يؤدي التطبيق إلى استبدال الإصدار المثبّت.",
+    "source.choose_latest_tag_name_or_commit_hash": "اختر وسمًا أو تثبيتًا أو الفرع الافتراضي. تثبّت المزامنة الإصدار المحفوظ.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "أحدث نسخة من الفرع الافتراضي",
     "source.tag_tag": "الوسم {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "تصدير حزمة 1 إلى {MAX_PACKAGES}",
     "errors.invalid_package_id": "هوية الحزمة غير صالحة {packageId}",
     "program.shortcut": "رمز مختصر",
-    "program.shortcut_help": "رمز برنامج من 1–20 حرفًا أو رقمًا أو _ أو -، يبدأ بحرف أو رقم. لا فرق بين الأحرف الكبيرة والصغيرة."
+    "program.shortcut_help": "رمز برنامج من 1–20 حرفًا أو رقمًا أو _ أو -، يبدأ بحرف أو رقم. لا فرق بين الأحرف الكبيرة والصغيرة.",
+    "errors.confirm_upstream": "أكّد الإصلاح من المستودع الأصلي.",
+    "errors.upstream_credential": "اختر بيانات اعتماد المستودع الأصلي.",
+    "errors.select_version": "اختر نسخة متاحة",
+    "errors.schema_selection": "قوة الخطة تتطلب نسخة حزمة واحدة صريحة، وإزالة الحزمة منفصلة.",
+    "errors.difference_limit": "يوجد أكثر من 10,000 اختلاف في الحزم."
   }
 }

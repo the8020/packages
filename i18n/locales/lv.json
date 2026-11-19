@@ -1,6 +1,7 @@
 {
   "name": "Latviešu",
   "texts": {
+    "programs.repair.description": "Labot no sākotnējās krātuves",
     "programs.export.description": "Eksportēt pārbaudītas pakotņu versijas kā pārnesamu sarakstu",
     "programs.import.description": "Importēt pārnesamu pakotņu sarakstu",
     "package.package": "Pakotne",
@@ -92,7 +93,7 @@
     "source.selected": "Izvēlēts",
     "source.whether_this_commit_matches_the_requested_package": "Vai šis komits atbilst pieprasītajai pakotnes versijai.",
     "source.version": "Versija",
-    "source.choose_latest_tag_name_or_commit_hash": "Izvēlieties `latest`, `tag:<name>` vai `commit:<hash>`, vai meklējiet pieejamās versijas lauka palīdzībā. Piemērošana aizstāj instalēto versiju.",
+    "source.choose_latest_tag_name_or_commit_hash": "Izvēlieties tagu, komitu vai noklusējuma zaru. Sinhronizējot tiek instalēta saglabātā versija.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Jaunākā noklusējuma zara versija",
     "source.tag_tag": "Tags {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Eksportēt 1 līdz {MAX_PACKAGES} iepakojumus.",
     "errors.invalid_package_id": "nepareizi iepakojuma identifikācija {packageId}",
     "program.shortcut": "Īskods",
-    "program.shortcut_help": "Programmas kods ar 1–20 burtiem, cipariem, _ vai -, kas sākas ar burtu vai ciparu. Lielo un mazo burtu atšķirība netiek ņemta vērā."
+    "program.shortcut_help": "Programmas kods ar 1–20 burtiem, cipariem, _ vai -, kas sākas ar burtu vai ciparu. Lielo un mazo burtu atšķirība netiek ņemta vērā.",
+    "errors.confirm_upstream": "Apstipriniet labošanu no sākotnējā repozitorija.",
+    "errors.upstream_credential": "Izvēlieties sākotnējā repozitorija piekļuves datus.",
+    "errors.select_version": "Izvēlieties pieejamo versiju.",
+    "errors.schema_selection": "Šēmas spēks prasa vienu eksplicētu iepakojuma versiju; iepakojuma izņemšana ir atsevišķa.",
+    "errors.difference_limit": "Pakotņu atšķirību skaits pārsniedz 10 000."
   }
 }

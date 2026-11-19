@@ -1,6 +1,7 @@
 {
   "name": "Eesti",
   "texts": {
+    "programs.repair.description": "Paranda lähtehoidlast",
     "programs.export.description": "Ekspordi kontrollitud paketiversioonid teisaldatava loendina",
     "programs.import.description": "Impordi teisaldatav paketiloend",
     "package.package": "Pakett",
@@ -92,7 +93,7 @@
     "source.selected": "Valitud",
     "source.whether_this_commit_matches_the_requested_package": "Kas see commit vastab soovitud paketiversioonile.",
     "source.version": "Versioon",
-    "source.choose_latest_tag_name_or_commit_hash": "Vali `latest`, `tag:<name>` või `commit:<hash>` või otsi saadaolevaid versioone väljaabist. Rakendamine asendab paigaldatud versiooni.",
+    "source.choose_latest_tag_name_or_commit_hash": "Vali silt, muudatus või vaikeharu. Sünkroonimine paigaldab salvestatud versiooni.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Vaikeharu uusim versioon",
     "source.tag_tag": "Silt {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Ekspordipakendid 1 kuni {MAX_PACKAGES}.",
     "errors.invalid_package_id": "kehtetu pakendi ID {packageId}",
     "program.shortcut": "Kiirkood",
-    "program.shortcut_help": "Programmikood 1–20 tähe, numbri, _ või - märgiga, algab tähe või numbriga. Tähesuurust ei eristata."
+    "program.shortcut_help": "Programmikood 1–20 tähe, numbri, _ või - märgiga, algab tähe või numbriga. Tähesuurust ei eristata.",
+    "errors.confirm_upstream": "Kinnita parandus lähtehoidlast.",
+    "errors.upstream_credential": "Vali lähtehoidla pääsuandmed.",
+    "errors.select_version": "Võtke valitud versioon.",
+    "errors.schema_selection": "Skeemi jõu nõuab ühte eksplisiit pakendi versiooni; pakendi eemaldamine on eraldi.",
+    "errors.difference_limit": "Pakettide erinevusi on üle 10 000."
   }
 }

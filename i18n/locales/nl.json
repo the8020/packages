@@ -1,6 +1,7 @@
 {
   "name": "Nederlands",
   "texts": {
+    "programs.repair.description": "Herstellen vanuit de upstreamrepository",
     "programs.export.description": "Geverifieerde pakketversies exporteren als overdraagbare lijst",
     "programs.import.description": "Overdraagbare pakketlijst importeren",
     "package.package": "Pakket",
@@ -92,7 +93,7 @@
     "source.selected": "Geselecteerd",
     "source.whether_this_commit_matches_the_requested_package": "Of deze commit overeenkomt met de gevraagde pakketversie.",
     "source.version": "Versie",
-    "source.choose_latest_tag_name_or_commit_hash": "Kies `latest`, `tag:<name>` of `commit:<hash>`, of zoek beschikbare versies via de veldhulp. Toepassen vervangt de geïnstalleerde versie.",
+    "source.choose_latest_tag_name_or_commit_hash": "Kies een tag, commit of de standaardbranch. Synchronisatie installeert de opgeslagen versie.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Nieuwste standaardbranch",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Uitvoeren van 1 tot en met {MAX_PACKAGES} pakketten.",
     "errors.invalid_package_id": "ongeldig pakket-ID {packageId}",
     "program.shortcut": "Snelcode",
-    "program.shortcut_help": "Programmacode van 1–20 letters, cijfers, _ of -, beginnend met een letter of cijfer. Hoofdletters en kleine letters zijn gelijk."
+    "program.shortcut_help": "Programmacode van 1–20 letters, cijfers, _ of -, beginnend met een letter of cijfer. Hoofdletters en kleine letters zijn gelijk.",
+    "errors.confirm_upstream": "Bevestig het herstel vanuit de oorspronkelijke repository.",
+    "errors.upstream_credential": "Kies inloggegevens voor de oorspronkelijke repository.",
+    "errors.select_version": "Selecteer een beschikbare versie.",
+    "errors.schema_selection": "De kracht van het schema vereist één expliciete pakketversie; het verwijderen van het pakket is apart.",
+    "errors.difference_limit": "Er zijn meer dan 10.000 pakketverschillen."
   }
 }

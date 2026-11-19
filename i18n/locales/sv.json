@@ -1,6 +1,7 @@
 {
   "name": "Svenska",
   "texts": {
+    "programs.repair.description": "Reparera från ursprungsarkivet",
     "programs.export.description": "Exportera verifierade paketversioner som en flyttbar lista",
     "programs.import.description": "Importera en flyttbar paketlista",
     "package.package": "Paket",
@@ -92,7 +93,7 @@
     "source.selected": "Vald",
     "source.whether_this_commit_matches_the_requested_package": "Om denna commit motsvarar den önskade paketversionen.",
     "source.version": "Version",
-    "source.choose_latest_tag_name_or_commit_hash": "Välj `latest`, `tag:<name>` eller `commit:<hash>`, eller sök bland tillgängliga versioner i fälthjälpen. Tillämpning ersätter den installerade versionen.",
+    "source.choose_latest_tag_name_or_commit_hash": "Välj en tagg, en commit eller standardgrenen. Synkronisering installerar den sparade versionen.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Senaste standardgren",
     "source.tag_tag": "Tagg {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Exporterar 1 till {MAX_PACKAGES} paket.",
     "errors.invalid_package_id": "Oegentligt paket ID {packageId}",
     "program.shortcut": "Genväg",
-    "program.shortcut_help": "Programkod med 1–20 bokstäver, siffror, _ eller -, som börjar med en bokstav eller siffra. Ingen skillnad görs på stora och små bokstäver."
+    "program.shortcut_help": "Programkod med 1–20 bokstäver, siffror, _ eller -, som börjar med en bokstav eller siffra. Ingen skillnad görs på stora och små bokstäver.",
+    "errors.confirm_upstream": "Bekräfta reparation från källarkivet.",
+    "errors.upstream_credential": "Välj inloggningsuppgifter för källarkivet.",
+    "errors.select_version": "Välj en tillgänglig version.",
+    "errors.schema_selection": "Skema kraft kräver en uttrycklig paketversion; paket avlägsnande är separat.",
+    "errors.difference_limit": "Det finns fler än 10 000 paketskillnader."
   }
 }

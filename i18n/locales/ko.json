@@ -1,6 +1,7 @@
 {
   "name": "한국어",
   "texts": {
+    "programs.repair.description": "업스트림 저장소에서 복구",
     "programs.export.description": "검증된 패키지 버전을 이식 가능한 목록으로 내보내기",
     "programs.import.description": "이식 가능한 패키지 목록 가져오기",
     "package.package": "패키지",
@@ -92,7 +93,7 @@
     "source.selected": "선택됨",
     "source.whether_this_commit_matches_the_requested_package": "이 커밋이 요청한 패키지 버전과 일치하는지를 나타냅니다.",
     "source.version": "버전",
-    "source.choose_latest_tag_name_or_commit_hash": "`latest`, `tag:<name>` 또는 `commit:<hash>`를 선택하거나 필드 도움말에서 사용 가능한 버전을 검색하세요. 적용하면 설치된 버전을 교체합니다.",
+    "source.choose_latest_tag_name_or_commit_hash": "태그, 커밋 또는 기본 브랜치를 선택하세요. 동기화하면 저장한 버전을 설치합니다.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "기본 브랜치 최신 버전",
     "source.tag_tag": "태그 {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "1~{MAX_PACKAGES} 패키지를 수출합니다.",
     "errors.invalid_package_id": "유효하지 않은 패키지 ID {packageId}",
     "program.shortcut": "바로가기 코드",
-    "program.shortcut_help": "영문자, 숫자, _ 또는 -로 구성된 1~20자 프로그램 코드입니다. 영문자나 숫자로 시작하며 대소문자를 구분하지 않습니다."
+    "program.shortcut_help": "영문자, 숫자, _ 또는 -로 구성된 1~20자 프로그램 코드입니다. 영문자나 숫자로 시작하며 대소문자를 구분하지 않습니다.",
+    "errors.confirm_upstream": "원본 저장소에서 복구할지 확인하세요.",
+    "errors.upstream_credential": "원본 저장소의 인증 정보를 선택하세요.",
+    "errors.select_version": "사용 가능한 버전을 선택하세요.",
+    "errors.schema_selection": "스키마 파워는 명시적인 패키지 버전을 필요로 하며, 패키지를 제거하는 것은 별도로 이루어집니다.",
+    "errors.difference_limit": "패키지 차이가 10,000건을 초과합니다."
   }
 }

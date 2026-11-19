@@ -251,3 +251,27 @@ export async function importList(...args: string[]) {
   }
   return { packages };
 }
+
+export function repair(...args: string[]) {
+  const parsed = parseCommandArguments(args, {
+    values: ["source", "secret", "commit"],
+    booleans: ["confirm"],
+  });
+  if (
+    parsed.options.confirm !== true || typeof parsed.options.source !== "string"
+  ) {
+    throw new AdminCommandError({
+      code: "invalid_arguments",
+      message: "packages.repair requires --source and --confirm",
+    });
+  }
+  return packages.repair(
+    requiredCommandArgument(parsed.positionals, 0, "package ID"),
+    {
+      source: parsed.options.source,
+      secret: parsed.options.secret as string | undefined,
+      commit: parsed.options.commit as string | undefined,
+      confirm: true,
+    },
+  );
+}

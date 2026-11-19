@@ -1,6 +1,7 @@
 {
   "name": "Deutsch",
   "texts": {
+    "programs.repair.description": "Aus Upstream-Repository reparieren",
     "programs.export.description": "Geprüfte Paketversionen als portable Liste exportieren",
     "programs.import.description": "Portable Paketliste importieren",
     "package.package": "Paket",
@@ -92,7 +93,7 @@
     "source.selected": "Ausgewählt",
     "source.whether_this_commit_matches_the_requested_package": "Ob dieser Commit der angeforderten Paketversion entspricht.",
     "source.version": "Version",
-    "source.choose_latest_tag_name_or_commit_hash": "Wählen Sie `latest`, `tag:<name>` oder `commit:<hash>`, oder suchen Sie über die Feldhilfe nach verfügbaren Versionen. Anwenden ersetzt die installierte Version.",
+    "source.choose_latest_tag_name_or_commit_hash": "Tag, Commit oder Standardbranch auswählen. Die Synchronisierung installiert die gespeicherte Version.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Neuester Stand des Standardbranchs",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Export 1 bis {MAX_PACKAGES} Pakete.",
     "errors.invalid_package_id": "nicht gültiges Paket-ID {packageId}",
     "program.shortcut": "Kürzel",
-    "program.shortcut_help": "Programmcode mit 1–20 Buchstaben, Ziffern, _ oder -, beginnend mit einem Buchstaben oder einer Ziffer. Groß- und Kleinschreibung wird ignoriert."
+    "program.shortcut_help": "Programmcode mit 1–20 Buchstaben, Ziffern, _ oder -, beginnend mit einem Buchstaben oder einer Ziffer. Groß- und Kleinschreibung wird ignoriert.",
+    "errors.confirm_upstream": "Reparatur aus dem Ursprungsrepository bestätigen.",
+    "errors.upstream_credential": "Zugangsdaten für das Ursprungsrepository auswählen.",
+    "errors.select_version": "Wählen Sie eine verfügbare Version aus.",
+    "errors.schema_selection": "Die Schema-Kraft erfordert eine explizite Paketversion; die Paketentfernung ist separat.",
+    "errors.difference_limit": "Es gibt mehr als 10.000 Paketunterschiede."
   }
 }

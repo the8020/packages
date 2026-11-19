@@ -1,6 +1,7 @@
 {
   "name": "Português (Portugal)",
   "texts": {
+    "programs.repair.description": "Reparar a partir do repositório de origem",
     "programs.export.description": "Exportar versões de pacotes verificadas como lista portátil",
     "programs.import.description": "Importar uma lista portátil de pacotes",
     "package.package": "Pacote",
@@ -92,7 +93,7 @@
     "source.selected": "Selecionado",
     "source.whether_this_commit_matches_the_requested_package": "Indica se este commit corresponde à versão solicitada do pacote.",
     "source.version": "Versão",
-    "source.choose_latest_tag_name_or_commit_hash": "Escolha `latest`, `tag:<name>` ou `commit:<hash>`, ou pesquise as versões disponíveis na ajuda do campo. Aplicar substitui a versão instalada.",
+    "source.choose_latest_tag_name_or_commit_hash": "Escolha uma etiqueta, um commit ou o ramo predefinido. A sincronização instala a versão guardada.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Versão mais recente do branch predefinido",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Exportação de 1 a {MAX_PACKAGES} pacotes.",
     "errors.invalid_package_id": "ID de pacote inválido {packageId}",
     "program.shortcut": "Atalho",
-    "program.shortcut_help": "Código de programa com 1–20 letras, algarismos, _ ou -, começando por uma letra ou algarismo. Não distingue maiúsculas de minúsculas."
+    "program.shortcut_help": "Código de programa com 1–20 letras, algarismos, _ ou -, começando por uma letra ou algarismo. Não distingue maiúsculas de minúsculas.",
+    "errors.confirm_upstream": "Confirme a reparação a partir do repositório de origem.",
+    "errors.upstream_credential": "Selecione uma credencial do repositório de origem.",
+    "errors.select_version": "Selecione uma versão disponível.",
+    "errors.schema_selection": "A força do esquema requer uma versão explícita do pacote; a remoção do pacote é separada.",
+    "errors.difference_limit": "Há mais de 10 000 diferenças entre pacotes."
   }
 }

@@ -166,24 +166,26 @@ below.
   package ID: `inspect`, `versions.list`, `index.inspect`, `repository.inspect`
   and `repository.status` check it; `list`, `index.list`, `repository.list` and
   `listPrograms()` keep only viewable packages through auth's unaudited `filter`
-  (`viewablePackages`). Source inspection of a not yet indexed URL keeps the
-  development check only. It checks the declared `packages.package.*` and
-  `the8020.packages.repository.edit` permissions before native mutations. Values
-  are canonical package IDs; synchronizing the entire index checks value `*`.
-  Reads use typed kernel APIs; selected inspection adds package-owned program
-  metadata. Native command recovery remains independent and package commands run
-  as system. `declarations/auth.toml` documents keys.
+  (`viewablePackages`). Source inspection on test and production uses the target
+  package identity at the development adapter. It checks the declared
+  `packages.package.*` and `the8020.packages.repository.edit` permissions before
+  native mutations. Values are canonical package IDs; synchronizing the entire
+  index checks value `*`. Reads use typed kernel APIs; selected inspection adds
+  package-owned program metadata. Native command recovery remains independent
+  and package commands run as system. `declarations/auth.toml` documents keys.
 - Source inspection accepts an optional global secret name for private
   repositories. Naming one requires `the8020.packages.package.edit` on the
   package ID derived from the URL's final two path segments, the same authority
-  as storing that secret on the package; public inspection keeps only the
-  development system check. The value is resolved only by the kernel and never
-  returned.
+  as storing that secret on the package; public inspection on dev uses the
+  upstream URL. The value is resolved only by the kernel and never returned.
 
-- Direct application package mutations additionally require the shared system
-  role `development`, including when invoked as `system`. Test and production
-  use the deployment package's reviewed import/run owner. Native recovery stays
-  independent of this application policy.
+- Development uses local sources and configured upstream Git. On test and
+  production, inspection, fetch, version selection, install, checkout and pull
+  use authenticated development Git. Selecting a version records its exact
+  commit. Sync compares the desired state with the receipts of enabled nodes and
+  the current node. Only selected node/package rows are applied. Confirmed
+  upstream repair accepts an explicit source and upstream credential. Applying
+  it records a deployment run. Native recovery remains independently available.
 - Repository fetch uses the same authorized API and refreshes available
   refs/tags without changing desired or active versions. Installation and
   explicit version application retain an attached Git branch; branch state
@@ -249,14 +251,14 @@ below.
   comes from, so a URL deriving another name (including letter case) is not an
   error. `verifyExportEntry` checks one package so screens can report progress.
   Import previews new/same/different/local rows without contacting remotes,
-  writes `index.set` under the listed package ID, pins the commit when the tag
-  moved, never overwrites a local package, changes a different version only with
-  explicit overwrite, and may synchronize the imported packages once. An
-  installed imported or unchanged package without a Git remote gets `origin` set
-  to the listed source, so it can be fetched, pushed and exported again.
-  Dependencies ignore platform `the8020/*` packages and never block export:
-  `missingDependencies` reports listed packages whose dependencies the list
-  lacks (`packages.export --check` and a blocked export return them as
+  writes `index.set` under the listed package ID, pins the exported commit,
+  never overwrites a local package, changes a different version only with
+  explicit overwrite, and may synchronize the imported packages once. On
+  development an installed imported or unchanged package without a Git remote
+  gets `origin` set to the listed source, so it can be fetched, pushed and
+  exported again. Dependencies ignore platform `the8020/*` packages and never
+  block export: `missingDependencies` reports listed packages whose dependencies
+  the list lacks (`packages.export --check` and a blocked export return them as
   `missing_dependencies`), and `withDependencies` appends missing ones
   transitively (`packages.export --with-dependencies`).
 - `src/dependencies.ts` derives a package's dependencies from its code: other

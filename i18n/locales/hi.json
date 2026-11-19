@@ -1,6 +1,7 @@
 {
   "name": "हिन्दी",
   "texts": {
+    "programs.repair.description": "मूल रिपॉज़िटरी से सुधारें",
     "programs.export.description": "सत्यापित पैकेज संस्करणों को पोर्टेबल सूची के रूप में निर्यात करें",
     "programs.import.description": "पोर्टेबल पैकेज सूची आयात करें",
     "package.package": "पैकेज",
@@ -92,7 +93,7 @@
     "source.selected": "चयनित",
     "source.whether_this_commit_matches_the_requested_package": "यह कमिट अनुरोधित पैकेज संस्करण से मेल खाता है या नहीं।",
     "source.version": "संस्करण",
-    "source.choose_latest_tag_name_or_commit_hash": "`latest`, `tag:<name>` या `commit:<hash>` चुनें, या फ़ील्ड सहायता में उपलब्ध संस्करण खोजें। लागू करने पर इंस्टॉल संस्करण बदलता है।",
+    "source.choose_latest_tag_name_or_commit_hash": "टैग, कमिट या डिफ़ॉल्ट ब्रांच चुनें। सिंक करने पर सहेजा गया संस्करण इंस्टॉल होता है।",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "नवीनतम डिफ़ॉल्ट शाखा",
     "source.tag_tag": "टैग {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "1 से {MAX_PACKAGES} पैकेज निर्यात करें।",
     "errors.invalid_package_id": "अवैध पैकेज आईडी {packageId}",
     "program.shortcut": "शॉर्टकट",
-    "program.shortcut_help": "1–20 अक्षरों, अंकों, _ या - का प्रोग्राम कोड, जो अक्षर या अंक से शुरू हो। बड़े और छोटे अक्षरों में अंतर नहीं किया जाता।"
+    "program.shortcut_help": "1–20 अक्षरों, अंकों, _ या - का प्रोग्राम कोड, जो अक्षर या अंक से शुरू हो। बड़े और छोटे अक्षरों में अंतर नहीं किया जाता।",
+    "errors.confirm_upstream": "मूल रिपॉज़िटरी से मरम्मत की पुष्टि करें।",
+    "errors.upstream_credential": "मूल रिपॉज़िटरी के लिए क्रेडेंशियल चुनें।",
+    "errors.select_version": "उपलब्ध संस्करण का चयन करें।",
+    "errors.schema_selection": "योजना बल के लिए एक स्पष्ट पैकेज संस्करण की आवश्यकता होती है; पैकेज हटाने के लिए अलग है।",
+    "errors.difference_limit": "पैकेजों में 10,000 से अधिक अंतर हैं।"
   }
 }

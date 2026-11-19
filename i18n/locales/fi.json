@@ -1,6 +1,7 @@
 {
   "name": "Suomi",
   "texts": {
+    "programs.repair.description": "Korjaa alkuperäisestä tietovarastosta",
     "programs.export.description": "Vie tarkistetut pakettiversiot siirrettävänä luettelona",
     "programs.import.description": "Tuo siirrettävä pakettiluettelo",
     "package.package": "Paketti",
@@ -92,7 +93,7 @@
     "source.selected": "Valittu",
     "source.whether_this_commit_matches_the_requested_package": "Vastaako tämä commit pyydettyä pakettiversiota.",
     "source.version": "Versio",
-    "source.choose_latest_tag_name_or_commit_hash": "Valitse `latest`, `tag:<name>` tai `commit:<hash>`, tai etsi saatavilla olevia versioita kenttäohjeesta. Käyttöönotto korvaa asennetun version.",
+    "source.choose_latest_tag_name_or_commit_hash": "Valitse tunniste, commit tai oletushaara. Synkronointi asentaa tallennetun version.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Oletushaaran uusin versio",
     "source.tag_tag": "Versiotunniste {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Vienti 1 - {MAX_PACKAGES} pakettia.",
     "errors.invalid_package_id": "virallinen pakkaus-ID {packageId}",
     "program.shortcut": "Pikakoodi",
-    "program.shortcut_help": "Ohjelmakoodi, jossa on 1–20 kirjainta, numeroa, _ tai - ja joka alkaa kirjaimella tai numerolla. Kirjainkoolla ei ole merkitystä."
+    "program.shortcut_help": "Ohjelmakoodi, jossa on 1–20 kirjainta, numeroa, _ tai - ja joka alkaa kirjaimella tai numerolla. Kirjainkoolla ei ole merkitystä.",
+    "errors.confirm_upstream": "Vahvista korjaus alkuperäisestä tietovarastosta.",
+    "errors.upstream_credential": "Valitse alkuperäisen tietovaraston tunnistetiedot.",
+    "errors.select_version": "Valitse käytettävissä oleva versio.",
+    "errors.schema_selection": "Järjestelmän voima edellyttää yhden nimenomaisen pakkausversion; pakkauksen poistaminen on erillinen.",
+    "errors.difference_limit": "Pakettien eroja on yli 10 000."
   }
 }

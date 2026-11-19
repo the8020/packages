@@ -2,7 +2,7 @@ version = 1
 command = "packages.source.inspect"
 program = "the8020/packages/source-inspect"
 summary = "Inspect package source"
-usage = "<source-url> [--secret <name>]"
+usage = "<source-url | package-id-on-test-or-production> [--secret <name>]"
 mutates_state = false
 restart_behavior = "none"
 [[examples]]

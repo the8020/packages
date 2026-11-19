@@ -1,6 +1,7 @@
 {
   "name": "Íslenska",
   "texts": {
+    "programs.repair.description": "Gera við úr upprunalegu safni",
     "programs.export.description": "Flytja út staðfestar pakkaútgáfur sem færanlegan lista",
     "programs.import.description": "Flytja inn færanlegan pakkalista",
     "package.package": "Pakki",
@@ -92,7 +93,7 @@
     "source.selected": "Valið",
     "source.whether_this_commit_matches_the_requested_package": "Hvort þetta commit samsvari umbeðinni pakkaútgáfu.",
     "source.version": "Útgáfa",
-    "source.choose_latest_tag_name_or_commit_hash": "Veldu `latest`, `tag:<name>` eða `commit:<hash>`, eða leitaðu að tiltækum útgáfum í reitahjálp. Beiting skiptir út uppsettri útgáfu.",
+    "source.choose_latest_tag_name_or_commit_hash": "Veldu merki, commit eða sjálfgefna grein. Samstilling setur upp vistuðu útgáfuna.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Nýjasta sjálfgefna grein",
     "source.tag_tag": "Merki {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Útflutningur 1 til {MAX_PACKAGES} pakka.",
     "errors.invalid_package_id": "Ógildi pakka kennitölu {packageId}",
     "program.shortcut": "Flýtikóði",
-    "program.shortcut_help": "Forritskóði með 1–20 bókstöfum, tölustöfum, _ eða -, sem byrjar á bókstaf eða tölustaf. Ekki er gerður greinarmunur á há- og lágstöfum."
+    "program.shortcut_help": "Forritskóði með 1–20 bókstöfum, tölustöfum, _ eða -, sem byrjar á bókstaf eða tölustaf. Ekki er gerður greinarmunur á há- og lágstöfum.",
+    "errors.confirm_upstream": "Staðfestu viðgerð úr upprunalegu kóðasafni.",
+    "errors.upstream_credential": "Veldu aðgangsskilríki fyrir upprunalega kóðasafnið.",
+    "errors.select_version": "Veldu aðgengilegan útgáfu.",
+    "errors.schema_selection": "Skipulagsvörun krefst einar skýrar útgáfu af pakka; fjarlægð pakka er aðskilin.",
+    "errors.difference_limit": "Fleiri en 10.000 mismunir fundust á pökkum."
   }
 }

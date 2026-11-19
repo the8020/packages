@@ -33,6 +33,7 @@ function fakeApi(packages: Record<string, FakePackage>) {
   const bySource = (source: string) =>
     Object.entries(packages).find(([, item]) => item.remote === source);
   const api = {
+    isDevelopment: () => Promise.resolve(true),
     index: {
       list: () =>
         Promise.resolve(
@@ -332,7 +333,7 @@ Deno.test("import keeps different versions unless overwrite is chosen", async ()
         author: "acme",
         repository: "other",
         source: "https://git.example/acme/other.git",
-        tag: "2.0.0",
+        commit: c(2),
       })
     }`,
     "synchronize acme/other",

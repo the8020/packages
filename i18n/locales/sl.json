@@ -1,6 +1,7 @@
 {
   "name": "Slovenščina",
   "texts": {
+    "programs.repair.description": "Popravi iz izvornega repozitorija",
     "programs.export.description": "Izvoz preverjenih različic paketov kot prenosljivega seznama",
     "programs.import.description": "Uvoz prenosljivega seznama paketov",
     "package.package": "Paket",
@@ -92,7 +93,7 @@
     "source.selected": "Izbrana",
     "source.whether_this_commit_matches_the_requested_package": "Ali se ta potrditev ujema z zahtevano različico paketa.",
     "source.version": "Različica",
-    "source.choose_latest_tag_name_or_commit_hash": "Izberite `latest`, `tag:<name>` ali `commit:<hash>` ali poiščite razpoložljive različice v pomoči za polje. Uveljavitev zamenja nameščeno različico.",
+    "source.choose_latest_tag_name_or_commit_hash": "Izberite oznako, commit ali privzeto vejo. Sinhronizacija namesti shranjeno različico.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Najnovejša privzeta veja",
     "source.tag_tag": "Oznaka {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Izvoz pakete 1 do {MAX_PACKAGES}.",
     "errors.invalid_package_id": "nepovpračen identifikacijski številek paketa {packageId}",
     "program.shortcut": "Bližnjica",
-    "program.shortcut_help": "Koda programa z 1–20 črkami, števkami, _ ali -, ki se začne s črko ali števko. Velikost črk ni pomembna."
+    "program.shortcut_help": "Koda programa z 1–20 črkami, števkami, _ ali -, ki se začne s črko ali števko. Velikost črk ni pomembna.",
+    "errors.confirm_upstream": "Potrdite popravilo iz izvornega repozitorija.",
+    "errors.upstream_credential": "Izberite poverilnico za izvorni repozitorij.",
+    "errors.select_version": "Izberite razpoložljivo različico.",
+    "errors.schema_selection": "Prisilna sprememba sheme zahteva eno izrecno izbrano različico paketa; odstranitev paketa je ločen postopek.",
+    "errors.difference_limit": "Med paketi je več kot 10.000 razlik."
   }
 }

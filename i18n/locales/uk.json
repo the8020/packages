@@ -1,6 +1,7 @@
 {
   "name": "Українська",
   "texts": {
+    "programs.repair.description": "Відновити з вихідного репозиторію",
     "programs.export.description": "Експорт перевірених версій пакетів як переносного списку",
     "programs.import.description": "Імпорт переносного списку пакетів",
     "package.package": "Пакет",
@@ -92,7 +93,7 @@
     "source.selected": "Вибрано",
     "source.whether_this_commit_matches_the_requested_package": "Чи відповідає цей коміт запитаній версії пакета.",
     "source.version": "Версія",
-    "source.choose_latest_tag_name_or_commit_hash": "Виберіть `latest`, `tag:<name>` або `commit:<hash>` чи знайдіть доступну версію в довідці поля. Застосування замінює встановлену версію.",
+    "source.choose_latest_tag_name_or_commit_hash": "Виберіть тег, коміт або типову гілку. Синхронізація встановлює збережену версію.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Найновіша версія типової гілки",
     "source.tag_tag": "Тег {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Вивезення 1 до {MAX_PACKAGES} пакетів.",
     "errors.invalid_package_id": "недійний пакетний ідентифікатор {packageId}",
     "program.shortcut": "Скорочення",
-    "program.shortcut_help": "Код програми з 1–20 літер, цифр, _ або -, що починається з літери чи цифри. Регістр не враховується."
+    "program.shortcut_help": "Код програми з 1–20 літер, цифр, _ або -, що починається з літери чи цифри. Регістр не враховується.",
+    "errors.confirm_upstream": "Підтвердьте відновлення з початкового репозиторію.",
+    "errors.upstream_credential": "Виберіть облікові дані для початкового репозиторію.",
+    "errors.select_version": "Виберіть доступну версію.",
+    "errors.schema_selection": "Сила схеми вимагає однієї чіткої версії упаковки; видалення упаковки відбувається окремо.",
+    "errors.difference_limit": "Виявлено понад 10 000 відмінностей між пакунками."
   }
 }

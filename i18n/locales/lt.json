@@ -1,6 +1,7 @@
 {
   "name": "Lietuvių",
   "texts": {
+    "programs.repair.description": "Taisyti iš pirminės saugyklos",
     "programs.export.description": "Eksportuoti patikrintas paketų versijas kaip perkeliamą sąrašą",
     "programs.import.description": "Importuoti perkeliamą paketų sąrašą",
     "package.package": "Paketas",
@@ -92,7 +93,7 @@
     "source.selected": "Pasirinktas",
     "source.whether_this_commit_matches_the_requested_package": "Ar šis komitas atitinka prašomą paketo versiją.",
     "source.version": "Versija",
-    "source.choose_latest_tag_name_or_commit_hash": "Pasirinkite `latest`, `tag:<name>` arba `commit:<hash>`, arba ieškokite galimų versijų lauko žinyne. Pritaikius pakeičiama įdiegta versija.",
+    "source.choose_latest_tag_name_or_commit_hash": "Pasirinkite žymą, pataisą arba numatytąją šaką. Sinchronizuojant įdiegiama išsaugota versija.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Naujausia numatytoji šaka",
     "source.tag_tag": "Žyma {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Eksportuoti 1 iki {MAX_PACKAGES} paketų.",
     "errors.invalid_package_id": "negaliojančio paketo ID {packageId}",
     "program.shortcut": "Trumpasis kodas",
-    "program.shortcut_help": "Programos kodas iš 1–20 raidžių, skaitmenų, _ ar -, prasidedantis raide arba skaitmeniu. Raidžių dydis nesvarbus."
+    "program.shortcut_help": "Programos kodas iš 1–20 raidžių, skaitmenų, _ ar -, prasidedantis raide arba skaitmeniu. Raidžių dydis nesvarbus.",
+    "errors.confirm_upstream": "Patvirtinkite taisymą iš pradinės saugyklos.",
+    "errors.upstream_credential": "Pasirinkite pradinės saugyklos prisijungimo duomenis.",
+    "errors.select_version": "Pasirinkite prieinamą versiją.",
+    "errors.schema_selection": "Skaičių jėga reikalauja vienos aiškios pakuotės versijos; pakuotės pašalinimas yra atskiras.",
+    "errors.difference_limit": "Paketų skirtumų yra daugiau nei 10 000."
   }
 }

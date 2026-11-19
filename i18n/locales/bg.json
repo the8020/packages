@@ -1,6 +1,7 @@
 {
   "name": "Български",
   "texts": {
+    "programs.repair.description": "Поправка от външното хранилище",
     "programs.export.description": "Експорт на проверени версии на пакети като преносим списък",
     "programs.import.description": "Импорт на преносим списък с пакети",
     "package.package": "Пакет",
@@ -92,7 +93,7 @@
     "source.selected": "Избран",
     "source.whether_this_commit_matches_the_requested_package": "Дали този комит съвпада със заявената версия на пакета.",
     "source.version": "Версия",
-    "source.choose_latest_tag_name_or_commit_hash": "Изберете `latest`, `tag:<name>` или `commit:<hash>`, или потърсете наличните версии в помощта за полето. Прилагането заменя инсталираната версия.",
+    "source.choose_latest_tag_name_or_commit_hash": "Изберете етикет, комит или подразбиращия се клон. Синхронизирането инсталира запазената версия.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Последна версия на основния клон",
     "source.tag_tag": "Таг {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Износ на пакети от 1 до {MAX_PACKAGES}.",
     "errors.invalid_package_id": "невалиден идентификационен номер на опаковката {packageId}",
     "program.shortcut": "Съкращение",
-    "program.shortcut_help": "Код на програма от 1–20 букви, цифри, _ или -, започващ с буква или цифра. Регистърът не се отчита."
+    "program.shortcut_help": "Код на програма от 1–20 букви, цифри, _ или -, започващ с буква или цифра. Регистърът не се отчита.",
+    "errors.confirm_upstream": "Потвърдете поправката от изходното хранилище.",
+    "errors.upstream_credential": "Изберете данни за достъп до изходното хранилище.",
+    "errors.select_version": "Изберете налична версия.",
+    "errors.schema_selection": "Схемата изисква една изрична версия на пакета; премахването на пакета е отделно.",
+    "errors.difference_limit": "Над 10 000 разлики между пакетите."
   }
 }

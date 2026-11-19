@@ -8,6 +8,7 @@ const Packages = table("the8020__packages__packages", {
   author: t.from(packageInfo.shape.author),
   repository: t.from(packageInfo.shape.repository),
   source: t.from(sourceInfo.shape.source).nullable(),
+  transportSource: t.from(sourceInfo.shape.source).nullable(),
   requestedCommit: t.from(sourceInfo.shape.commit).nullable(),
   requestedTag: t.from(sourceInfo.shape.tag).nullable(),
   secretName: t.from(secretName).nullable(),

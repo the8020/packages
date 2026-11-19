@@ -1,6 +1,7 @@
 {
   "name": "Italiano",
   "texts": {
+    "programs.repair.description": "Ripara dal repository di origine",
     "programs.export.description": "Esporta le versioni verificate dei pacchetti come elenco portabile",
     "programs.import.description": "Importa un elenco portabile di pacchetti",
     "package.package": "Pacchetto",
@@ -92,7 +93,7 @@
     "source.selected": "Selezionato",
     "source.whether_this_commit_matches_the_requested_package": "Indica se questo commit corrisponde alla versione richiesta del pacchetto.",
     "source.version": "Versione",
-    "source.choose_latest_tag_name_or_commit_hash": "Scegli `latest`, `tag:<name>` o `commit:<hash>`, oppure cerca le versioni disponibili nell'aiuto del campo. L'applicazione sostituisce la versione installata.",
+    "source.choose_latest_tag_name_or_commit_hash": "Scegli un tag, un commit o il ramo predefinito. La sincronizzazione installa la versione salvata.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Ultima versione del branch predefinito",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Esportare pacchetti da 1 a {MAX_PACKAGES}.",
     "errors.invalid_package_id": "ID del pacchetto non valido {packageId}",
     "program.shortcut": "Scorciatoia",
-    "program.shortcut_help": "Codice di programma di 1–20 lettere, cifre, _ o -, che inizia con una lettera o cifra. Maiuscole e minuscole sono equivalenti."
+    "program.shortcut_help": "Codice di programma di 1–20 lettere, cifre, _ o -, che inizia con una lettera o cifra. Maiuscole e minuscole sono equivalenti.",
+    "errors.confirm_upstream": "Conferma la riparazione dal repository di origine.",
+    "errors.upstream_credential": "Seleziona una credenziale per il repository di origine.",
+    "errors.select_version": "Selezionare una versione disponibile.",
+    "errors.schema_selection": "La forza dello schema richiede una versione esplicita del pacco; la rimozione del pacco è separata.",
+    "errors.difference_limit": "Sono presenti più di 10.000 differenze tra i pacchetti."
   }
 }

@@ -1,6 +1,7 @@
 {
   "name": "Català",
   "texts": {
+    "programs.repair.description": "Repara des del repositori d’origen",
     "programs.export.description": "Exporta versions de paquets verificades com a llista portable",
     "programs.import.description": "Importa una llista portable de paquets",
     "package.package": "Paquet",
@@ -92,7 +93,7 @@
     "source.selected": "Seleccionat",
     "source.whether_this_commit_matches_the_requested_package": "Indica si aquest commit coincideix amb la versió sol·licitada del paquet.",
     "source.version": "Versió",
-    "source.choose_latest_tag_name_or_commit_hash": "Tria `latest`, `tag:<name>` o `commit:<hash>`, o cerca les versions disponibles a l'ajuda del camp. En aplicar-la es reemplaça la versió instal·lada.",
+    "source.choose_latest_tag_name_or_commit_hash": "Seleccioneu una etiqueta, un commit o la branca per defecte. La sincronització instal·la la versió desada.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Última versió de la branca predeterminada",
     "source.tag_tag": "Etiqueta {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Exportar paquets 1 a {MAX_PACKAGES}.",
     "errors.invalid_package_id": "Identificació de paquete no válida {packageId}",
     "program.shortcut": "Drecera",
-    "program.shortcut_help": "Codi de programa d’1–20 lletres, dígits, _ o -, que comença amb una lletra o dígit. No distingeix majúscules de minúscules."
+    "program.shortcut_help": "Codi de programa d’1–20 lletres, dígits, _ o -, que comença amb una lletra o dígit. No distingeix majúscules de minúscules.",
+    "errors.confirm_upstream": "Confirmeu la reparació des del repositori d’origen.",
+    "errors.upstream_credential": "Seleccioneu una credencial del repositori d’origen.",
+    "errors.select_version": "Seleccioneu una versió disponible.",
+    "errors.schema_selection": "La força del esquema requereix una versió explícita del paquet; la retirada del paquet és separada.",
+    "errors.difference_limit": "Hi ha més de 10.000 diferències entre paquets."
   }
 }

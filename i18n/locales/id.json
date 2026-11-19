@@ -1,6 +1,7 @@
 {
   "name": "Bahasa Indonesia",
   "texts": {
+    "programs.repair.description": "Perbaiki dari repositori asal",
     "programs.export.description": "Ekspor versi paket terverifikasi sebagai daftar portabel",
     "programs.import.description": "Impor daftar paket portabel",
     "package.package": "Paket",
@@ -92,7 +93,7 @@
     "source.selected": "Terpilih",
     "source.whether_this_commit_matches_the_requested_package": "Apakah commit ini cocok dengan versi paket yang diminta.",
     "source.version": "Versi",
-    "source.choose_latest_tag_name_or_commit_hash": "Pilih `latest`, `tag:<name>`, atau `commit:<hash>`, atau cari versi tersedia di bantuan field. Penerapan mengganti versi terpasang.",
+    "source.choose_latest_tag_name_or_commit_hash": "Pilih tag, commit, atau cabang bawaan. Sinkronisasi memasang versi yang disimpan.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Branch default terbaru",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Mengekspor 1 sampai {MAX_PACKAGES} paket.",
     "errors.invalid_package_id": "ID paket yang tidak valid {packageId}",
     "program.shortcut": "Kode pintas",
-    "program.shortcut_help": "Kode program berisi 1–20 huruf, angka, _ atau -, diawali huruf atau angka. Huruf besar dan kecil dianggap sama."
+    "program.shortcut_help": "Kode program berisi 1–20 huruf, angka, _ atau -, diawali huruf atau angka. Huruf besar dan kecil dianggap sama.",
+    "errors.confirm_upstream": "Konfirmasikan perbaikan dari repositori asal.",
+    "errors.upstream_credential": "Pilih kredensial repositori asal.",
+    "errors.select_version": "Pilih versi yang tersedia.",
+    "errors.schema_selection": "Kekuatan skema membutuhkan satu versi paket eksplisit; penghapusan paket terpisah.",
+    "errors.difference_limit": "Ada lebih dari 10.000 perbedaan paket."
   }
 }

@@ -1,6 +1,7 @@
 {
   "name": "Filipino",
   "texts": {
+    "programs.repair.description": "Ayusin mula sa pinagmulang repository",
     "programs.export.description": "I-export ang mga na-verify na bersyon ng package bilang portable na listahan",
     "programs.import.description": "Mag-import ng portable na listahan ng package",
     "package.package": "Package",
@@ -92,7 +93,7 @@
     "source.selected": "Napili",
     "source.whether_this_commit_matches_the_requested_package": "Kung tugma ang commit na ito sa hiniling na bersyon ng package.",
     "source.version": "Bersyon",
-    "source.choose_latest_tag_name_or_commit_hash": "Piliin ang `latest`, `tag:<name>`, o `commit:<hash>`, o maghanap ng available na bersyon sa tulong ng field. Pinapalitan ng paglalapat ang naka-install na bersyon.",
+    "source.choose_latest_tag_name_or_commit_hash": "Pumili ng tag, commit o default na branch. Ini-install ng pag-sync ang naka-save na bersyon.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Pinakabagong default branch",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "I-export ang 1 hanggang {MAX_PACKAGES} packages.",
     "errors.invalid_package_id": "hindi valid package ID {packageId}",
     "program.shortcut": "Shortcut",
-    "program.shortcut_help": "Code ng programa na may 1–20 titik, digit, _ o -, na nagsisimula sa titik o digit. Walang pagkakaiba ang malaki at maliit na titik."
+    "program.shortcut_help": "Code ng programa na may 1–20 titik, digit, _ o -, na nagsisimula sa titik o digit. Walang pagkakaiba ang malaki at maliit na titik.",
+    "errors.confirm_upstream": "Kumpirmahin ang pag-aayos mula sa upstream repository.",
+    "errors.upstream_credential": "Pumili ng kredensiyal para sa upstream repository.",
+    "errors.select_version": "Piliin ang magagamit na bersyon.",
+    "errors.schema_selection": "Ang lakas ng schema ay nangangailangan ng isang eksplisit na bersyon ng pakete; ang pag-alis ng pakete ay hiwalay.",
+    "errors.difference_limit": "May mahigit 10,000 pagkakaiba sa mga package."
   }
 }

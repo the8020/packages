@@ -1,0 +1,7 @@
+version = 1
+command = "packages.repair"
+program = "the8020/packages/repair"
+summary = "Fetch upstream versions, or apply an exact upstream commit"
+usage = "<package-id> --source <url> [--secret <name>] [--commit <sha>] --confirm"
+mutates_state = true
+restart_behavior = "none"

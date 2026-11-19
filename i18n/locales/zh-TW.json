@@ -1,6 +1,7 @@
 {
   "name": "繁體中文（台灣）",
   "texts": {
+    "programs.repair.description": "從上游儲存庫修復",
     "programs.export.description": "將已驗證的套件版本匯出為可攜式清單",
     "programs.import.description": "匯入可攜式套件清單",
     "package.package": "套件",
@@ -92,7 +93,7 @@
     "source.selected": "已選擇",
     "source.whether_this_commit_matches_the_requested_package": "此提交是否匹配要求的套件版本。",
     "source.version": "版本",
-    "source.choose_latest_tag_name_or_commit_hash": "選擇 `latest`、`tag:<name>` 或 `commit:<hash>`，或在欄位說明中搜尋可用版本。套用後將取代已安裝版本。",
+    "source.choose_latest_tag_name_or_commit_hash": "選取標籤、提交或預設分支。同步時會安裝已儲存的版本。",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "預設分支最新版本",
     "source.tag_tag": "標籤 {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "輸出1至{MAX_PACKAGES}個包裹.",
     "errors.invalid_package_id": "沒有有效的包裝ID{packageId}",
     "program.shortcut": "快捷碼",
-    "program.shortcut_help": "由1–20個英文字母、數字、_或-組成的程式代碼，以字母或數字開頭，不區分大小寫。"
+    "program.shortcut_help": "由1–20個英文字母、數字、_或-組成的程式代碼，以字母或數字開頭，不區分大小寫。",
+    "errors.confirm_upstream": "請確認從上游儲存庫修復。",
+    "errors.upstream_credential": "請選取上游儲存庫的憑證。",
+    "errors.select_version": "選擇可用版本.",
+    "errors.schema_selection": "圖案效力需要一個明顯的包裝版本;包裝取消是別的.",
+    "errors.difference_limit": "套件差異超過 10,000 項。"
   }
 }

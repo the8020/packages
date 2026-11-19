@@ -1,6 +1,7 @@
 {
   "name": "日本語",
   "texts": {
+    "programs.repair.description": "上流リポジトリから修復",
     "programs.export.description": "検証済みのパッケージバージョンを移植可能なリストとしてエクスポート",
     "programs.import.description": "移植可能なパッケージリストをインポート",
     "package.package": "パッケージ",
@@ -92,7 +93,7 @@
     "source.selected": "選択済み",
     "source.whether_this_commit_matches_the_requested_package": "このコミットが要求されたパッケージバージョンと一致するかを示します。",
     "source.version": "バージョン",
-    "source.choose_latest_tag_name_or_commit_hash": "`latest`、`tag:<name>`、`commit:<hash>` を選ぶか、フィールドヘルプで利用可能なバージョンを検索してください。適用するとインストール済みバージョンを置き換えます。",
+    "source.choose_latest_tag_name_or_commit_hash": "タグ、コミット、またはデフォルトブランチを選択します。同期すると保存済みのバージョンがインストールされます。",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "既定ブランチの最新",
     "source.tag_tag": "タグ {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "1から{MAX_PACKAGES}のパッケージを輸出する",
     "errors.invalid_package_id": "無効なパッケージ ID {packageId}",
     "program.shortcut": "ショートカット",
-    "program.shortcut_help": "英数字、_、- を使った1～20文字のプログラムコード。先頭は英数字で、大文字と小文字は区別しません。"
+    "program.shortcut_help": "英数字、_、- を使った1～20文字のプログラムコード。先頭は英数字で、大文字と小文字は区別しません。",
+    "errors.confirm_upstream": "元のリポジトリからの修復を確認してください。",
+    "errors.upstream_credential": "元のリポジトリ用の認証情報を選択してください。",
+    "errors.select_version": "入手可能なバージョンを選択します.",
+    "errors.schema_selection": "スケマフォースは,パケットのバージョンを明確に1つ必要とする.パケットの削除は別途である.",
+    "errors.difference_limit": "パッケージの差分が 10,000 件を超えています。"
   }
 }

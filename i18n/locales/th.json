@@ -1,6 +1,7 @@
 {
   "name": "ไทย",
   "texts": {
+    "programs.repair.description": "ซ่อมแซมจากคลังต้นทาง",
     "programs.export.description": "ส่งออกเวอร์ชันแพ็กเกจที่ตรวจสอบแล้วเป็นรายการที่ย้ายได้",
     "programs.import.description": "นำเข้ารายการแพ็กเกจที่ย้ายได้",
     "package.package": "แพ็กเกจ",
@@ -92,7 +93,7 @@
     "source.selected": "เลือกแล้ว",
     "source.whether_this_commit_matches_the_requested_package": "คอมมิตนี้ตรงกับรุ่นแพ็กเกจที่ขอหรือไม่",
     "source.version": "รุ่น",
-    "source.choose_latest_tag_name_or_commit_hash": "เลือก `latest`, `tag:<name>` หรือ `commit:<hash>` หรือค้นหารุ่นที่มีในตัวช่วยฟิลด์ การใช้จะแทนที่รุ่นที่ติดตั้ง",
+    "source.choose_latest_tag_name_or_commit_hash": "เลือกแท็ก คอมมิต หรือสาขาเริ่มต้น การซิงค์จะติดตั้งเวอร์ชันที่บันทึกไว้",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "สาขาเริ่มต้นล่าสุด",
     "source.tag_tag": "แท็ก {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "ส่งออกกระเป๋า 1 ถึง {MAX_PACKAGES}",
     "errors.invalid_package_id": "ID แพ็คเกจไม่ถูกต้อง {packageId}",
     "program.shortcut": "รหัสลัด",
-    "program.shortcut_help": "รหัสโปรแกรมยาว 1–20 ตัวอักษร ตัวเลข _ หรือ - โดยเริ่มด้วยตัวอักษรหรือตัวเลข ไม่แยกตัวพิมพ์ใหญ่และเล็ก"
+    "program.shortcut_help": "รหัสโปรแกรมยาว 1–20 ตัวอักษร ตัวเลข _ หรือ - โดยเริ่มด้วยตัวอักษรหรือตัวเลข ไม่แยกตัวพิมพ์ใหญ่และเล็ก",
+    "errors.confirm_upstream": "ยืนยันการซ่อมแซมจากคลังต้นทาง",
+    "errors.upstream_credential": "เลือกข้อมูลรับรองสำหรับคลังต้นทาง",
+    "errors.select_version": "เลือกเวอร์ชั่นที่ว่าง",
+    "errors.schema_selection": "การใช้งานของโครงการต้องมีเวอร์ชั่นพัคเกจที่ชัดเจนเดียว การถอนพัคเกจนั้นเป็นแบบแยก",
+    "errors.difference_limit": "พบความแตกต่างของแพ็กเกจมากกว่า 10,000 รายการ"
   }
 }

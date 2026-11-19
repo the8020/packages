@@ -1,6 +1,7 @@
 {
   "name": "Norsk bokmål",
   "texts": {
+    "programs.repair.description": "Reparer fra opprinnelig kodelager",
     "programs.export.description": "Eksporter verifiserte pakkeversjoner som en flyttbar liste",
     "programs.import.description": "Importer en flyttbar pakkeliste",
     "package.package": "Pakke",
@@ -92,7 +93,7 @@
     "source.selected": "Valgt",
     "source.whether_this_commit_matches_the_requested_package": "Om commiten samsvarer med ønsket pakkeversjon.",
     "source.version": "Versjon",
-    "source.choose_latest_tag_name_or_commit_hash": "Velg `latest`, `tag:<name>` eller `commit:<hash>`, eller søk i tilgjengelige versjoner i felthjelpen. Bruk erstatter den installerte versjonen.",
+    "source.choose_latest_tag_name_or_commit_hash": "Velg en tagg, en commit eller standardgrenen. Synkronisering installerer den lagrede versjonen.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Nyeste standardgren",
     "source.tag_tag": "Tagg {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Eksport 1 til {MAX_PACKAGES} pakker.",
     "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}",
     "program.shortcut": "Snarvei",
-    "program.shortcut_help": "Programkode med 1–20 bokstaver, sifre, _ eller -, som begynner med en bokstav eller et siffer. Store og små bokstaver er like."
+    "program.shortcut_help": "Programkode med 1–20 bokstaver, sifre, _ eller -, som begynner med en bokstav eller et siffer. Store og små bokstaver er like.",
+    "errors.confirm_upstream": "Bekreft reparasjon fra kildelageret.",
+    "errors.upstream_credential": "Velg påloggingsinformasjon for kildelageret.",
+    "errors.select_version": "Velg en tilgjengelig versjon.",
+    "errors.schema_selection": "Skema kraft krever en eksplisitt pakkeversjon; pakke fjerning er separat.",
+    "errors.difference_limit": "Det er mer enn 10 000 pakkeforskjeller."
   }
 }

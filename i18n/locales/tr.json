@@ -1,6 +1,7 @@
 {
   "name": "Türkçe",
   "texts": {
+    "programs.repair.description": "Kaynak depodan onar",
     "programs.export.description": "Doğrulanmış paket sürümlerini taşınabilir liste olarak dışa aktar",
     "programs.import.description": "Taşınabilir paket listesini içe aktar",
     "package.package": "Paket",
@@ -92,7 +93,7 @@
     "source.selected": "Seçili",
     "source.whether_this_commit_matches_the_requested_package": "Bu commit'in istenen paket sürümüyle eşleşip eşleşmediği.",
     "source.version": "Sürüm",
-    "source.choose_latest_tag_name_or_commit_hash": "`latest`, `tag:<name>` veya `commit:<hash>` seçin ya da alan yardımında kullanılabilir sürümleri arayın. Uygulandığında yüklü sürüm değiştirilir.",
+    "source.choose_latest_tag_name_or_commit_hash": "Bir etiket, commit veya varsayılan dalı seçin. Eşitleme kaydedilen sürümü yükler.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Varsayılan dalın en son sürümü",
     "source.tag_tag": "Etiket {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "1 ila {MAX_PACKAGES} paket ihraç.",
     "errors.invalid_package_id": "geçersiz paket kimliği {packageId}",
     "program.shortcut": "Kısa kod",
-    "program.shortcut_help": "Harf veya rakamla başlayan, 1–20 harf, rakam, _ veya - içeren program kodu. Büyük/küçük harf ayrımı yapılmaz."
+    "program.shortcut_help": "Harf veya rakamla başlayan, 1–20 harf, rakam, _ veya - içeren program kodu. Büyük/küçük harf ayrımı yapılmaz.",
+    "errors.confirm_upstream": "Kaynak depodan onarımı onaylayın.",
+    "errors.upstream_credential": "Kaynak depo için kimlik bilgisi seçin.",
+    "errors.select_version": "Kullanılabilir bir sürüm seçin.",
+    "errors.schema_selection": "Şema gücü, açık bir paket versiyonunu gerektirir; paket kaldırılması ayrıdır.",
+    "errors.difference_limit": "Paketler arasında 10.000'den fazla fark var."
   }
 }

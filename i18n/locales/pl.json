@@ -1,6 +1,7 @@
 {
   "name": "Polski",
   "texts": {
+    "programs.repair.description": "Napraw z repozytorium źródłowego",
     "programs.export.description": "Eksport zweryfikowanych wersji pakietów jako przenośnej listy",
     "programs.import.description": "Import przenośnej listy pakietów",
     "package.package": "Pakiet",
@@ -92,7 +93,7 @@
     "source.selected": "Wybrany",
     "source.whether_this_commit_matches_the_requested_package": "Czy commit odpowiada żądanej wersji pakietu.",
     "source.version": "Wersja",
-    "source.choose_latest_tag_name_or_commit_hash": "Wybierz `latest`, `tag:<name>` lub `commit:<hash>`, albo wyszukaj dostępne wersje w pomocy pola. Zastosowanie zastępuje zainstalowaną wersję.",
+    "source.choose_latest_tag_name_or_commit_hash": "Wybierz tag, commit lub domyślną gałąź. Synchronizacja instaluje zapisaną wersję.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Najnowsza wersja gałęzi domyślnej",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Wywóz 1 do {MAX_PACKAGES} paczek.",
     "errors.invalid_package_id": "nieważny identyfikator pakietu {packageId}",
     "program.shortcut": "Skrót",
-    "program.shortcut_help": "Kod programu złożony z 1–20 liter, cyfr, _ lub -, zaczynający się literą lub cyfrą. Wielkość liter nie ma znaczenia."
+    "program.shortcut_help": "Kod programu złożony z 1–20 liter, cyfr, _ lub -, zaczynający się literą lub cyfrą. Wielkość liter nie ma znaczenia.",
+    "errors.confirm_upstream": "Potwierdź naprawę z repozytorium źródłowego.",
+    "errors.upstream_credential": "Wybierz dane logowania do repozytorium źródłowego.",
+    "errors.select_version": "Wybierz dostępną wersję.",
+    "errors.schema_selection": "Siła schematyczna wymaga jednej wyraźnej wersji pakietu; usunięcie pakietu jest oddzielne.",
+    "errors.difference_limit": "Liczba różnic między pakietami przekracza 10 000."
   }
 }

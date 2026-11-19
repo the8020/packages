@@ -1,6 +1,7 @@
 {
   "name": "עברית",
   "texts": {
+    "programs.repair.description": "תיקון ממאגר המקור",
     "programs.export.description": "ייצוא גרסאות חבילות מאומתות כרשימה ניידת",
     "programs.import.description": "ייבוא רשימת חבילות ניידת",
     "package.package": "חבילה",
@@ -92,7 +93,7 @@
     "source.selected": "נבחר",
     "source.whether_this_commit_matches_the_requested_package": "האם ה־Commit הזה תואם לגרסת החבילה המבוקשת.",
     "source.version": "גרסה",
-    "source.choose_latest_tag_name_or_commit_hash": "בחרו `latest`,‏ `tag:<name>` או `commit:<hash>`, או חפשו בגרסאות הזמינות בעזרת השדה. החלה מחליפה את הגרסה המותקנת.",
+    "source.choose_latest_tag_name_or_commit_hash": "יש לבחור תג, קומיט או ענף ברירת מחדל. הסנכרון מתקין את הגרסה שנשמרה.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "הגרסה האחרונה בענף ברירת המחדל",
     "source.tag_tag": "תג {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "ייצוא 1 ל-{MAX_PACKAGES} חבילות.",
     "errors.invalid_package_id": "איד חבילה לא חוקי {packageId}",
     "program.shortcut": "קוד קיצור",
-    "program.shortcut_help": "קוד תוכנית בן 1–20 אותיות, ספרות, _ או -, המתחיל באות או בספרה. אין הבחנה בין אותיות גדולות לקטנות."
+    "program.shortcut_help": "קוד תוכנית בן 1–20 אותיות, ספרות, _ או -, המתחיל באות או בספרה. אין הבחנה בין אותיות גדולות לקטנות.",
+    "errors.confirm_upstream": "יש לאשר את התיקון ממאגר המקור.",
+    "errors.upstream_credential": "יש לבחור פרטי גישה למאגר המקור.",
+    "errors.select_version": "בחר גרסה זמינה.",
+    "errors.schema_selection": "כוח הסכמה דורש גרסה אחת של החבילה מפורשת; הסרת החבילה נפרדת.",
+    "errors.difference_limit": "יש יותר מ־10,000 הבדלים בין החבילות."
   }
 }

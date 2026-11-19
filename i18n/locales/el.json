@@ -1,6 +1,7 @@
 {
   "name": "Ελληνικά",
   "texts": {
+    "programs.repair.description": "Επιδιόρθωση από το αρχικό αποθετήριο",
     "programs.export.description": "Εξαγωγή επαληθευμένων εκδόσεων πακέτων ως φορητή λίστα",
     "programs.import.description": "Εισαγωγή φορητής λίστας πακέτων",
     "package.package": "Πακέτο",
@@ -92,7 +93,7 @@
     "source.selected": "Επιλεγμένο",
     "source.whether_this_commit_matches_the_requested_package": "Αν αυτό το commit αντιστοιχεί στην επιθυμητή έκδοση πακέτου.",
     "source.version": "Έκδοση",
-    "source.choose_latest_tag_name_or_commit_hash": "Επιλέξτε `latest`, `tag:<name>` ή `commit:<hash>`, ή αναζητήστε τις διαθέσιμες εκδόσεις στη βοήθεια πεδίου. Η εφαρμογή αντικαθιστά την εγκατεστημένη έκδοση.",
+    "source.choose_latest_tag_name_or_commit_hash": "Επιλέξτε ετικέτα, commit ή τον προεπιλεγμένο κλάδο. Ο συγχρονισμός εγκαθιστά την αποθηκευμένη έκδοση.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Νεότερη έκδοση προεπιλεγμένου κλάδου",
     "source.tag_tag": "Ετικέτα {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Εξαγωγή 1 έως {MAX_PACKAGES} πακέτων.",
     "errors.invalid_package_id": "Απαράβλητο αναγνωριστικό πακέτου {packageId}",
     "program.shortcut": "Συντόμευση",
-    "program.shortcut_help": "Κωδικός προγράμματος με 1–20 γράμματα, ψηφία, _ ή -, που αρχίζει με γράμμα ή ψηφίο. Δεν γίνεται διάκριση πεζών και κεφαλαίων."
+    "program.shortcut_help": "Κωδικός προγράμματος με 1–20 γράμματα, ψηφία, _ ή -, που αρχίζει με γράμμα ή ψηφίο. Δεν γίνεται διάκριση πεζών και κεφαλαίων.",
+    "errors.confirm_upstream": "Επιβεβαιώστε την επιδιόρθωση από το αρχικό αποθετήριο.",
+    "errors.upstream_credential": "Επιλέξτε διαπιστευτήριο για το αρχικό αποθετήριο.",
+    "errors.select_version": "Επιλέξτε μια διαθέσιμη έκδοση.",
+    "errors.schema_selection": "Η ισχύς του σχεδίου απαιτεί μία ρητή έκδοση συσκευασίας· η απομάκρυνση της συσκευασίας είναι ξεχωριστή.",
+    "errors.difference_limit": "Υπάρχουν περισσότερες από 10.000 διαφορές στα πακέτα."
   }
 }

@@ -1,6 +1,7 @@
 {
   "name": "فارسی",
   "texts": {
+    "programs.repair.description": "ترمیم از مخزن بالادست",
     "programs.export.description": "صدور نسخه‌های تأییدشدهٔ بسته‌ها به‌صورت فهرست قابل انتقال",
     "programs.import.description": "ورود فهرست قابل انتقال بسته‌ها",
     "package.package": "بسته",
@@ -92,7 +93,7 @@
     "source.selected": "انتخاب‌شده",
     "source.whether_this_commit_matches_the_requested_package": "آیا این کامیت با نسخهٔ درخواستی بسته مطابقت دارد.",
     "source.version": "نسخه",
-    "source.choose_latest_tag_name_or_commit_hash": "`latest`، `tag:<name>` یا `commit:<hash>` را انتخاب کنید، یا نسخه‌های موجود را در راهنمای فیلد جست‌وجو کنید. اعمال آن نسخهٔ نصب‌شده را جایگزین می‌کند.",
+    "source.choose_latest_tag_name_or_commit_hash": "یک برچسب، کامیت یا شاخهٔ پیش‌فرض را انتخاب کنید. همگام‌سازی نسخهٔ ذخیره‌شده را نصب می‌کند.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "آخرین نسخهٔ شاخهٔ پیش‌فرض",
     "source.tag_tag": "برچسب {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "صادرات بسته های 1 تا {MAX_PACKAGES}",
     "errors.invalid_package_id": "پیکیج ID غیرفعال {packageId}",
     "program.shortcut": "کد میانبر",
-    "program.shortcut_help": "کد برنامه با ۱–۲۰ حرف، رقم، _ یا - که با حرف یا رقم آغاز می‌شود. بزرگی و کوچکی حروف تفاوتی ندارد."
+    "program.shortcut_help": "کد برنامه با ۱–۲۰ حرف، رقم، _ یا - که با حرف یا رقم آغاز می‌شود. بزرگی و کوچکی حروف تفاوتی ندارد.",
+    "errors.confirm_upstream": "تعمیر از مخزن اصلی را تأیید کنید.",
+    "errors.upstream_credential": "اطلاعات ورود مخزن اصلی را انتخاب کنید.",
+    "errors.select_version": "یک نسخه موجود را انتخاب کنید.",
+    "errors.schema_selection": "نیروی طرح نیاز به یک نسخه بسته صریح دارد؛ حذف بسته جداگانه است.",
+    "errors.difference_limit": "بیش از ۱۰٬۰۰۰ تفاوت میان بسته‌ها وجود دارد."
   }
 }

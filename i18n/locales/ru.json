@@ -1,6 +1,7 @@
 {
   "name": "Русский",
   "texts": {
+    "programs.repair.description": "Восстановить из исходного репозитория",
     "programs.export.description": "Экспорт проверенных версий пакетов в виде переносимого списка",
     "programs.import.description": "Импорт переносимого списка пакетов",
     "package.package": "Пакет",
@@ -92,7 +93,7 @@
     "source.selected": "Выбран",
     "source.whether_this_commit_matches_the_requested_package": "Соответствует ли этот коммит запрошенной версии пакета.",
     "source.version": "Версия",
-    "source.choose_latest_tag_name_or_commit_hash": "Выберите `latest`, `tag:<name>` или `commit:<hash>` либо найдите доступную версию в помощи поля. Применение заменяет установленную версию.",
+    "source.choose_latest_tag_name_or_commit_hash": "Выберите тег, коммит или ветку по умолчанию. Синхронизация установит сохранённую версию.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Последняя версия основной ветки",
     "source.tag_tag": "Тег {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Экспорт пакетов 1 - {MAX_PACKAGES}.",
     "errors.invalid_package_id": "недействительный идентификатор упаковки {packageId}",
     "program.shortcut": "Сокращение",
-    "program.shortcut_help": "Код программы из 1–20 букв, цифр, _ или -, начинающийся с буквы или цифры. Регистр не учитывается."
+    "program.shortcut_help": "Код программы из 1–20 букв, цифр, _ или -, начинающийся с буквы или цифры. Регистр не учитывается.",
+    "errors.confirm_upstream": "Подтвердите восстановление из исходного репозитория.",
+    "errors.upstream_credential": "Выберите учётные данные для исходного репозитория.",
+    "errors.select_version": "Выберите доступную версию.",
+    "errors.schema_selection": "Сила схемы требует одной явной версии упаковки; удаление упаковки осуществляется отдельно.",
+    "errors.difference_limit": "Обнаружено более 10 000 различий между пакетами."
   }
 }

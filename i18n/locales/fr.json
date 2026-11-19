@@ -1,6 +1,7 @@
 {
   "name": "Français",
   "texts": {
+    "programs.repair.description": "Réparer depuis le dépôt amont",
     "programs.export.description": "Exporter les versions de paquets vérifiées sous forme de liste portable",
     "programs.import.description": "Importer une liste de paquets portable",
     "package.package": "Paquet",
@@ -92,7 +93,7 @@
     "source.selected": "Sélectionné",
     "source.whether_this_commit_matches_the_requested_package": "Indique si ce commit correspond à la version demandée du paquet.",
     "source.version": "Version",
-    "source.choose_latest_tag_name_or_commit_hash": "Choisissez `latest`, `tag:<name>` ou `commit:<hash>`, ou recherchez une version dans l’aide du champ. L’application remplace la version installée.",
+    "source.choose_latest_tag_name_or_commit_hash": "Choisissez une étiquette, un commit ou la branche par défaut. La synchronisation installe la version enregistrée.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Dernière version de la branche par défaut",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Exporter des colis de 1 à {MAX_PACKAGES}.",
     "errors.invalid_package_id": "Identification de colis non valide {packageId}",
     "program.shortcut": "Raccourci",
-    "program.shortcut_help": "Code de programme de 1 à 20 lettres, chiffres, _ ou -, commençant par une lettre ou un chiffre. La casse est ignorée."
+    "program.shortcut_help": "Code de programme de 1 à 20 lettres, chiffres, _ ou -, commençant par une lettre ou un chiffre. La casse est ignorée.",
+    "errors.confirm_upstream": "Confirmez la réparation depuis le dépôt d’origine.",
+    "errors.upstream_credential": "Sélectionnez un identifiant pour le dépôt d’origine.",
+    "errors.select_version": "Sélectionnez une version disponible.",
+    "errors.schema_selection": "La force du schéma nécessite une version explicite du paquet; le retrait du paquet est séparé.",
+    "errors.difference_limit": "Il y a plus de 10 000 différences entre les paquets."
   }
 }

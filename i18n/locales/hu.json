@@ -1,6 +1,7 @@
 {
   "name": "Magyar",
   "texts": {
+    "programs.repair.description": "Javítás a forrástárolóból",
     "programs.export.description": "Ellenőrzött csomagverziók exportálása hordozható listaként",
     "programs.import.description": "Hordozható csomaglista importálása",
     "package.package": "Csomag",
@@ -92,7 +93,7 @@
     "source.selected": "Kiválasztva",
     "source.whether_this_commit_matches_the_requested_package": "Ez a commit megegyezik-e a kért csomagverzióval.",
     "source.version": "Verzió",
-    "source.choose_latest_tag_name_or_commit_hash": "Válasszon `latest`, `tag:<name>` vagy `commit:<hash>` értéket, vagy keressen elérhető verziókat a mezősúgóban. Az alkalmazás lecseréli a telepített verziót.",
+    "source.choose_latest_tag_name_or_commit_hash": "Válasszon címkét, commitot vagy alapértelmezett ágat. A szinkronizálás a mentett verziót telepíti.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Alapág legújabb verziója",
     "source.tag_tag": "Címke: {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Export 1 és {MAX_PACKAGES} csomag között.",
     "errors.invalid_package_id": "nem érvényes csomag ID {packageId}",
     "program.shortcut": "Rövid kód",
-    "program.shortcut_help": "1–20 betűből, számjegyből, _ vagy - jelből álló programkód, amely betűvel vagy számjeggyel kezdődik. A kis- és nagybetűk azonosnak számítanak."
+    "program.shortcut_help": "1–20 betűből, számjegyből, _ vagy - jelből álló programkód, amely betűvel vagy számjeggyel kezdődik. A kis- és nagybetűk azonosnak számítanak.",
+    "errors.confirm_upstream": "Erősítse meg a javítást az eredeti tárolóból.",
+    "errors.upstream_credential": "Válasszon hitelesítő adatot az eredeti tárolóhoz.",
+    "errors.select_version": "Válassza ki a rendelkezésre álló verziót.",
+    "errors.schema_selection": "A rendszer erőssége egy kifejezett csomagolási verziót igényel; a csomag eltávolítása külön.",
+    "errors.difference_limit": "A csomagok közötti eltérések száma meghaladja a 10 000-et."
   }
 }

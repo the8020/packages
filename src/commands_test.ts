@@ -183,6 +183,9 @@ Deno.test("repository fetch uses the authorized package API without applying a v
   (globalThis as unknown as Record<symbol, unknown>)[kernelInvokeSymbol] =
     ((operation, input) => {
       if (operation === "database.execute") {
+        if (!String(input.statement).includes("__settings")) {
+          return Promise.resolve({ columns: [], rows: [] });
+        }
         return Promise.resolve({
           columns: ["value"],
           rows: [[{
@@ -192,6 +195,14 @@ Deno.test("repository fetch uses the authorized package API without applying a v
         });
       }
       calls.push(input);
+      if (input.operation === "package.index.inspect") {
+        return Promise.resolve({
+          success: true,
+          result: {
+            package: { source: "https://example.test/the8020/example.git" },
+          },
+        });
+      }
       return Promise.resolve({
         success: true,
         result: { repository: { package_id: "the8020/example" } },
@@ -208,9 +219,9 @@ Deno.test("repository fetch uses the authorized package API without applying a v
     await assertRejects(
       () => fetchRepository("the8020/example"),
       Error,
-      "development system",
+      "development source",
     );
-    assertEquals(calls.length, 1);
+    assertEquals(calls.length, 2);
   } finally {
     delete (globalThis as unknown as Record<symbol, unknown>)[
       kernelInvokeSymbol

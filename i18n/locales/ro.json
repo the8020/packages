@@ -1,6 +1,7 @@
 {
   "name": "Română",
   "texts": {
+    "programs.repair.description": "Repară din depozitul sursă",
     "programs.export.description": "Exportă versiunile verificate ale pachetelor ca listă portabilă",
     "programs.import.description": "Importă o listă portabilă de pachete",
     "package.package": "Pachet",
@@ -92,7 +93,7 @@
     "source.selected": "Selectat",
     "source.whether_this_commit_matches_the_requested_package": "Indică dacă acest commit corespunde versiunii solicitate a pachetului.",
     "source.version": "Versiune",
-    "source.choose_latest_tag_name_or_commit_hash": "Alegeți `latest`, `tag:<name>` sau `commit:<hash>`, ori căutați versiunile disponibile în ajutorul câmpului. Aplicarea înlocuiește versiunea instalată.",
+    "source.choose_latest_tag_name_or_commit_hash": "Alegeți o etichetă, un commit sau ramura implicită. Sincronizarea instalează versiunea salvată.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Cea mai nouă versiune a ramurii implicite",
     "source.tag_tag": "Etichetă {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Exportarea pachetelor 1 - {MAX_PACKAGES}.",
     "errors.invalid_package_id": "ID-ul de pachet nu valabil {packageId}",
     "program.shortcut": "Cod rapid",
-    "program.shortcut_help": "Cod de program cu 1–20 litere, cifre, _ sau -, începând cu o literă sau cifră. Nu se face distincție între majuscule și minuscule."
+    "program.shortcut_help": "Cod de program cu 1–20 litere, cifre, _ sau -, începând cu o literă sau cifră. Nu se face distincție între majuscule și minuscule.",
+    "errors.confirm_upstream": "Confirmați repararea din depozitul de origine.",
+    "errors.upstream_credential": "Selectați datele de autentificare pentru depozitul de origine.",
+    "errors.select_version": "Selectați o versiune disponibilă.",
+    "errors.schema_selection": "Forța schema necesită o versiune explicită a pachetului; eliminarea pachetului este separată.",
+    "errors.difference_limit": "Există peste 10.000 de diferențe între pachete."
   }
 }

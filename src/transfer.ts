@@ -35,6 +35,7 @@ export type PackageListFile = z.infer<typeof packageListFile>;
 /** The subset of the authorized packages API used by transfer. */
 export type TransferApi = Pick<
   typeof packages,
+  | "isDevelopment"
   | "index"
   | "repository"
   | "source"
@@ -100,9 +101,13 @@ async function exportEntry(
   const repository = await api.repository.inspect(packageId);
   if (!repository.remote_url) return { package: packageId, code: "no_remote" };
   await api.repository.fetch(packageId);
-  const source = await api.source.inspect(repository.remote_url, {
-    secret: index.secret,
-  });
+  const source = await api.source.inspect(
+    index.source || repository.remote_url,
+    {
+      packageId,
+      secret: index.secret,
+    },
+  );
   const versions = await api.versions.list(packageId, HISTORY_LIMIT);
   if (!inRemote(commit, source.references, versions)) {
     return {
@@ -292,20 +297,16 @@ async function importEntry(
   item: ImportPreview,
   api: TransferApi,
 ): Promise<ImportOutcome> {
-  const source = await api.source.inspect(item.source, { secret: item.secret });
-  // The listed package ID is the target name; the Git URL is only its source.
+  await api.source.inspect(item.source, {
+    secret: item.secret,
+    packageId: item.package,
+  });
   const [author, repository] = item.package.split("/") as [string, string];
-  // A moved or missing tag must not change the exported code: pin the commit.
-  const tagged = item.tag !== undefined &&
-    source.references.some((reference) =>
-      reference.kind === "tag" && reference.name === item.tag &&
-      reference.commit === item.commit
-    );
   await api.index.set({
     author,
     repository,
     source: item.source,
-    ...(tagged ? { tag: item.tag } : { commit: item.commit }),
+    commit: item.commit,
     ...(item.secret ? { secret: item.secret } : {}),
   });
   return { ...item, outcome: "imported" };
@@ -363,6 +364,7 @@ export async function importPackageList(
   }
   // Installed packages keep their Git remote so they can be fetched, pushed
   // and exported again; unchanged packages get a missing remote on re-import.
+  if (!await api.isDevelopment()) return outcomes;
   for (const item of outcomes) {
     if (item.outcome !== "imported" && item.code !== "same") continue;
     try {

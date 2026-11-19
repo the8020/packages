@@ -1,6 +1,7 @@
 {
   "name": "Dansk",
   "texts": {
+    "programs.repair.description": "Reparer fra det oprindelige lager",
     "programs.export.description": "Eksportér verificerede pakkeversioner som en flytbar liste",
     "programs.import.description": "Importér en flytbar pakkeliste",
     "package.package": "Pakke",
@@ -92,7 +93,7 @@
     "source.selected": "Valgt",
     "source.whether_this_commit_matches_the_requested_package": "Om denne commit svarer til den ønskede pakkeversion.",
     "source.version": "Version",
-    "source.choose_latest_tag_name_or_commit_hash": "Vælg `latest`, `tag:<name>` eller `commit:<hash>`, eller søg i tilgængelige versioner i felthjælpen. Anvendelse erstatter den installerede version.",
+    "source.choose_latest_tag_name_or_commit_hash": "Vælg et tag, et commit eller standardgrenen. Synkronisering installerer den gemte version.",
     "source.value1_value2": "{value1} — {value2}",
     "source.latest_default_branch": "Seneste standardgren",
     "source.tag_tag": "Tag {tag}",
@@ -134,6 +135,11 @@
     "errors.export_1_to_packages": "Eksport 1 til {MAX_PACKAGES} pakker.",
     "errors.invalid_package_id": "Ugyldig pakke-ID {packageId}",
     "program.shortcut": "Genvej",
-    "program.shortcut_help": "Programkode med 1–20 bogstaver, cifre, _ eller -, som starter med et bogstav eller ciffer. Store og små bogstaver er ens."
+    "program.shortcut_help": "Programkode med 1–20 bogstaver, cifre, _ eller -, som starter med et bogstav eller ciffer. Store og små bogstaver er ens.",
+    "errors.confirm_upstream": "Bekræft reparation fra kildelageret.",
+    "errors.upstream_credential": "Vælg legitimationsoplysninger til kildelageret.",
+    "errors.select_version": "Vælg en tilgængelig version.",
+    "errors.schema_selection": "Skema kraft kræver en eksplicit pakkeversion; pakke fjernelse er separat.",
+    "errors.difference_limit": "Der er over 10.000 pakkeforskelle."
   }
 }

@@ -6,11 +6,16 @@ Parent DOX: [packages DOX](../AGENTS.md).
 
 # Ownership
 
-- Own `packages.ts`, `activations.ts`, `activation_packages.ts`,
-  `synchronizations.ts`, and `hook_runs.ts` and their descriptor tests; physical
-  schema deployment remains kernel-owned.
+- Own `packages.ts`, `node_packages.ts`, `activations.ts`,
+  `activation_packages.ts`, `synchronizations.ts`, and `hook_runs.ts` and their
+  descriptor tests; physical schema deployment remains kernel-owned.
 
 # Local Contracts
+
+- `packages` stores the desired selector, upstream configuration, selected
+  development transport and system-published commit. `node_packages` records the
+  observed commit and readiness per node/package. `activations.nodeId`
+  identifies the node that owns source switching and recovery.
 
 - Default-export authored table descriptors through `/p/the8020/db/mod.ts`;
   table identity follows the package and file path.

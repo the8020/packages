@@ -18,6 +18,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
   may consume only its execution-scoped optional Git token.
 - `repository-fetch` refreshes available versions without activation; branch and
   commit checkout remain explicit source-changing actions.
+- `repair` requires an explicit upstream and confirmation. Fetch lists versions;
+  applying a commit records the change on the target node.
 - The hidden `delete` program requires a package ID and `--confirm` before
   calling `kernel.packages.delete`.
 - `secret-usages` implements the `the8020/secrets` usage contract: non-retired

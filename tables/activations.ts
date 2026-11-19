@@ -14,6 +14,8 @@ const Activations = table("the8020__packages__activations", {
       "failed",
     ] as const,
   ).default("staged"),
+  pinVersions: t.boolean().default(false),
+  nodeId: t.text().nullable(),
   error: t.text().nullable(),
   previousPackageSetHash: t.text(),
   candidatePackageSetHash: t.text(),
