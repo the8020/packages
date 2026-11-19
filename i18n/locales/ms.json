@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Pakej {id}",
     "secret_usages.repository_credentials": "Bukti kelayakan repositori",
     "programs.secret-usages.description": "Senaraikan pakej yang bukti kelayakan repositorinya menggunakan rahsia yang diberikan",
+    "errors.export_1_to_packages": "Mengeksport 1 hingga {MAX_PACKAGES} pakej.",
+    "errors.invalid_package_id": "ID pakej yang tidak sah {packageId}",
     "program.shortcut": "Kod pintas",
     "program.shortcut_help": "Kod program dengan 1–20 huruf, digit, _ atau -, bermula dengan huruf atau digit. Huruf besar dan kecil dianggap sama."
   }

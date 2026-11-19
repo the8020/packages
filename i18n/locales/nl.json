@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Pakket {id}",
     "secret_usages.repository_credentials": "Repository-inloggegevens",
     "programs.secret-usages.description": "Pakketten weergeven waarvan de repository-inloggegevens de opgegeven geheimen gebruiken",
+    "errors.export_1_to_packages": "Uitvoeren van 1 tot en met {MAX_PACKAGES} pakketten.",
+    "errors.invalid_package_id": "ongeldig pakket-ID {packageId}",
     "program.shortcut": "Snelcode",
     "program.shortcut_help": "Programmacode van 1–20 letters, cijfers, _ of -, beginnend met een letter of cijfer. Hoofdletters en kleine letters zijn gelijk."
   }

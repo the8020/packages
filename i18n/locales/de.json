@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Repository-Zugangsdaten",
     "programs.secret-usages.description": "Pakete auflisten, deren Repository-Zugangsdaten die angegebenen Geheimnisse verwenden",
+    "errors.export_1_to_packages": "Export 1 bis {MAX_PACKAGES} Pakete.",
+    "errors.invalid_package_id": "nicht gültiges Paket-ID {packageId}",
     "program.shortcut": "Kürzel",
     "program.shortcut_help": "Programmcode mit 1–20 Buchstaben, Ziffern, _ oder -, beginnend mit einem Buchstaben oder einer Ziffer. Groß- und Kleinschreibung wird ignoriert."
   }

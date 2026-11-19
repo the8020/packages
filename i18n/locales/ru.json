@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Пакет {id}",
     "secret_usages.repository_credentials": "Учётные данные репозитория",
     "programs.secret-usages.description": "Показывает пакеты, учётные данные репозитория которых используют указанные секреты",
+    "errors.export_1_to_packages": "Экспорт пакетов 1 - {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "недействительный идентификатор упаковки {packageId}",
     "program.shortcut": "Сокращение",
     "program.shortcut_help": "Код программы из 1–20 букв, цифр, _ или -, начинающийся с буквы или цифры. Регистр не учитывается."
   }

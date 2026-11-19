@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Balíček {id}",
     "secret_usages.repository_credentials": "Přihlašovací údaje k repozitáři",
     "programs.secret-usages.description": "Výpis balíčků, jejichž přihlašovací údaje k repozitáři používají zadané tajné údaje",
+    "errors.export_1_to_packages": "Exportujte 1 až {MAX_PACKAGES} balíčků.",
+    "errors.invalid_package_id": "Neplatné ID balíčku {packageId}",
     "program.shortcut": "Zkratka",
     "program.shortcut_help": "Kód programu o 1–20 písmenech, číslicích, _ nebo -, začínající písmenem nebo číslicí. Na velikosti písmen nezáleží."
   }

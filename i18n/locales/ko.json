@@ -131,6 +131,8 @@
     "secret_usages.package_id": "패키지 {id}",
     "secret_usages.repository_credentials": "저장소 자격 증명",
     "programs.secret-usages.description": "지정한 시크릿을 저장소 자격 증명에 사용하는 패키지 목록 조회",
+    "errors.export_1_to_packages": "1~{MAX_PACKAGES} 패키지를 수출합니다.",
+    "errors.invalid_package_id": "유효하지 않은 패키지 ID {packageId}",
     "program.shortcut": "바로가기 코드",
     "program.shortcut_help": "영문자, 숫자, _ 또는 -로 구성된 1~20자 프로그램 코드입니다. 영문자나 숫자로 시작하며 대소문자를 구분하지 않습니다."
   }

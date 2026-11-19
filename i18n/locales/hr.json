@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Vjerodajnice repozitorija",
     "programs.secret-usages.description": "Prikazuje pakete čije vjerodajnice repozitorija koriste zadane tajne",
+    "errors.export_1_to_packages": "Izvoz paketa 1 do {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "Nevaljan paket ID {packageId}",
     "program.shortcut": "Kratica",
     "program.shortcut_help": "Kod programa od 1–20 slova, znamenki, _ ili -, koji počinje slovom ili znamenkom. Veličina slova nije bitna."
   }

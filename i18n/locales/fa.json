@@ -131,6 +131,8 @@
     "secret_usages.package_id": "بسته {id}",
     "secret_usages.repository_credentials": "اطلاعات احراز هویت مخزن",
     "programs.secret-usages.description": "فهرست بسته‌هایی که اطلاعات احراز هویت مخزنشان از رازهای داده‌شده استفاده می‌کند",
+    "errors.export_1_to_packages": "صادرات بسته های 1 تا {MAX_PACKAGES}",
+    "errors.invalid_package_id": "پیکیج ID غیرفعال {packageId}",
     "program.shortcut": "کد میانبر",
     "program.shortcut_help": "کد برنامه با ۱–۲۰ حرف، رقم، _ یا - که با حرف یا رقم آغاز می‌شود. بزرگی و کوچکی حروف تفاوتی ندارد."
   }

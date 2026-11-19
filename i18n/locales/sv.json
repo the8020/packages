@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Inloggningsuppgifter för repository",
     "programs.secret-usages.description": "Lista paket vars inloggningsuppgifter för repository använder angivna hemligheter",
+    "errors.export_1_to_packages": "Exporterar 1 till {MAX_PACKAGES} paket.",
+    "errors.invalid_package_id": "Oegentligt paket ID {packageId}",
     "program.shortcut": "Genväg",
     "program.shortcut_help": "Programkod med 1–20 bokstäver, siffror, _ eller -, som börjar med en bokstav eller siffra. Ingen skillnad görs på stora och små bokstäver."
   }

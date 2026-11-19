@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Пакет {id}",
     "secret_usages.repository_credentials": "Облікові дані репозиторію",
     "programs.secret-usages.description": "Показує пакети, облікові дані репозиторію яких використовують задані секрети",
+    "errors.export_1_to_packages": "Вивезення 1 до {MAX_PACKAGES} пакетів.",
+    "errors.invalid_package_id": "недійний пакетний ідентифікатор {packageId}",
     "program.shortcut": "Скорочення",
     "program.shortcut_help": "Код програми з 1–20 літер, цифр, _ або -, що починається з літери чи цифри. Регістр не враховується."
   }

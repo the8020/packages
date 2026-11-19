@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Kredensial repositori",
     "programs.secret-usages.description": "Daftar paket yang kredensial repositorinya menggunakan rahasia tertentu",
+    "errors.export_1_to_packages": "Mengekspor 1 sampai {MAX_PACKAGES} paket.",
+    "errors.invalid_package_id": "ID paket yang tidak valid {packageId}",
     "program.shortcut": "Kode pintas",
     "program.shortcut_help": "Kode program berisi 1–20 huruf, angka, _ atau -, diawali huruf atau angka. Huruf besar dan kecil dianggap sama."
   }

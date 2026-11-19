@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Pakki {id}",
     "secret_usages.repository_credentials": "Auðkenni kóðasafns",
     "programs.secret-usages.description": "Birta pakka þar sem auðkenni kóðasafns nota tilgreind leyndarmál",
+    "errors.export_1_to_packages": "Útflutningur 1 til {MAX_PACKAGES} pakka.",
+    "errors.invalid_package_id": "Ógildi pakka kennitölu {packageId}",
     "program.shortcut": "Flýtikóði",
     "program.shortcut_help": "Forritskóði með 1–20 bókstöfum, tölustöfum, _ eða -, sem byrjar á bókstaf eða tölustaf. Ekki er gerður greinarmunur á há- og lágstöfum."
   }

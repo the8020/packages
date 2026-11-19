@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Package {id}",
     "secret_usages.repository_credentials": "Mga kredensyal ng repository",
     "programs.secret-usages.description": "Ilista ang mga package na gumagamit ng mga ibinigay na sikreto sa kanilang kredensyal ng repository",
+    "errors.export_1_to_packages": "I-export ang 1 hanggang {MAX_PACKAGES} packages.",
+    "errors.invalid_package_id": "hindi valid package ID {packageId}",
     "program.shortcut": "Shortcut",
     "program.shortcut_help": "Code ng programa na may 1–20 titik, digit, _ o -, na nagsisimula sa titik o digit. Walang pagkakaiba ang malaki at maliit na titik."
   }

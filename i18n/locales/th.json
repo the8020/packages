@@ -131,6 +131,8 @@
     "secret_usages.package_id": "แพ็กเกจ {id}",
     "secret_usages.repository_credentials": "ข้อมูลรับรองคลังโค้ด",
     "programs.secret-usages.description": "แสดงแพ็กเกจที่ข้อมูลรับรองคลังโค้ดใช้ข้อมูลลับที่ระบุ",
+    "errors.export_1_to_packages": "ส่งออกกระเป๋า 1 ถึง {MAX_PACKAGES}",
+    "errors.invalid_package_id": "ID แพ็คเกจไม่ถูกต้อง {packageId}",
     "program.shortcut": "รหัสลัด",
     "program.shortcut_help": "รหัสโปรแกรมยาว 1–20 ตัวอักษร ตัวเลข _ หรือ - โดยเริ่มด้วยตัวอักษรหรือตัวเลข ไม่แยกตัวพิมพ์ใหญ่และเล็ก"
   }

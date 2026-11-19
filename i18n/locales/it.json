@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Pacchetto {id}",
     "secret_usages.repository_credentials": "Credenziali del repository",
     "programs.secret-usages.description": "Elenca i pacchetti le cui credenziali del repository usano i segreti indicati",
+    "errors.export_1_to_packages": "Esportare pacchetti da 1 a {MAX_PACKAGES}.",
+    "errors.invalid_package_id": "ID del pacchetto non valido {packageId}",
     "program.shortcut": "Scorciatoia",
     "program.shortcut_help": "Codice di programma di 1–20 lettere, cifre, _ o -, che inizia con una lettera o cifra. Maiuscole e minuscole sono equivalenti."
   }

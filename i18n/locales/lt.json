@@ -131,6 +131,8 @@
     "secret_usages.package_id": "Paketas {id}",
     "secret_usages.repository_credentials": "Saugyklos prisijungimo duomenys",
     "programs.secret-usages.description": "Rodyti paketus, kurių saugyklos prisijungimo duomenys naudoja nurodytas paslaptis",
+    "errors.export_1_to_packages": "Eksportuoti 1 iki {MAX_PACKAGES} paketų.",
+    "errors.invalid_package_id": "negaliojančio paketo ID {packageId}",
     "program.shortcut": "Trumpasis kodas",
     "program.shortcut_help": "Programos kodas iš 1–20 raidžių, skaitmenų, _ ar -, prasidedantis raide arba skaitmeniu. Raidžių dydis nesvarbus."
   }
