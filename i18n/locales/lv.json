@@ -130,6 +130,8 @@
     "package.description_label": "Apraksts",
     "secret_usages.package_id": "Pakotne {id}",
     "secret_usages.repository_credentials": "Repozitorija akreditācijas dati",
-    "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus"
+    "programs.secret-usages.description": "Uzskaitīt pakotnes, kuru repozitorija akreditācijas dati izmanto norādītos noslēpumus",
+    "program.shortcut": "Īskods",
+    "program.shortcut_help": "Programmas kods ar 1–20 burtiem, cipariem, _ vai -, kas sākas ar burtu vai ciparu. Lielo un mazo burtu atšķirība netiek ņemta vērā."
   }
 }

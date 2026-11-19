@@ -130,6 +130,8 @@
     "package.description_label": "Descrizione",
     "secret_usages.package_id": "Pacchetto {id}",
     "secret_usages.repository_credentials": "Credenziali del repository",
-    "programs.secret-usages.description": "Elenca i pacchetti le cui credenziali del repository usano i segreti indicati"
+    "programs.secret-usages.description": "Elenca i pacchetti le cui credenziali del repository usano i segreti indicati",
+    "program.shortcut": "Scorciatoia",
+    "program.shortcut_help": "Codice di programma di 1–20 lettere, cifre, _ o -, che inizia con una lettera o cifra. Maiuscole e minuscole sono equivalenti."
   }
 }

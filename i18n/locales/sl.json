@@ -130,6 +130,8 @@
     "package.description_label": "Opis",
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Poverilnice repozitorija",
-    "programs.secret-usages.description": "Prikaže pakete, katerih poverilnice repozitorija uporabljajo podane skrivnosti"
+    "programs.secret-usages.description": "Prikaže pakete, katerih poverilnice repozitorija uporabljajo podane skrivnosti",
+    "program.shortcut": "Bližnjica",
+    "program.shortcut_help": "Koda programa z 1–20 črkami, števkami, _ ali -, ki se začne s črko ali števko. Velikost črk ni pomembna."
   }
 }

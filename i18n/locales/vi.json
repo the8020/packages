@@ -130,6 +130,8 @@
     "package.description_label": "Mô tả",
     "secret_usages.package_id": "Gói {id}",
     "secret_usages.repository_credentials": "Thông tin xác thực kho mã",
-    "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho"
+    "programs.secret-usages.description": "Liệt kê các gói có thông tin xác thực kho mã dùng các bí mật đã cho",
+    "program.shortcut": "Mã tắt",
+    "program.shortcut_help": "Mã chương trình gồm 1–20 chữ cái, chữ số, _ hoặc -, bắt đầu bằng chữ cái hoặc chữ số. Không phân biệt chữ hoa và chữ thường."
   }
 }

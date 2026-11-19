@@ -130,6 +130,8 @@
     "package.description_label": "Beschreibung",
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Repository-Zugangsdaten",
-    "programs.secret-usages.description": "Pakete auflisten, deren Repository-Zugangsdaten die angegebenen Geheimnisse verwenden"
+    "programs.secret-usages.description": "Pakete auflisten, deren Repository-Zugangsdaten die angegebenen Geheimnisse verwenden",
+    "program.shortcut": "Kürzel",
+    "program.shortcut_help": "Programmcode mit 1–20 Buchstaben, Ziffern, _ oder -, beginnend mit einem Buchstaben oder einer Ziffer. Groß- und Kleinschreibung wird ignoriert."
   }
 }

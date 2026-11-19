@@ -130,6 +130,8 @@
     "package.description_label": "Description",
     "secret_usages.package_id": "Paquet {id}",
     "secret_usages.repository_credentials": "Identifiants du dépôt",
-    "programs.secret-usages.description": "Lister les paquets dont les identifiants de dépôt utilisent les secrets indiqués"
+    "programs.secret-usages.description": "Lister les paquets dont les identifiants de dépôt utilisent les secrets indiqués",
+    "program.shortcut": "Raccourci",
+    "program.shortcut_help": "Code de programme de 1 à 20 lettres, chiffres, _ ou -, commençant par une lettre ou un chiffre. La casse est ignorée."
   }
 }

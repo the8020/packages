@@ -130,6 +130,8 @@
     "package.description_label": "Perihalan",
     "secret_usages.package_id": "Pakej {id}",
     "secret_usages.repository_credentials": "Bukti kelayakan repositori",
-    "programs.secret-usages.description": "Senaraikan pakej yang bukti kelayakan repositorinya menggunakan rahsia yang diberikan"
+    "programs.secret-usages.description": "Senaraikan pakej yang bukti kelayakan repositorinya menggunakan rahsia yang diberikan",
+    "program.shortcut": "Kod pintas",
+    "program.shortcut_help": "Kod program dengan 1–20 huruf, digit, _ atau -, bermula dengan huruf atau digit. Huruf besar dan kecil dianggap sama."
   }
 }

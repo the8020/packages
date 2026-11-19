@@ -130,6 +130,8 @@
     "package.description_label": "Kuvaus",
     "secret_usages.package_id": "Paketti {id}",
     "secret_usages.repository_credentials": "Lähdekoodivaraston tunnistetiedot",
-    "programs.secret-usages.description": "Luettele paketit, joiden lähdekoodivaraston tunnistetiedot käyttävät annettuja salaisuuksia"
+    "programs.secret-usages.description": "Luettele paketit, joiden lähdekoodivaraston tunnistetiedot käyttävät annettuja salaisuuksia",
+    "program.shortcut": "Pikakoodi",
+    "program.shortcut_help": "Ohjelmakoodi, jossa on 1–20 kirjainta, numeroa, _ tai - ja joka alkaa kirjaimella tai numerolla. Kirjainkoolla ei ole merkitystä."
   }
 }

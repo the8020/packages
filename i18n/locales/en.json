@@ -130,6 +130,10 @@
     "package.description_label": "Description",
     "secret_usages.package_id": "Package {id}",
     "secret_usages.repository_credentials": "Repository credentials",
-    "programs.secret-usages.description": "Report packages whose repository credentials use given secrets"
+    "programs.secret-usages.description": "Report packages whose repository credentials use given secrets",
+    "errors.export_1_to_packages": "Export 1 to {MAX_PACKAGES} packages.",
+    "errors.invalid_package_id": "invalid package ID {packageId}",
+    "program.shortcut": "Shortcut",
+    "program.shortcut_help": "A program code of 1–20 letters, digits, _ or -, starting with a letter or digit. Letter case is ignored."
   }
 }

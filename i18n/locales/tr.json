@@ -130,6 +130,8 @@
     "package.description_label": "Açıklama",
     "secret_usages.package_id": "Paket {id}",
     "secret_usages.repository_credentials": "Depo kimlik bilgileri",
-    "programs.secret-usages.description": "Depo kimlik bilgileri verilen gizli bilgileri kullanan paketleri listele"
+    "programs.secret-usages.description": "Depo kimlik bilgileri verilen gizli bilgileri kullanan paketleri listele",
+    "program.shortcut": "Kısa kod",
+    "program.shortcut_help": "Harf veya rakamla başlayan, 1–20 harf, rakam, _ veya - içeren program kodu. Büyük/küçük harf ayrımı yapılmaz."
   }
 }

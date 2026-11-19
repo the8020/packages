@@ -130,6 +130,8 @@
     "package.description_label": "Leírás",
     "secret_usages.package_id": "Csomag: {id}",
     "secret_usages.repository_credentials": "Tároló hitelesítő adatai",
-    "programs.secret-usages.description": "Azon csomagok listázása, amelyek tárolóhitelesítő adatai a megadott titkokat használják"
+    "programs.secret-usages.description": "Azon csomagok listázása, amelyek tárolóhitelesítő adatai a megadott titkokat használják",
+    "program.shortcut": "Rövid kód",
+    "program.shortcut_help": "1–20 betűből, számjegyből, _ vagy - jelből álló programkód, amely betűvel vagy számjeggyel kezdődik. A kis- és nagybetűk azonosnak számítanak."
   }
 }

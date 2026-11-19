@@ -8,6 +8,8 @@ Parent DOX: [packages DOX](../AGENTS.md).
 # Ownership
 
 - `package.ts` and `program.ts` own references and descriptive metadata.
+- `program.ts` also owns the shared program-shortcut code schema and help,
+  reused by manifest validation and UUI personal mappings.
 - `source.ts` owns file/Git metadata and branch, commit, install-version, and
   installed-version field builders using the supplied bounded inspection.
 - `../programs.ts` enriches native executable discovery with application

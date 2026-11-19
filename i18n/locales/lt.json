@@ -130,6 +130,8 @@
     "package.description_label": "Aprašymas",
     "secret_usages.package_id": "Paketas {id}",
     "secret_usages.repository_credentials": "Saugyklos prisijungimo duomenys",
-    "programs.secret-usages.description": "Rodyti paketus, kurių saugyklos prisijungimo duomenys naudoja nurodytas paslaptis"
+    "programs.secret-usages.description": "Rodyti paketus, kurių saugyklos prisijungimo duomenys naudoja nurodytas paslaptis",
+    "program.shortcut": "Trumpasis kodas",
+    "program.shortcut_help": "Programos kodas iš 1–20 raidžių, skaitmenų, _ ar -, prasidedantis raide arba skaitmeniu. Raidžių dydis nesvarbus."
   }
 }

@@ -130,6 +130,8 @@
     "package.description_label": "Descriere",
     "secret_usages.package_id": "Pachet {id}",
     "secret_usages.repository_credentials": "Credențiale depozit",
-    "programs.secret-usages.description": "Listează pachetele ale căror credențiale de depozit folosesc secretele indicate"
+    "programs.secret-usages.description": "Listează pachetele ale căror credențiale de depozit folosesc secretele indicate",
+    "program.shortcut": "Cod rapid",
+    "program.shortcut_help": "Cod de program cu 1–20 litere, cifre, _ sau -, începând cu o literă sau cifră. Nu se face distincție între majuscule și minuscule."
   }
 }

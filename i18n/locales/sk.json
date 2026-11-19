@@ -130,6 +130,8 @@
     "package.description_label": "Popis",
     "secret_usages.package_id": "Balíček {id}",
     "secret_usages.repository_credentials": "Prihlasovacie údaje k repozitáru",
-    "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje"
+    "programs.secret-usages.description": "Výpis balíčkov, ktorých prihlasovacie údaje k repozitáru používajú zadané tajné údaje",
+    "program.shortcut": "Skratka",
+    "program.shortcut_help": "Kód programu s 1–20 písmenami, číslicami, _ alebo -, začínajúci písmenom alebo číslicou. Veľkosť písmen sa nerozlišuje."
   }
 }

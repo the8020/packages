@@ -130,6 +130,8 @@
     "package.description_label": "Описание",
     "secret_usages.package_id": "Пакет {id}",
     "secret_usages.repository_credentials": "Идентификационни данни за хранилището",
-    "programs.secret-usages.description": "Показва пакетите, чиито идентификационни данни за хранилище използват дадените тайни"
+    "programs.secret-usages.description": "Показва пакетите, чиито идентификационни данни за хранилище използват дадените тайни",
+    "program.shortcut": "Съкращение",
+    "program.shortcut_help": "Код на програма от 1–20 букви, цифри, _ или -, започващ с буква или цифра. Регистърът не се отчита."
   }
 }

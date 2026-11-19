@@ -130,6 +130,8 @@
     "package.description_label": "説明",
     "secret_usages.package_id": "パッケージ {id}",
     "secret_usages.repository_credentials": "リポジトリ認証情報",
-    "programs.secret-usages.description": "指定したシークレットをリポジトリ認証情報に使用しているパッケージを一覧表示"
+    "programs.secret-usages.description": "指定したシークレットをリポジトリ認証情報に使用しているパッケージを一覧表示",
+    "program.shortcut": "ショートカット",
+    "program.shortcut_help": "英数字、_、- を使った1～20文字のプログラムコード。先頭は英数字で、大文字と小文字は区別しません。"
   }
 }

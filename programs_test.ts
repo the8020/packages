@@ -47,6 +47,11 @@ Deno.test("program manifests parse TOML and reject invalid UUI flags", async () 
     assertEquals((await readProgramManifest(path)).entrypoint, "program.ts");
     await Deno.writeTextFile(
       path,
+      'schema = 1\ndescription = "Shortcuts"\nuui = true\nshortcut = "xy11"\n',
+    );
+    assertEquals((await readProgramManifest(path)).shortcut, "XY11");
+    await Deno.writeTextFile(
+      path,
       'schema = 1.0\ndescription = "Invalid schema type"\n',
     );
     await assertRejects(
@@ -61,6 +66,11 @@ Deno.test("program manifests parse TOML and reject invalid UUI flags", async () 
         "uui = true\nuui = false",
         "uui = yes",
         "unknown = true",
+        'shortcut = ""',
+        'shortcut = "has spaces"',
+        'shortcut = "-BAD"',
+        'shortcut = "123456789012345678901"',
+        "shortcut = 12",
       ]
     ) {
       await Deno.writeTextFile(
@@ -97,7 +107,7 @@ Deno.test("application catalog reads metadata without loading code or changing n
           ? 'schema = 1\ndescription = "Broken"\nuui = "invalid"\n'
           : `schema = 1\ndescription = "${name}"\nentrypoint = "nested/main.ts"\nuui = ${
             name === "interactive"
-          }\ndiscoverable = false\ndefault_layout = "layouts/main.json"\n`,
+          }\ndiscoverable = false\ndefault_layout = "layouts/main.json"\nshortcut = "TEST"\n`,
       );
       definitions.push({
         program_id: `acme/tools/${name}`,
@@ -153,6 +163,7 @@ Deno.test("application catalog reads metadata without loading code or changing n
     );
     assertEquals(programs[0]!.description, "interactive");
     assertEquals(programs[0]!.uui, true);
+    assertEquals(programs[0]!.shortcut, "TEST");
     assertEquals(programs[0]!.discoverable, false);
     assertEquals(programs[0]!.default_layout, "layouts/main.json");
     assertEquals(programs[0]!.commit, "native-commit");

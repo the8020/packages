@@ -130,6 +130,8 @@
     "package.description_label": "说明",
     "secret_usages.package_id": "软件包 {id}",
     "secret_usages.repository_credentials": "代码仓库凭据",
-    "programs.secret-usages.description": "列出代码仓库凭据使用指定机密的软件包"
+    "programs.secret-usages.description": "列出代码仓库凭据使用指定机密的软件包",
+    "program.shortcut": "快捷码",
+    "program.shortcut_help": "由1–20个英文字母、数字、_或-组成的程序代码，以字母或数字开头，不区分大小写。"
   }
 }

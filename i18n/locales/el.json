@@ -130,6 +130,8 @@
     "package.description_label": "Περιγραφή",
     "secret_usages.package_id": "Πακέτο {id}",
     "secret_usages.repository_credentials": "Διαπιστευτήρια αποθετηρίου",
-    "programs.secret-usages.description": "Λίστα πακέτων των οποίων τα διαπιστευτήρια αποθετηρίου χρησιμοποιούν τα δεδομένα απόρρητα"
+    "programs.secret-usages.description": "Λίστα πακέτων των οποίων τα διαπιστευτήρια αποθετηρίου χρησιμοποιούν τα δεδομένα απόρρητα",
+    "program.shortcut": "Συντόμευση",
+    "program.shortcut_help": "Κωδικός προγράμματος με 1–20 γράμματα, ψηφία, _ ή -, που αρχίζει με γράμμα ή ψηφίο. Δεν γίνεται διάκριση πεζών και κεφαλαίων."
   }
 }

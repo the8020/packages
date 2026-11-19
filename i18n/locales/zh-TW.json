@@ -130,6 +130,8 @@
     "package.description_label": "說明",
     "secret_usages.package_id": "套件 {id}",
     "secret_usages.repository_credentials": "程式碼儲存庫認證資訊",
-    "programs.secret-usages.description": "列出程式碼儲存庫認證資訊使用指定機密的套件"
+    "programs.secret-usages.description": "列出程式碼儲存庫認證資訊使用指定機密的套件",
+    "program.shortcut": "快捷碼",
+    "program.shortcut_help": "由1–20個英文字母、數字、_或-組成的程式代碼，以字母或數字開頭，不區分大小寫。"
   }
 }
