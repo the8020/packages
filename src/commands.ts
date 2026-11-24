@@ -115,6 +115,7 @@ export function synchronize(...args: string[]) {
     selected,
     kernel.execution.optionalSecret("git-token"),
     {
+      recover_checkout: parsed.options.schema !== true,
       force_columns: typeof parsed.options.force === "string"
         ? parsed.options.force.split(",").filter(Boolean)
         : [],

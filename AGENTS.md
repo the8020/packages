@@ -253,7 +253,9 @@ below.
   Import previews new/same/different/local rows without contacting remotes,
   writes `index.set` under the listed package ID, pins the exported commit,
   never overwrites a local package, changes a different version only with
-  explicit overwrite, and may synchronize the imported packages once. On
+  explicit overwrite, and may synchronize the imported packages once. Import
+  does not opt into replacing displaced local work; only the explicit
+  non-preview synchronization command requests recovery on development. On
   development an installed imported or unchanged package without a Git remote
   gets `origin` set to the listed source, so it can be fetched, pushed and
   exported again. Dependencies ignore platform `the8020/*` packages and never

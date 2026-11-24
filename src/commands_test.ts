@@ -11,6 +11,7 @@ import {
 import remove from "../programs/delete/program.ts";
 import fetchRepository from "../programs/repository-fetch/program.ts";
 import { sourceInspect, synchronize } from "./commands.ts";
+import { packages } from "./admin.ts";
 
 (globalThis as unknown as Record<symbol, unknown>)[
   kernelDatabaseBackendSymbol
@@ -55,10 +56,17 @@ Deno.test("schema synchronization transports exact consent and rejects old nativ
       operation: "package.synchronize",
       input: {
         packages: "acme/orders",
+        recover_checkout: true,
         force_columns: "acme__orders__orders.status",
         approved_plan: "a".repeat(64),
         schema_preview: false,
       },
+    }]);
+    calls.length = 0;
+    await packages.synchronize(["acme/orders"]);
+    assertEquals(calls, [{
+      operation: "package.synchronize",
+      input: { packages: "acme/orders" },
     }]);
     version = 0;
     calls.length = 0;
